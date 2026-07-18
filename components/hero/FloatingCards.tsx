@@ -117,9 +117,9 @@ export default function FloatingCards() {
             </div>
 
             <div>
-              <h3 className="whitespace-nowrap text-[15px] font-semibold tracking-wide text-white">
-                {card.title}
-              </h3>
+              <p className="whitespace-nowrap text-[15px] font-semibold tracking-wide text-white">
+  {card.title}
+</p>
 
               <p className="mt-0.5 whitespace-nowrap text-xs text-gray-400">
                 {card.subtitle}

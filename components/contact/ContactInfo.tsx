@@ -48,9 +48,9 @@ export default function ContactInfo() {
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold text-white">
-            {site.name}
-          </h3>
+          <p className="text-3xl font-bold text-white">
+  {site.name}
+</p>
 
           <p className="mt-2 text-cyan-300">
             {site.title}

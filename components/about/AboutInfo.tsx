@@ -106,9 +106,9 @@ export default function AboutInfo() {
                 {item.title}
               </p>
 
-              <h4 className="mt-1 text-[15px] font-semibold leading-6 text-white">
-                {item.value}
-              </h4>
+              <p className="mt-1 text-[15px] font-semibold leading-6 text-white">
+  {item.value}
+</p>
             </div>
           </motion.div>
         );
