@@ -2,20 +2,34 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { Loader2 } from "lucide-react";
+import type { ReactNode } from "react";
+import type { HTMLMotionProps } from "framer-motion";
 import clsx from "clsx";
 
-interface ButtonProps {
+interface ButtonProps
+  extends Omit<HTMLMotionProps<"button">, "children"> {
   children: ReactNode;
   href?: string;
-  onClick?: () => void;
   variant?: "primary" | "secondary" | "outline";
   size?: "sm" | "md" | "lg";
   icon?: ReactNode;
   target?: "_blank" | "_self";
   download?: boolean;
+  loading?: boolean;
+  fullWidth?: boolean;
   className?: string;
 }
+
+const motionProps = {
+  whileHover: {
+    scale: 1.05,
+    y: -3,
+  },
+  whileTap: {
+    scale: 0.97,
+  },
+};
 
 export default function Button({
   children,
@@ -26,10 +40,15 @@ export default function Button({
   icon,
   target,
   download = false,
+  loading = false,
+  disabled = false,
+  fullWidth = false,
   className,
+  type = "button",
+  ...props
 }: ButtonProps) {
   const baseClasses =
-    "inline-flex items-center justify-center gap-2 rounded-2xl font-semibold transition-all duration-300";
+    "inline-flex items-center justify-center gap-2 rounded-2xl font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#081120]";
 
   const variants = {
     primary:
@@ -39,14 +58,12 @@ export default function Button({
       "border border-white/10 bg-white/5 text-white backdrop-blur-xl hover:border-cyan-400/50 hover:bg-cyan-500/10",
 
     outline:
-      "border border-cyan-400/25 text-cyan-300 bg-transparent hover:bg-cyan-500/10 hover:border-cyan-400",
+      "border border-cyan-400/25 bg-transparent text-cyan-300 hover:border-cyan-400 hover:bg-cyan-500/10",
   };
 
   const sizes = {
     sm: "px-5 py-2.5 text-sm",
-
     md: "px-7 py-3.5 text-base",
-
     lg: "px-8 py-4 text-lg",
   };
 
@@ -54,36 +71,38 @@ export default function Button({
     baseClasses,
     variants[variant],
     sizes[size],
+    fullWidth && "w-full",
+    (disabled || loading) &&
+      "cursor-not-allowed opacity-50 pointer-events-none",
     className
   );
 
   const content = (
     <>
-      {icon && (
-        <span className="transition-transform duration-300 group-hover:-translate-y-1">
-          {icon}
+      {(loading || icon) && (
+        <span className="transition-transform duration-300 group-hover:-translate-y-0.5">
+          {loading ? (
+            <Loader2 className="h-5 w-5 animate-spin" />
+          ) : (
+            icon
+          )}
         </span>
       )}
 
-      {children}
+      <span>{children}</span>
     </>
   );
 
   if (href) {
     const external =
-      href.startsWith("http") ||
+      href.startsWith("http://") ||
+      href.startsWith("https://") ||
       target === "_blank";
 
     if (external) {
       return (
         <motion.a
-          whileHover={{
-            scale: 1.05,
-            y: -3,
-          }}
-          whileTap={{
-            scale: 0.97,
-          }}
+          {...motionProps}
           href={href}
           target={target}
           rel={
@@ -93,6 +112,7 @@ export default function Button({
           }
           download={download}
           className={clsx(classes, "group")}
+          aria-disabled={disabled || loading}
         >
           {content}
         </motion.a>
@@ -100,15 +120,7 @@ export default function Button({
     }
 
     return (
-      <motion.div
-        whileHover={{
-          scale: 1.05,
-          y: -3,
-        }}
-        whileTap={{
-          scale: 0.97,
-        }}
-      >
+      <motion.div {...motionProps}>
         <Link
           href={href}
           className={clsx(classes, "group")}
@@ -121,15 +133,12 @@ export default function Button({
 
   return (
     <motion.button
-      whileHover={{
-        scale: 1.05,
-        y: -3,
-      }}
-      whileTap={{
-        scale: 0.97,
-      }}
+      {...motionProps}
+      type={type}
       onClick={onClick}
+      disabled={disabled || loading}
       className={clsx(classes, "group")}
+      {...props}
     >
       {content}
     </motion.button>

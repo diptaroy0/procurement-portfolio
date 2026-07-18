@@ -1,13 +1,14 @@
 "use client";
 
 import ExperienceCard from "./ExperienceCard";
-import { experience } from "@/data/experience";
+import { experiences } from "./experience";
 
 export default function ExperienceTimeline() {
   return (
     <div className="relative mx-auto max-w-6xl">
-
+      {/* Timeline Line */}
       <div
+        aria-hidden="true"
         className="
           absolute
           left-5
@@ -21,19 +22,15 @@ export default function ExperienceTimeline() {
         "
       />
 
+      {/* Timeline Items */}
       <div className="space-y-14">
-
-        {experience.map((item) => (
-
+        {experiences.map((experience) => (
           <ExperienceCard
-            key={`${item.company}-${item.title}`}
-            experience={item}
+            key={`${experience.company}-${experience.title}`}
+            experience={experience}
           />
-
         ))}
-
       </div>
-
     </div>
   );
 }

@@ -72,9 +72,9 @@ export default function FloatingCards() {
               right: card.right,
               bottom: card.bottom,
             }}
-            className=" 
-            group
-            absolute will-change-transform
+            className="
+              group
+              absolute
               z-30
               hidden
               lg:flex
@@ -84,14 +84,16 @@ export default function FloatingCards() {
               border
               border-cyan-400/20
               bg-[rgba(15,23,42,.82)]
-              backdrop-blur-2xl
               px-5
               py-3.5
+              backdrop-blur-2xl
               shadow-[0_18px_45px_rgba(0,0,0,.45)]
               transition-all
               duration-300
               hover:border-cyan-400/45
               hover:shadow-[0_0_35px_rgba(34,211,238,.22)]
+              transform-gpu
+              will-change-transform
             "
           >
             <div
@@ -113,13 +115,16 @@ export default function FloatingCards() {
                 group-hover:scale-110
               "
             >
-              <Icon size={19} />
+              <Icon
+                size={19}
+                aria-hidden="true"
+              />
             </div>
 
             <div>
               <p className="whitespace-nowrap text-[15px] font-semibold tracking-wide text-white">
-  {card.title}
-</p>
+                {card.title}
+              </p>
 
               <p className="mt-0.5 whitespace-nowrap text-xs text-gray-400">
                 {card.subtitle}

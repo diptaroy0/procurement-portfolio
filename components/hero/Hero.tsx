@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import Container from "../ui/Container";
+import Container from "../common/Container";
 import HeroContent from "./HeroContent";
 import HeroImage from "./HeroImage";
 import BackgroundEffects from "../ui/BackgroundEffects";

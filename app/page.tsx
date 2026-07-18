@@ -2,11 +2,16 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
 import Experience from "@/components/experience/Experience";
-import Projects from "@/components/projects/Projects";
-import Skills from "@/components/skills/Skills";
 import Contact from "@/components/contact/Contact";
+
 import BackgroundEffects from "@/components/ui/BackgroundEffects";
 import ScrollProgress from "@/components/ui/ScrollProgress";
+
+import Achievements from "@/components/achievements/Achievements";
+import CoreExpertise from "@/components/expertise/CoreExpertise";
+import ProcurementWorkflow from "@/components/workflow/ProcurementWorkflow";
+import CaseStudies from "@/components/case-studies/CaseStudies";
+import Education from "@/components/education/Education";
 
 export default function Home() {
   return (
@@ -15,25 +20,24 @@ export default function Home() {
       <BackgroundEffects />
 
       <main className="relative min-h-screen overflow-x-hidden">
-        {/* Navigation */}
         <Navbar />
 
-        {/* Hero Section */}
         <Hero />
 
-        {/* About Section */}
+        <Achievements />
+
+        <CoreExpertise />
+
         <About />
 
-        {/* Experience Section */}
         <Experience />
 
-        {/* Projects Section */}
-        <Projects />
+        <ProcurementWorkflow />
 
-        {/* Skills Section */}
-        <Skills />
+        <CaseStudies />
 
-        {/* Contact Section */}
+        <Education />
+
         <Contact />
       </main>
     </>

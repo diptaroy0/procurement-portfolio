@@ -1,6 +1,6 @@
 "use client";
 
-import Container from "../ui/Container";
+import Container from "../common/Container";
 import FadeIn from "../ui/FadeIn";
 
 import AboutImage from "./AboutImage";

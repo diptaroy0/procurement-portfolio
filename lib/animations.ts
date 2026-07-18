@@ -1,4 +1,6 @@
-export const fadeUp = {
+import type { MotionProps } from "framer-motion";
+
+export const fadeUp: MotionProps = {
   initial: {
     opacity: 0,
     y: 40,
@@ -11,14 +13,38 @@ export const fadeUp = {
 
   transition: {
     duration: 0.7,
+    ease: "easeOut",
   },
 
   viewport: {
     once: true,
+    amount: 0.2,
   },
 };
 
-export const fadeLeft = {
+export const fadeDown: MotionProps = {
+  initial: {
+    opacity: 0,
+    y: -40,
+  },
+
+  whileInView: {
+    opacity: 1,
+    y: 0,
+  },
+
+  transition: {
+    duration: 0.7,
+    ease: "easeOut",
+  },
+
+  viewport: {
+    once: true,
+    amount: 0.2,
+  },
+};
+
+export const fadeLeft: MotionProps = {
   initial: {
     opacity: 0,
     x: 50,
@@ -31,14 +57,16 @@ export const fadeLeft = {
 
   transition: {
     duration: 0.7,
+    ease: "easeOut",
   },
 
   viewport: {
     once: true,
+    amount: 0.2,
   },
 };
 
-export const fadeRight = {
+export const fadeRight: MotionProps = {
   initial: {
     opacity: 0,
     x: -50,
@@ -51,14 +79,16 @@ export const fadeRight = {
 
   transition: {
     duration: 0.7,
+    ease: "easeOut",
   },
 
   viewport: {
     once: true,
+    amount: 0.2,
   },
 };
 
-export const scaleIn = {
+export const scaleIn: MotionProps = {
   initial: {
     opacity: 0,
     scale: 0.95,
@@ -71,9 +101,99 @@ export const scaleIn = {
 
   transition: {
     duration: 0.6,
+    ease: "easeOut",
   },
 
   viewport: {
     once: true,
+    amount: 0.2,
+  },
+};
+
+export const zoomIn: MotionProps = {
+  initial: {
+    opacity: 0,
+    scale: 0.8,
+  },
+
+  whileInView: {
+    opacity: 1,
+    scale: 1,
+  },
+
+  transition: {
+    duration: 0.5,
+    ease: "easeOut",
+  },
+
+  viewport: {
+    once: true,
+    amount: 0.2,
+  },
+};
+
+export const rotateIn: MotionProps = {
+  initial: {
+    opacity: 0,
+    rotate: -6,
+    scale: 0.95,
+  },
+
+  whileInView: {
+    opacity: 1,
+    rotate: 0,
+    scale: 1,
+  },
+
+  transition: {
+    duration: 0.6,
+    ease: "easeOut",
+  },
+
+  viewport: {
+    once: true,
+    amount: 0.2,
+  },
+};
+
+export const fadeUpSlow: MotionProps = {
+  initial: {
+    opacity: 0,
+    y: 60,
+  },
+
+  whileInView: {
+    opacity: 1,
+    y: 0,
+  },
+
+  transition: {
+    duration: 1,
+    ease: "easeOut",
+  },
+
+  viewport: {
+    once: true,
+    amount: 0.2,
+  },
+};
+
+export const fadeIn: MotionProps = {
+  initial: {
+    opacity: 0,
+  },
+
+  whileInView: {
+    opacity: 1,
+  },
+
+  transition: {
+    duration: 0.6,
+    ease: "easeOut",
+  },
+
+  viewport: {
+    once: true,
+    amount: 0.2,
   },
 };

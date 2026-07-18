@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 
-import Container from "../ui/Container";
-import SkillsHeader from "./SkillsHeader";
+import Container from "../common/Container";
 import SkillsGrid from "./SkillsGrid";
+import SectionHeader from "@/components/common/SectionHeader";
 
 export default function Skills() {
   return (
@@ -14,7 +14,12 @@ export default function Skills() {
     >
       <Container>
         {/* Header */}
-        <SkillsHeader />
+        <SectionHeader
+  id="skills-heading"
+  badge="Technical Toolkit"
+  title="Skills & Technologies"
+  description="Tools, platforms, and technologies used across procurement, automation, and software development."
+/>
 
         {/* Grid */}
         <motion.div
