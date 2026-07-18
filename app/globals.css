@@ -1,26 +1,367 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #07111f;
+  --foreground: #ffffff;
+
+  --primary: #00d4ff;
+  --secondary: #1d4ed8;
+
+  --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.08);
+
+  --shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+
+  --radius: 24px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* -------------------- */
+/* Global */
+/* -------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 80% 15%, rgba(0, 212, 255, 0.1), transparent 30%),
+    radial-gradient(circle at 10% 90%, rgba(37, 99, 235, 0.08), transparent 35%),
+    #07111f;
+
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+
+  overflow-x: hidden;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------------------- */
+/* Scrollbar */
+/* -------------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08111f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    #00d4ff,
+    #2563eb
+  );
+
+  border-radius: 999px;
+  border: 2px solid #08111f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    #22d3ee,
+    #3b82f6
+  );
+}
+
+/* -------------------- */
+/* Selection */
+/* -------------------- */
+
+::selection {
+  background: #00d4ff;
+  color: #08111f;
+}
+
+/* -------------------- */
+/* Focus */
+/* -------------------- */
+
+:focus-visible {
+  outline: 2px solid rgba(0, 212, 255, 0.7);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* -------------------- */
+/* Reusable Container */
+/* -------------------- */
+
+.section {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: auto;
+
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+/* -------------------- */
+/* Glass */
+/* -------------------- */
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* -------------------- */
+/* Gradient Text */
+/* -------------------- */
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #00d4ff,
+    #1d4ed8
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* -------------------- */
+/* Glow */
+/* -------------------- */
+
+.glow {
+  box-shadow:
+    0 0 30px rgba(0, 212, 255, 0.18);
+}
+
+/* -------------------- */
+/* Hero Glow */
+/* -------------------- */
+
+.hero-glow {
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  border-radius: 999px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0, 212, 255, 0.18),
+      transparent 70%
+    );
+
+  filter: blur(20px);
+}
+
+/* -------------------- */
+/* Grid */
+/* -------------------- */
+
+.grid-bg {
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    );
+
+  background-size: 60px 60px;
+}
+
+/* -------------------- */
+/* Buttons */
+/* -------------------- */
+
+.btn-primary {
+  background:
+    linear-gradient(
+      90deg,
+      #00d4ff,
+      #2563eb
+    );
+
+  color: white;
+
+  transition: 0.35s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 212, 255, 0.35);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: 0.35s;
+}
+
+.btn-outline:hover {
+  background: rgba(0, 212, 255, 0.08);
+
+  border-color: #00d4ff;
+}
+
+/* -------------------- */
+/* Floating Animation */
+/* -------------------- */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+/* -------------------- */
+/* Pulse */
+/* -------------------- */
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 212, 255, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 35px rgba(0, 212, 255, 0.25);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(0, 212, 255, 0.2);
+  }
+}
+
+.pulse {
+  animation: pulseGlow 4s infinite;
+}
+
+/* -------------------- */
+/* Fade Up */
+/* -------------------- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* -------------------- */
+/* Hero Image */
+/* -------------------- */
+
+.hero-image {
+  filter:
+    drop-shadow(0 30px 40px rgba(0, 0, 0, 0.45));
+}
+
+/* -------------------- */
+/* Card */
+/* -------------------- */
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 22px;
+
+  backdrop-filter: blur(18px);
+
+  transition: 0.35s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 212, 255, 0.15);
+}
+
+/* -------------------- */
+/* Reduced Motion */
+/* -------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* -------------------- */
+/* Responsive */
+/* -------------------- */
+
+@media (max-width: 1024px) {
+  .section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
