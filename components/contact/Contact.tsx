@@ -11,6 +11,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      aria-labelledby="contact-heading"
       className="relative overflow-hidden py-32"
     >
       <Container>

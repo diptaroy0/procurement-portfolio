@@ -71,15 +71,19 @@ export default function Navbar() {
       >
         {/* Logo */}
 
-        <a href="#" className="flex items-center gap-4">
+        <a
+          href="#"
+          aria-label="Go to homepage"
+          className="flex items-center gap-4"
+        >
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 text-xl font-bold text-white shadow-lg shadow-cyan-500/25">
             DR
           </div>
 
           <div>
-            <h1 className="text-2xl font-bold text-white">
+            <p className="text-2xl font-bold text-white">
               Dipta <span className="text-cyan-400">Roy</span>
-            </h1>
+            </p>
 
             <p className="text-xs uppercase tracking-[0.35em] text-slate-400">
               Procurement • SCM
@@ -89,7 +93,10 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
 
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav
+          aria-label="Primary navigation"
+          className="hidden items-center gap-10 lg:flex"
+        >
           {navItems.map((item) => {
             const active = activeSection === item.href.replace("#", "");
 
@@ -97,6 +104,7 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
+                aria-current={active ? "page" : undefined}
                 className={`
                   group
                   relative
@@ -145,6 +153,7 @@ export default function Navbar() {
           <a
             href="/resume/Dipta_Roy_Resume.pdf"
             download
+            aria-label="Download Dipta Roy's resume"
             className="
               inline-flex
               items-center
@@ -164,12 +173,18 @@ export default function Navbar() {
               hover:bg-cyan-500/10
             "
           >
-            <Download size={18} />
+            <Download
+              size={18}
+              aria-hidden="true"
+              focusable="false"
+            />
+
             Resume
           </a>
 
           <a
             href="#contact"
+            aria-label="Go to contact section"
             className="
               rounded-xl
               bg-gradient-to-r

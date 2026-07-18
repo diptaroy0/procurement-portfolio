@@ -32,47 +32,63 @@ export default function ContactForm() {
         Send a Message
       </h3>
 
-      <p className="mt-3 text-gray-400 leading-8">
+      <p className="mt-3 leading-8 text-gray-400">
         Have an opportunity or project in mind? Fill out the form below and I'll
         get back to you as soon as possible.
       </p>
 
-      <form className="mt-10 space-y-6">
-
+      <form
+        noValidate
+        className="mt-10 space-y-6"
+      >
         {/* Name */}
 
         <Input
+          id="name"
+          name="name"
           label="Full Name"
           type="text"
           placeholder="John Smith"
+          autoComplete="name"
         />
 
         {/* Email */}
 
         <Input
+          id="email"
+          name="email"
           label="Email Address"
           type="email"
           placeholder="john@example.com"
+          autoComplete="email"
         />
 
         {/* Subject */}
 
         <Input
+          id="subject"
+          name="subject"
           label="Subject"
           type="text"
           placeholder="Procurement Opportunity"
+          autoComplete="off"
         />
 
         {/* Message */}
 
         <div>
-
-          <label className="mb-3 block text-sm text-gray-300">
+          <label
+            htmlFor="message"
+            className="mb-3 block text-sm text-gray-300"
+          >
             Message
           </label>
 
           <textarea
+            id="message"
+            name="message"
             rows={6}
+            required
             placeholder="Tell me about your project..."
             className="
               w-full
@@ -91,13 +107,13 @@ export default function ContactForm() {
               focus:ring-cyan-500/20
             "
           />
-
         </div>
 
         {/* Submit */}
 
         <button
           type="submit"
+          aria-label="Send Message"
           className="
             inline-flex
             items-center
@@ -116,34 +132,49 @@ export default function ContactForm() {
             hover:shadow-[0_0_30px_rgba(34,211,238,.25)]
           "
         >
-          <Send size={18} />
+          <Send
+            size={18}
+            aria-hidden="true"
+            focusable="false"
+          />
+
           Send Message
         </button>
-
       </form>
-
     </motion.div>
   );
 }
 
 function Input({
+  id,
+  name,
   label,
   type,
   placeholder,
+  autoComplete,
 }: {
+  id: string;
+  name: string;
   label: string;
   type: string;
   placeholder: string;
+  autoComplete?: string;
 }) {
   return (
     <div>
-
-      <label className="mb-3 block text-sm text-gray-300">
+      <label
+        htmlFor={id}
+        className="mb-3 block text-sm text-gray-300"
+      >
         {label}
       </label>
 
       <input
+        id={id}
+        name={name}
         type={type}
+        required
+        autoComplete={autoComplete}
         placeholder={placeholder}
         className="
           w-full
@@ -162,7 +193,6 @@ function Input({
           focus:ring-cyan-500/20
         "
       />
-
     </div>
   );
 }

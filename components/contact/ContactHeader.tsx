@@ -29,6 +29,8 @@ export default function ContactHeader() {
       >
         <Send
           size={16}
+          aria-hidden="true"
+          focusable="false"
           className="text-cyan-400"
         />
 
@@ -40,6 +42,7 @@ export default function ContactHeader() {
       {/* Heading */}
 
       <motion.h2
+        id="contact-heading"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -61,6 +64,7 @@ export default function ContactHeader() {
       {/* Accent */}
 
       <motion.div
+        aria-hidden="true"
         initial={{ width: 0 }}
         whileInView={{ width: 120 }}
         viewport={{ once: true }}

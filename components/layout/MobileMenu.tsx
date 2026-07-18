@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -14,11 +14,37 @@ const navItems = [
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <>
       {/* Menu Button */}
 
       <button
+        type="button"
+        aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={open}
+        aria-controls="mobile-navigation"
         onClick={() => setOpen(!open)}
         className="
           lg:hidden
@@ -32,13 +58,26 @@ export default function MobileMenu() {
           hover:bg-cyan-500/10
         "
       >
-        {open ? <X size={22} /> : <Menu size={22} />}
+        {open ? (
+          <X
+            size={22}
+            aria-hidden="true"
+            focusable="false"
+          />
+        ) : (
+          <Menu
+            size={22}
+            aria-hidden="true"
+            focusable="false"
+          />
+        )}
       </button>
 
       {/* Overlay */}
 
       {open && (
         <div
+          aria-hidden="true"
           className="
             fixed
             inset-0
@@ -54,6 +93,10 @@ export default function MobileMenu() {
       {/* Drawer */}
 
       <div
+        id="mobile-navigation"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="mobile-menu-title"
         className={`
           fixed
           top-0
@@ -61,9 +104,9 @@ export default function MobileMenu() {
           z-50
           h-full
           w-72
-          bg-[#081120]
           border-l
           border-cyan-400/20
+          bg-[#081120]
           transition-transform
           duration-300
           lg:hidden
@@ -72,19 +115,30 @@ export default function MobileMenu() {
         `}
       >
         <div className="flex items-center justify-between border-b border-cyan-400/10 p-6">
-
-          <h2 className="text-xl font-bold text-white">
+          <h2
+            id="mobile-menu-title"
+            className="text-xl font-bold text-white"
+          >
             Navigation
           </h2>
 
-          <button onClick={() => setOpen(false)}>
-            <X className="text-white" />
+          <button
+            type="button"
+            aria-label="Close navigation menu"
+            onClick={() => setOpen(false)}
+          >
+            <X
+              className="text-white"
+              aria-hidden="true"
+              focusable="false"
+            />
           </button>
-
         </div>
 
-        <nav className="flex flex-col p-6">
-
+        <nav
+          aria-label="Mobile navigation"
+          className="flex flex-col p-6"
+        >
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -103,7 +157,6 @@ export default function MobileMenu() {
               {item.name}
             </a>
           ))}
-
         </nav>
       </div>
     </>

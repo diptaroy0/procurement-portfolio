@@ -38,20 +38,16 @@ export default function ContactInfo() {
       {/* Profile */}
 
       <div className="flex items-center gap-5">
-
         <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-cyan-400/20">
-
           <Image
             src={site.profileImage}
-            alt={site.name}
+            alt={`${site.name} - Procurement & Supply Chain Professional`}
             fill
             className="object-cover"
           />
-
         </div>
 
         <div>
-
           <h3 className="text-3xl font-bold text-white">
             {site.name}
           </h3>
@@ -76,49 +72,71 @@ export default function ContactInfo() {
               text-cyan-300
             "
           >
-            <CheckCircle2 size={16} />
+            <CheckCircle2
+              size={16}
+              aria-hidden="true"
+              focusable="false"
+            />
+
             {site.availability}
           </div>
-
         </div>
-
       </div>
 
       {/* Divider */}
 
-      <div className="my-10 h-px bg-gradient-to-r from-cyan-400/30 to-transparent" />
+      <div
+        aria-hidden="true"
+        className="my-10 h-px bg-gradient-to-r from-cyan-400/30 to-transparent"
+      />
 
       {/* Contact Information */}
 
       <div className="space-y-6">
-
         <InfoItem
-          icon={<MapPin size={20} />}
+          icon={
+            <MapPin
+              size={20}
+              aria-hidden="true"
+              focusable="false"
+            />
+          }
           label="Location"
           value={site.location}
         />
 
         <InfoItem
-          icon={<Mail size={20} />}
+          icon={
+            <Mail
+              size={20}
+              aria-hidden="true"
+              focusable="false"
+            />
+          }
           label="Email"
           value={site.email}
         />
 
         <InfoItem
-          icon={<Phone size={20} />}
+          icon={
+            <Phone
+              size={20}
+              aria-hidden="true"
+              focusable="false"
+            />
+          }
           label="Phone"
           value={site.phone}
         />
-
       </div>
 
       {/* Buttons */}
 
       <div className="mt-10 flex flex-wrap gap-4">
-
         <a
           href={site.resume}
           download
+          aria-label="Download Dipta Roy's resume"
           className="
             inline-flex
             items-center
@@ -137,7 +155,12 @@ export default function ContactInfo() {
             hover:shadow-[0_0_25px_rgba(34,211,238,.25)]
           "
         >
-          <Download size={18} />
+          <Download
+            size={18}
+            aria-hidden="true"
+            focusable="false"
+          />
+
           Resume
         </a>
 
@@ -145,6 +168,7 @@ export default function ContactInfo() {
           href={site.linkedin}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit Dipta Roy's LinkedIn profile (opens in a new tab)"
           className="
             inline-flex
             items-center
@@ -163,6 +187,7 @@ export default function ContactInfo() {
         >
           <FaLinkedinIn
             size={18}
+            aria-hidden="true"
             className="text-cyan-400"
           />
 
@@ -173,6 +198,7 @@ export default function ContactInfo() {
           href={site.github}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit Dipta Roy's GitHub profile (opens in a new tab)"
           className="
             inline-flex
             items-center
@@ -191,14 +217,13 @@ export default function ContactInfo() {
         >
           <FaGithub
             size={18}
+            aria-hidden="true"
             className="text-white"
           />
 
           GitHub
         </a>
-
       </div>
-
     </motion.div>
   );
 }
@@ -214,8 +239,8 @@ function InfoItem({
 }) {
   return (
     <div className="flex items-start gap-4">
-
       <div
+        aria-hidden="true"
         className="
           flex
           h-12
@@ -231,7 +256,6 @@ function InfoItem({
       </div>
 
       <div>
-
         <p className="text-sm text-gray-400">
           {label}
         </p>
@@ -239,9 +263,7 @@ function InfoItem({
         <p className="mt-1 font-medium text-white">
           {value}
         </p>
-
       </div>
-
     </div>
   );
 }
