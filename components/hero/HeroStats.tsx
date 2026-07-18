@@ -77,9 +77,9 @@ export default function HeroStats() {
               <Icon size={22} />
             </div>
 
-            <h3 className="text-4xl font-bold gradient-text">
+            <p className="text-4xl font-bold gradient-text">
               {item.value}
-            </h3>
+            </p>
 
             <p className="mt-2 text-sm leading-6 text-gray-400">
               {item.label}
