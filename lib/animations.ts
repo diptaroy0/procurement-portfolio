@@ -1,5 +1,47 @@
 import type { MotionProps } from "framer-motion";
 
+/* ==========================================================
+   Hero Animations
+========================================================== */
+
+export const heroLeft: MotionProps = {
+  initial: {
+    opacity: 0,
+    x: -60,
+  },
+
+  animate: {
+    opacity: 1,
+    x: 0,
+  },
+
+  transition: {
+    duration: 0.8,
+    ease: "easeOut",
+  },
+};
+
+export const heroRight: MotionProps = {
+  initial: {
+    opacity: 0,
+    x: 60,
+  },
+
+  animate: {
+    opacity: 1,
+    x: 0,
+  },
+
+  transition: {
+    duration: 0.9,
+    ease: "easeOut",
+  },
+};
+
+/* ==========================================================
+   Scroll Animations
+========================================================== */
+
 export const fadeUp: MotionProps = {
   initial: {
     opacity: 0,
@@ -79,6 +121,26 @@ export const fadeRight: MotionProps = {
 
   transition: {
     duration: 0.7,
+    ease: "easeOut",
+  },
+
+  viewport: {
+    once: true,
+    amount: 0.2,
+  },
+};
+
+export const fadeIn: MotionProps = {
+  initial: {
+    opacity: 0,
+  },
+
+  whileInView: {
+    opacity: 1,
+  },
+
+  transition: {
+    duration: 0.6,
     ease: "easeOut",
   },
 
@@ -169,26 +231,6 @@ export const fadeUpSlow: MotionProps = {
 
   transition: {
     duration: 1,
-    ease: "easeOut",
-  },
-
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
-};
-
-export const fadeIn: MotionProps = {
-  initial: {
-    opacity: 0,
-  },
-
-  whileInView: {
-    opacity: 1,
-  },
-
-  transition: {
-    duration: 0.6,
     ease: "easeOut",
   },
 

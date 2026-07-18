@@ -1,65 +1,88 @@
-export const caseStudies = [
+export interface CaseStudy {
+  title: string;
+  company: string;
+  challenge: string;
+  responsibilities: string[];
+  technologies: string[];
+  result: string;
+}
+
+export const caseStudies: CaseStudy[] = [
   {
-    title: "Industrial Automation Procurement",
+    title: "Industrial Automation Components Procurement",
     company: "RFL Group",
+
     challenge:
-      "Support automation projects by sourcing high-quality PLCs, HMIs, sensors and electrical components within project timelines.",
+      "Supported industrial automation projects by sourcing PLCs, HMIs, sensors, electrical components, and control equipment while ensuring strict project timelines and quality requirements.",
+
     responsibilities: [
-      "Supplier sourcing",
-      "Technical comparison",
-      "Commercial negotiation",
+      "Supplier sourcing and vendor qualification",
+      "Technical and commercial evaluation",
+      "Price and commercial negotiation",
       "Purchase Order management",
-      "Delivery coordination",
+      "Delivery coordination and follow-up",
     ],
+
     technologies: [
+      "SAP S/4HANA",
+      "Strategic Sourcing",
+      "RFQ",
       "PLC",
       "HMI",
-      "SAP",
-      "Excel",
     ],
+
     result:
-      "Ensured timely availability of automation components, supporting uninterrupted project execution.",
+      "Ensured the timely availability of automation components, enabling uninterrupted project execution and supporting manufacturing productivity.",
   },
 
   {
     title: "Material Handling Equipment Procurement",
     company: "RFL Group",
+
     challenge:
-      "Procure forklifts, reach trucks and pallet stackers for manufacturing operations.",
+      "Managed procurement of forklifts, reach trucks, pallet stackers, and warehouse equipment to support manufacturing expansion and operational efficiency.",
+
     responsibilities: [
       "International supplier communication",
-      "Quotation analysis",
-      "Price negotiation",
+      "Quotation analysis and comparison",
+      "Commercial negotiation",
       "Purchase planning",
       "Delivery monitoring",
     ],
+
     technologies: [
       "Supplier Management",
-      "RFQ",
-      "PO",
+      "Purchase Order Management",
       "Negotiation",
+      "Inventory Planning",
     ],
+
     result:
-      "Successfully supported procurement of 100+ material handling equipment units.",
+      "Successfully supported the procurement of more than 100 material handling equipment units while ensuring cost-effective sourcing and on-time delivery.",
   },
 
   {
-    title: "International Supplier Management",
+    title: "International Supplier Network Development",
     company: "China & Taiwan",
+
     challenge:
-      "Maintain communication with overseas suppliers while ensuring competitive pricing and on-time delivery.",
+      "Established and maintained a reliable international supplier network while ensuring competitive pricing, consistent quality, and on-time delivery performance.",
+
     responsibilities: [
       "Vendor communication",
       "Lead time management",
       "Cost analysis",
-      "Relationship management",
+      "Supplier relationship management",
     ],
+
     technologies: [
       "Strategic Sourcing",
       "Supplier Development",
+      "Supplier Relationship Management",
       "Procurement",
     ],
+
     result:
-      "Built strong relationships with more than 100 international suppliers.",
+      "Built and maintained relationships with more than 100 international suppliers across China and Taiwan, strengthening sourcing capability and improving procurement responsiveness.",
   },
 ];

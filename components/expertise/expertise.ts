@@ -1,3 +1,4 @@
+import type { LucideIcon } from "lucide-react";
 import {
   ShoppingCart,
   Boxes,
@@ -5,7 +6,13 @@ import {
   Cpu,
 } from "lucide-react";
 
-export const expertise = [
+export interface ExpertiseItem {
+  icon: LucideIcon;
+  title: string;
+  skills: string[];
+}
+
+export const expertise: ExpertiseItem[] = [
   {
     icon: ShoppingCart,
     title: "Procurement",
@@ -14,7 +21,7 @@ export const expertise = [
       "Supplier Negotiation",
       "Vendor Development",
       "RFQ & Quotation",
-      "Purchase Order",
+      "Purchase Orders",
       "Cost Optimization",
     ],
   },

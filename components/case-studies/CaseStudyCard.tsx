@@ -1,88 +1,155 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
-import { GlassCard } from "@/components/common";
 
-type Props = {
-  study: {
-    title: string;
-    company: string;
-    challenge: string;
-    responsibilities: string[];
-    technologies: string[];
-    result: string;
-  };
-};
+import { GlassCard, Tag } from "@/components/common";
+import { fadeUp } from "@/lib/animations";
 
-export default function CaseStudyCard({ study }: Props) {
+import type { CaseStudy } from "./caseStudies";
+
+interface CaseStudyCardProps {
+  study: CaseStudy;
+}
+
+export default function CaseStudyCard({
+  study,
+}: CaseStudyCardProps) {
   return (
-    <GlassCard>
-      <p className="text-sm uppercase tracking-widest text-cyan-300">
-        {study.company}
-      </p>
+    <motion.div
+      {...fadeUp}
+      className="h-full"
+    >
+      <GlassCard
+        className="
+          h-full
+          transition-all
+          duration-300
 
-      <h3 className="mt-3 text-3xl font-bold text-white">
-        {study.title}
-      </h3>
+          hover:-translate-y-2
+          hover:border-cyan-400/30
+          hover:shadow-[0_0_35px_rgba(34,211,238,.15)]
+        "
+      >
+        {/* Company */}
 
-      <div className="mt-8 space-y-6">
-        <div>
-          <h4 className="text-lg font-semibold text-cyan-300">
-            Challenge
-          </h4>
+        <p
+          className="
+            text-xs
+            font-semibold
+            uppercase
+            tracking-[0.2em]
+            text-cyan-300
 
-          <p className="mt-2 leading-8 text-gray-400">
-            {study.challenge}
-          </p>
-        </div>
+            sm:text-sm
+          "
+        >
+          {study.company}
+        </p>
 
-        <div>
-          <h4 className="text-lg font-semibold text-cyan-300">
-            Responsibilities
-          </h4>
+        {/* Title */}
 
-          <ul className="mt-3 space-y-2">
-            {study.responsibilities.map((item) => (
-              <li key={item} className="flex gap-3">
-                <CheckCircle2
-                  size={18}
-                  className="mt-1 text-cyan-400"
-                  aria-hidden="true"
-                />
+        <h3
+          className="
+            mt-3
+            text-2xl
+            font-bold
+            leading-tight
+            text-white
 
-                <span className="text-gray-300">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+            sm:text-3xl
+          "
+        >
+          {study.title}
+        </h3>
 
-        <div>
-          <h4 className="text-lg font-semibold text-cyan-300">
-            Technologies
-          </h4>
+        {/* Content */}
 
-          <div className="mt-3 flex flex-wrap gap-2">
-            {study.technologies.map((tech) => (
-              <span
-                key={tech}
-                className="rounded-full bg-cyan-500/10 px-3 py-2 text-sm text-cyan-300"
-              >
-                {tech}
-              </span>
-            ))}
+        <div className="mt-8 space-y-8">
+          {/* Challenge */}
+
+          <div>
+            <h4 className="text-lg font-semibold text-cyan-300">
+              Challenge
+            </h4>
+
+            <p
+              className="
+                mt-3
+                leading-7
+                text-gray-400
+
+                lg:leading-8
+              "
+            >
+              {study.challenge}
+            </p>
+          </div>
+
+          {/* Responsibilities */}
+
+          <div>
+            <h4 className="text-lg font-semibold text-cyan-300">
+              Responsibilities
+            </h4>
+
+            <ul className="mt-4 space-y-3">
+              {study.responsibilities.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3"
+                >
+                  <CheckCircle2
+                    size={18}
+                    className="mt-1 shrink-0 text-cyan-400"
+                    aria-hidden="true"
+                  />
+
+                  <span className="leading-7 text-gray-300">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Technologies */}
+
+          <div>
+            <h4 className="text-lg font-semibold text-cyan-300">
+              Technologies
+            </h4>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {study.technologies.map((tech) => (
+                <Tag key={tech}>
+                  {tech}
+                </Tag>
+              ))}
+            </div>
+          </div>
+
+          {/* Outcome */}
+
+          <div>
+            <h4 className="text-lg font-semibold text-cyan-300">
+              Outcome
+            </h4>
+
+            <p
+              className="
+                mt-3
+                leading-7
+                text-gray-300
+
+                lg:leading-8
+              "
+            >
+              {study.result}
+            </p>
           </div>
         </div>
-
-        <div>
-          <h4 className="text-lg font-semibold text-cyan-300">
-            Outcome
-          </h4>
-
-          <p className="mt-2 leading-8 text-gray-300">
-            {study.result}
-          </p>
-        </div>
-      </div>
-    </GlassCard>
+      </GlassCard>
+    </motion.div>
   );
 }

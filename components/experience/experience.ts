@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface ExperienceMetric {
   value: string;
   label: string;
@@ -19,28 +21,41 @@ export const experiences: Experience[] = [
     title: "Assistant Manager – Industrial Automation & SCM",
     company: "RFL Group (DPL Development)",
     location: "Bangladesh",
+
     responsibilities: [
       "Managed end-to-end procurement of industrial automation equipment, machinery, and engineering components.",
-      "Collaborated with more than 100 international suppliers across China and Taiwan.",
-      "Negotiated pricing, delivery schedules, and commercial terms to optimize procurement costs.",
-      "Handled RFQs, quotation evaluation, supplier comparison, purchase orders, and vendor communication.",
-      "Supported supply chain planning and inventory optimization for multiple manufacturing projects.",
-      "Worked with Oracle ERP procurement workflows and documentation.",
-      "Coordinated industrial automation projects including PLC, HMI, and SCADA solutions.",
-      "Collaborated with engineering, production, finance, and warehouse teams for project execution.",
+
+      "Collaborated with more than 100 international suppliers across China and Taiwan to ensure reliable sourcing and timely delivery.",
+
+      "Negotiated pricing, commercial terms, and delivery schedules to optimize procurement costs and supplier performance.",
+
+      "Handled RFQs, quotation evaluation, supplier comparison, purchase orders, and vendor communication throughout the procurement lifecycle.",
+
+      "Supported supply chain planning, inventory optimization, and material availability for multiple manufacturing projects.",
+
+      "Worked with ERP-based procurement workflows, documentation, and procurement reporting.",
+
+      "Coordinated industrial automation projects involving PLC, HMI, SCADA, and RMCS solutions.",
+
+      "Worked closely with engineering, production, finance, and warehouse teams to ensure successful project execution.",
     ],
+
     technologies: [
-      "Oracle ERP",
       "SAP S/4HANA",
       "Strategic Sourcing",
       "Supplier Negotiation",
       "Vendor Development",
+      "RFQ Management",
+      "Purchase Orders",
       "Supply Chain",
+      "Inventory Planning",
       "PLC",
       "HMI",
       "SCADA",
+      "RMCS",
       "Industrial Automation",
     ],
+
     metrics: [
       {
         value: "100+",
@@ -55,41 +70,52 @@ export const experiences: Experience[] = [
         label: "Countries Sourced",
       },
       {
-        value: "1 Year+",
+        value: "1+ Years",
         label: "Leadership Experience",
       },
     ],
   },
+
   {
     period: "Aug 2024 – May 2025",
     title: "Assistant Engineer – Industrial Automation",
     company: "RFL Group (DPL Development)",
     location: "Bangladesh",
+
     responsibilities: [
       "Designed and implemented industrial automation solutions for manufacturing operations.",
-      "Developed HMI interfaces and assisted with PLC programming and commissioning.",
-      "Supported machine installation, testing, troubleshooting, and preventive maintenance.",
-      "Worked closely with production teams to improve operational efficiency and minimize downtime.",
+
+      "Developed HMI interfaces and supported PLC programming, testing, and commissioning activities.",
+
+      "Performed machine installation, troubleshooting, preventive maintenance, and system optimization.",
+
+      "Collaborated with production teams to improve operational efficiency and reduce machine downtime.",
     ],
+
     technologies: [
       "PLC",
       "HMI",
       "SCADA",
       "Industrial Automation",
-      "AutoCAD",
       "Electrical Design",
+      "AutoCAD",
     ],
   },
+
   {
     period: "Aug 2024 – Jan 2025",
     title: "Trainee Engineer – Industrial Automation",
     company: "RFL Group (DPL Development)",
     location: "Bangladesh",
+
     responsibilities: [
-      "Received hands-on training in industrial automation systems and manufacturing processes.",
-      "Assisted senior engineers in machine commissioning and project implementation.",
-      "Prepared technical documentation and supported engineering activities.",
+      "Received hands-on training in industrial automation systems, manufacturing operations, and engineering practices.",
+
+      "Assisted senior engineers with machine commissioning, troubleshooting, and project implementation.",
+
+      "Prepared technical documentation, reports, and engineering support materials.",
     ],
+
     technologies: [
       "PLC",
       "HMI",

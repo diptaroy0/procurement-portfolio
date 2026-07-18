@@ -1,67 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  MapPin,
-  Mail,
-  Phone,
-  GraduationCap,
-  BriefcaseBusiness,
-  Languages,
-} from "lucide-react";
 
-const info = [
-  {
-    icon: MapPin,
-    title: "Location",
-    value: "Satarkul, Badda, Dhaka",
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    value: "diptaroy0@gmail.com",
-  },
-  {
-    icon: Phone,
-    title: "Phone",
-    value: "+880 1773-317355",
-  },
-  {
-    icon: GraduationCap,
-    title: "Education",
-    value: "B.Sc. EEE • Professional MBA (BUP)",
-  },
-  {
-    icon: BriefcaseBusiness,
-    title: "Experience",
-    value: "Industrial Automation & Procurement",
-  },
-  {
-    icon: Languages,
-    title: "Languages",
-    value: "Bangla • English",
-  },
-];
+import { fadeUp } from "@/lib/animations";
+
+import { info } from "./info";
 
 export default function AboutInfo() {
   return (
     <div className="grid gap-5 sm:grid-cols-2">
-      {info.map((item, index) => {
+      {info.map((item) => {
         const Icon = item.icon;
 
         return (
           <motion.div
             key={item.title}
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              delay: index * 0.08,
-              duration: 0.5,
-            }}
-            whileHover={{
-              y: -5,
-            }}
+            {...fadeUp}
+            whileHover={{ y: -5 }}
             className="
               group
               flex
@@ -98,7 +53,10 @@ export default function AboutInfo() {
                 group-hover:rotate-6
               "
             >
-              <Icon size={20} />
+              <Icon
+                size={20}
+                aria-hidden="true"
+              />
             </div>
 
             <div>
@@ -106,9 +64,19 @@ export default function AboutInfo() {
                 {item.title}
               </p>
 
-              <p className="mt-1 text-[15px] font-semibold leading-6 text-white">
-  {item.value}
-</p>
+              <p
+                className="
+                  mt-1
+                  text-sm
+                  font-semibold
+                  leading-6
+                  text-white
+
+                  sm:text-[15px]
+                "
+              >
+                {item.value}
+              </p>
             </div>
           </motion.div>
         );

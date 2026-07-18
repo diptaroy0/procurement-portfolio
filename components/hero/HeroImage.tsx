@@ -2,18 +2,25 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+
+import { heroRight } from "@/lib/animations";
+
 import FloatingCards from "./FloatingCards";
 
 export default function HeroImage() {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 60 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{
-        duration: 0.8,
-        delay: 0.4,
-      }}
-      className="relative flex justify-center lg:justify-end lg:translate-x-32 lg:-translate-y-44"
+      {...heroRight}
+      className="
+        relative
+        flex
+        justify-center
+        lg:justify-end
+        lg:translate-x-20
+        xl:translate-x-28
+        lg:-translate-y-24
+        xl:-translate-y-36
+      "
     >
       {/* ======================================================
           MAIN AMBIENT GLOW
@@ -33,13 +40,23 @@ export default function HeroImage() {
           absolute
           left-1/2
           top-1/2
-          h-[620px]
-          w-[620px]
+          h-[380px]
+          w-[380px]
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
           bg-cyan-400/15
-          blur-[150px]
+          blur-[100px]
+
+          sm:h-[460px]
+          sm:w-[460px]
+
+          md:h-[520px]
+          md:w-[520px]
+
+          lg:h-[620px]
+          lg:w-[620px]
+          lg:blur-[150px]
         "
       />
 
@@ -52,8 +69,8 @@ export default function HeroImage() {
           absolute
           left-1/2
           top-[52%]
-          h-[500px]
-          w-[500px]
+          h-[300px]
+          w-[300px]
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
@@ -64,11 +81,20 @@ export default function HeroImage() {
           via-cyan-400/5
           to-transparent
           backdrop-blur-sm
+
+          sm:h-[360px]
+          sm:w-[360px]
+
+          md:h-[420px]
+          md:w-[420px]
+
+          lg:h-[500px]
+          lg:w-[500px]
         "
       />
 
       {/* ======================================================
-          EXTRA PORTRAIT LIGHT
+          PORTRAIT LIGHT
       ======================================================= */}
 
       <div
@@ -76,13 +102,23 @@ export default function HeroImage() {
           absolute
           left-1/2
           top-[48%]
-          h-[380px]
-          w-[380px]
+          h-[260px]
+          w-[260px]
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
           bg-cyan-300/10
-          blur-[90px]
+          blur-[70px]
+
+          sm:h-[320px]
+          sm:w-[320px]
+
+          md:h-[340px]
+          md:w-[340px]
+
+          lg:h-[380px]
+          lg:w-[380px]
+          lg:blur-[90px]
         "
       />
 
@@ -116,17 +152,20 @@ export default function HeroImage() {
       >
         <Image
           src="/images/dipta.png"
-          alt="Dipta Roy"
+          alt="Dipta Roy - Procurement & Supply Chain Professional"
           width={520}
           height={700}
           priority
           className="
             h-auto
-            w-[440px]
+            w-[300px]
             object-contain
             drop-shadow-[0_45px_90px_rgba(0,0,0,.65)]
             transition-all
             duration-500
+
+            sm:w-[360px]
+            md:w-[420px]
             lg:w-[510px]
           "
         />

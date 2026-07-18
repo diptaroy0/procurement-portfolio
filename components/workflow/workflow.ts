@@ -1,3 +1,4 @@
+import type { LucideIcon } from "lucide-react";
 import {
   ClipboardList,
   FileText,
@@ -11,55 +12,71 @@ import {
   Wallet,
 } from "lucide-react";
 
-export const workflow = [
+export interface WorkflowStep {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+export const workflow: WorkflowStep[] = [
   {
     icon: ClipboardList,
     title: "Requirement",
-    description: "Receive technical or business requirements from stakeholders.",
+    description:
+      "Receive technical or business requirements from stakeholders.",
   },
   {
     icon: FileText,
     title: "Purchase Requisition",
-    description: "Review and approve procurement requests.",
+    description:
+      "Review and approve procurement requests before sourcing.",
   },
   {
     icon: Search,
     title: "RFQ",
-    description: "Request quotations from qualified suppliers.",
+    description:
+      "Request quotations from qualified suppliers and collect commercial offers.",
   },
   {
     icon: Users,
     title: "Supplier Evaluation",
-    description: "Compare technical capability, quality and pricing.",
+    description:
+      "Evaluate suppliers based on technical capability, quality, pricing, and delivery performance.",
   },
   {
     icon: Handshake,
     title: "Negotiation",
-    description: "Finalize pricing, lead time and commercial terms.",
+    description:
+      "Negotiate pricing, lead time, payment terms, warranty, and commercial conditions.",
   },
   {
     icon: ShoppingCart,
     title: "Purchase Order",
-    description: "Issue the official purchase order to the selected supplier.",
+    description:
+      "Issue the official Purchase Order to the selected supplier.",
   },
   {
     icon: Truck,
     title: "Delivery",
-    description: "Coordinate logistics and shipment tracking.",
+    description:
+      "Coordinate logistics, shipment tracking, customs, and delivery schedules.",
   },
   {
     icon: PackageCheck,
     title: "GRN",
-    description: "Verify received materials and record goods receipt.",
+    description:
+      "Inspect received materials and complete the Goods Receipt Note process.",
   },
   {
     icon: Receipt,
     title: "Invoice Verification",
-    description: "Match invoice with PO and GRN.",
+    description:
+      "Match supplier invoices against the Purchase Order and GRN before approval.",
   },
   {
     icon: Wallet,
     title: "Payment",
-    description: "Complete payment according to agreed terms.",
+    description:
+      "Process supplier payment according to agreed commercial terms.",
   },
 ];

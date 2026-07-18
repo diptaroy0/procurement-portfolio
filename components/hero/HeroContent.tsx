@@ -1,51 +1,100 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Circle } from "lucide-react";
 
+import { IconBadge } from "@/components/common";
 import { profile } from "@/data/profile";
+import {
+  fadeDown,
+  fadeIn,
+  fadeUp,
+} from "@/lib/animations";
 
 import HeroButtons from "./HeroButtons";
 
 export default function HeroContent() {
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-xl lg:max-w-2xl">
+      {/* Availability */}
 
-      {/* Badge */}
-
-      <motion.div
-        initial={{ opacity: 0, y: 25 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="mb-8 inline-flex items-center gap-3 rounded-full border border-cyan-400/25 bg-cyan-500/5 px-5 py-3 backdrop-blur-xl"
-      >
-        <span className="h-2.5 w-2.5 rounded-full bg-cyan-400 animate-pulse" />
-
-        <span className="text-sm font-medium text-cyan-300">
+      <motion.div {...fadeDown} className="mb-8">
+        <IconBadge icon={Circle} iconSize={10}>
           {profile.availability}
-        </span>
+        </IconBadge>
       </motion.div>
 
       {/* Heading */}
 
       <motion.h1
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.15, duration: 0.7 }}
+        id="hero-heading"
+        {...fadeUp}
         className="leading-[0.95]"
       >
-        <span className="block text-6xl font-black tracking-tight text-white lg:text-8xl">
+        <span
+          className="
+            block
+            text-5xl
+            font-black
+            tracking-tight
+            text-white
+            sm:text-6xl
+            xl:text-8xl
+          "
+        >
           {profile.headline.line1}
         </span>
 
-        <span className="block text-6xl font-black tracking-tight text-white lg:text-8xl">
+        <span
+          className="
+            block
+            text-5xl
+            font-black
+            tracking-tight
+            text-white
+            sm:text-6xl
+            xl:text-8xl
+          "
+        >
           {profile.headline.line2}
         </span>
 
-        <span className="mt-5 block bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 bg-clip-text text-6xl font-black tracking-tight text-transparent lg:text-8xl">
+        <span
+          className="
+            mt-5
+            block
+            bg-gradient-to-r
+            from-cyan-300
+            via-sky-400
+            to-blue-500
+            bg-clip-text
+            text-5xl
+            font-black
+            tracking-tight
+            text-transparent
+            sm:text-6xl
+            xl:text-8xl
+          "
+        >
           {profile.headline.line3}
         </span>
 
-        <span className="block bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 bg-clip-text text-6xl font-black tracking-tight text-transparent lg:text-8xl">
+        <span
+          className="
+            block
+            bg-gradient-to-r
+            from-cyan-300
+            via-sky-400
+            to-blue-500
+            bg-clip-text
+            text-5xl
+            font-black
+            tracking-tight
+            text-transparent
+            sm:text-6xl
+            xl:text-8xl
+          "
+        >
           {profile.headline.line4}
         </span>
       </motion.h1>
@@ -55,28 +104,49 @@ export default function HeroContent() {
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: 120 }}
-        transition={{ delay: 0.7, duration: 0.7 }}
+        transition={{
+          duration: 0.7,
+          delay: 0.5,
+        }}
         className="mt-10 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600"
       />
 
-      {/* Main Paragraph */}
+      {/* Summary */}
 
       <motion.p
-        initial={{ opacity: 0, y: 25 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-        className="mt-10 text-lg leading-[2.35rem] text-gray-300"
+        {...fadeUp}
+        transition={{
+          ...fadeUp.transition,
+          delay: 0.2,
+        }}
+        className="
+          mt-10
+          text-base
+          leading-8
+          text-gray-300
+          sm:text-lg
+          sm:leading-9
+        "
       >
         {profile.summary}
       </motion.p>
 
-      {/* Secondary Paragraph */}
+      {/* Description */}
 
       <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.75 }}
-        className="mt-8 text-lg leading-[2.35rem] text-gray-400"
+        {...fadeIn}
+        transition={{
+          ...fadeIn.transition,
+          delay: 0.4,
+        }}
+        className="
+          mt-8
+          text-base
+          leading-8
+          text-gray-400
+          sm:text-lg
+          sm:leading-9
+        "
       >
         {profile.description}
       </motion.p>
@@ -84,14 +154,15 @@ export default function HeroContent() {
       {/* Buttons */}
 
       <motion.div
-        initial={{ opacity: 0, y: 35 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.95 }}
+        {...fadeUp}
+        transition={{
+          ...fadeUp.transition,
+          delay: 0.6,
+        }}
         className="mt-12"
       >
         <HeroButtons />
       </motion.div>
-
     </div>
   );
 }

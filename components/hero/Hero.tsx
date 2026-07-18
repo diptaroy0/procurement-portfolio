@@ -2,50 +2,63 @@
 
 import { motion } from "framer-motion";
 
-import Container from "../common/Container";
+import { Container } from "@/components/common";
+import BackgroundEffects from "@/components/ui/BackgroundEffects";
+import { heroLeft, heroRight } from "@/lib/animations";
+
 import HeroContent from "./HeroContent";
 import HeroImage from "./HeroImage";
-import BackgroundEffects from "../ui/BackgroundEffects";
 import ScrollIndicator from "./ScrollIndicator";
-import Stats from "./HeroStats";
+import HeroStats from "./HeroStats";
 
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen overflow-hidden pt-36 pb-12"
       id="home"
+      aria-labelledby="hero-heading"
+      className="relative min-h-screen overflow-hidden pt-32 pb-16 lg:pt-36 lg:pb-12"
     >
       <BackgroundEffects />
 
       <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-
+        <div
+          className="
+            grid
+            items-center
+            gap-14
+            lg:grid-cols-[1.2fr_0.8fr]
+            lg:gap-10
+          "
+        >
           {/* LEFT */}
 
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative z-30"
+            {...heroLeft}
+            className="relative z-30 order-2 lg:order-1"
           >
             <HeroContent />
 
-            <div className="mt-14">
-              <Stats />
+            <div className="mt-12 lg:mt-14">
+              <HeroStats />
             </div>
           </motion.div>
 
           {/* RIGHT */}
 
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9 }}
-            className="relative z-10 flex justify-center lg:justify-end"
+            {...heroRight}
+            className="
+              relative
+              z-10
+              order-1
+              flex
+              justify-center
+              lg:order-2
+              lg:justify-end
+            "
           >
             <HeroImage />
           </motion.div>
-
         </div>
 
         <ScrollIndicator />

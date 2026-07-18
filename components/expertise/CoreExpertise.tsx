@@ -1,4 +1,9 @@
-import { SectionHeader } from "@/components/common";
+"use client";
+
+import {
+  Container,
+  SectionHeader,
+} from "@/components/common";
 
 import ExpertiseGrid from "./ExpertiseGrid";
 import TechnicalSkills from "./TechnicalSkills";
@@ -7,9 +12,10 @@ export default function CoreExpertise() {
   return (
     <section
       id="expertise"
-      className="relative py-28"
+      aria-labelledby="expertise-heading"
+      className="relative py-20 md:py-24 lg:py-28"
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <Container>
         <SectionHeader
           id="expertise-heading"
           badge="Professional Expertise"
@@ -17,18 +23,14 @@ export default function CoreExpertise() {
           description="Engineering precision combined with strategic procurement, supply chain management, ERP systems, and industrial automation to deliver reliable, efficient, and cost-effective business solutions."
         />
 
-        {/* Expertise Cards */}
-
-        <div className="mt-16">
+        <div className="mt-12 lg:mt-16">
           <ExpertiseGrid />
         </div>
 
-        {/* Technical Skills */}
-
-        <div className="mt-20">
+        <div className="mt-16 lg:mt-20">
           <TechnicalSkills />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
