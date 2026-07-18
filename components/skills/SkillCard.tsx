@@ -101,9 +101,9 @@ export default function SkillCard({
 
       {/* Title */}
 
-      <h3 className="mt-8 text-2xl font-bold text-white">
+      <p className="mt-8 text-2xl font-bold text-white">
         {skill.title}
-      </h3>
+      </p>
 
       {/* Divider */}
 

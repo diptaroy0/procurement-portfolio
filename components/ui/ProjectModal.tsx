@@ -151,9 +151,9 @@ export default function ProjectModal({
                 {/* Technologies */}
 
                 <div>
-                  <h3 className="mb-4 text-lg font-semibold text-cyan-400">
+                  <p className="mb-4 text-lg font-semibold text-cyan-400">
                     Technologies
-                  </h3>
+                  </p>
 
                   <div className="flex flex-wrap gap-3">
                     {project.technologies.map((tech) => (
@@ -180,9 +180,9 @@ export default function ProjectModal({
 
                 <div className="grid gap-8 md:grid-cols-3">
                   <div>
-                    <h3 className="mb-3 text-lg font-semibold text-cyan-400">
+                    <p className="mb-3 text-lg font-semibold text-cyan-400">
                       Challenge
-                    </h3>
+                    </p>
 
                     <p className="text-slate-300">
                       {project.challenge}
@@ -190,9 +190,9 @@ export default function ProjectModal({
                   </div>
 
                   <div>
-                    <h3 className="mb-3 text-lg font-semibold text-cyan-400">
+                    <p className="mb-3 text-lg font-semibold text-cyan-400">
                       Solution
-                    </h3>
+                    </p>
 
                     <p className="text-slate-300">
                       {project.solution}
@@ -200,9 +200,9 @@ export default function ProjectModal({
                   </div>
 
                   <div>
-                    <h3 className="mb-3 text-lg font-semibold text-cyan-400">
+                    <p className="mb-3 text-lg font-semibold text-cyan-400">
                       Impact
-                    </h3>
+                    </p>
 
                     <p className="text-slate-300">
                       {project.impact}

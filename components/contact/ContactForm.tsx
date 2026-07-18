@@ -28,9 +28,9 @@ export default function ContactForm() {
         shadow-[0_20px_60px_rgba(0,0,0,.45)]
       "
     >
-      <h3 className="text-3xl font-bold text-white">
+      <p className="text-3xl font-bold text-white">
         Send a Message
-      </h3>
+      </p>
 
       <p className="mt-3 leading-8 text-gray-400">
         Have an opportunity or project in mind? Fill out the form below and I'll

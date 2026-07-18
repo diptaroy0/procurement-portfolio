@@ -102,9 +102,9 @@ export default function ExperienceCard({
             {experience.period}
           </span>
 
-          <h3 className="mt-7 text-4xl font-bold text-white">
+          <p className="mt-7 text-4xl font-bold text-white">
             {experience.title}
-          </h3>
+          </p>
 
           <div className="mt-5 flex flex-wrap gap-8 text-gray-400">
 

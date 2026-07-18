@@ -100,9 +100,9 @@ export default function AboutImage() {
 
           </div>
 
-          <h3 className="mt-6 text-3xl font-bold text-white">
+          <p className="mt-6 text-3xl font-bold text-white">
             Dipta Roy
-          </h3>
+          </p>
 
           <p className="mt-2 text-center text-cyan-400">
             Procurement & Supply Chain Professional

@@ -104,9 +104,9 @@ export default function AboutHighlights() {
               <Icon size={24} />
             </div>
 
-            <h3 className="gradient-text text-3xl font-black">
+            <p className="gradient-text text-3xl font-black">
               {item.value}
-            </h3>
+            </p>
 
             <p className="mt-2 text-sm leading-6 text-gray-400">
               {item.title}
