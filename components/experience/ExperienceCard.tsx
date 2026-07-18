@@ -171,11 +171,11 @@ export default function ExperienceCard({
                 "
               >
 
-                <h4 className="text-3xl font-bold text-cyan-400">
+                <p className="text-3xl font-bold text-cyan-400">
 
                   {metric.value}
 
-                </h4>
+                </p>
 
                 <p className="mt-2 text-sm text-gray-400">
 
@@ -195,11 +195,11 @@ export default function ExperienceCard({
 
         <div className="px-9 pb-9">
 
-          <h4 className="mb-6 text-xl font-semibold text-white">
+          <p className="mb-6 text-xl font-semibold text-white">
 
             Key Responsibilities
 
-          </h4>
+          </p>
 
           <div className="space-y-5">
 
