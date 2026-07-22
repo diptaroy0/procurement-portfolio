@@ -1,17 +1,32 @@
+import type { LucideIcon } from "lucide-react";
 import {
   GraduationCap,
   BookOpen,
   Award,
 } from "lucide-react";
 
-export const education = [
+export interface EducationItem {
+  icon: LucideIcon;
+  title: string;
+  organization: string;
+  period: string;
+  description: string;
+}
+
+export interface CertificationItem {
+  icon: LucideIcon;
+  title: string;
+  status: string;
+}
+
+export const education: EducationItem[] = [
   {
     icon: GraduationCap,
     title: "Professional MBA (Supply Chain Management)",
     organization: "Bangladesh University of Professionals (BUP)",
     period: "2026 – Present",
     description:
-      "Pursuing advanced knowledge in supply chain management, strategic procurement, logistics, operations and business leadership.",
+      "Pursuing advanced knowledge in supply chain management, strategic procurement, logistics, operations management, and business leadership.",
   },
   {
     icon: GraduationCap,
@@ -19,11 +34,11 @@ export const education = [
     organization: "Hajee Mohammad Danesh Science & Technology University",
     period: "Completed",
     description:
-      "Built a strong engineering foundation in industrial systems, automation, electrical design and problem solving.",
+      "Built a strong engineering foundation in industrial automation, electrical systems, control engineering, and analytical problem solving.",
   },
 ];
 
-export const certifications = [
+export const certifications: CertificationItem[] = [
   {
     icon: Award,
     title: "SAP S/4HANA Procurement",

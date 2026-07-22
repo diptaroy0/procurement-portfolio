@@ -1,56 +1,49 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
-
 import {
-  MapPin,
-  Mail,
-  Phone,
-  Download,
   CheckCircle2,
+  Download,
+  Mail,
+  MapPin,
+  Phone,
 } from "lucide-react";
-
 import {
   FaGithub,
   FaLinkedinIn,
 } from "react-icons/fa";
 
+import { GlassCard } from "@/components/common";
 import { site } from "@/data/site";
 
 export default function ContactInfo() {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -40 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
+    <GlassCard
       className="
-        rounded-[32px]
-        border
-        border-cyan-400/15
-        bg-[rgba(15,23,42,.72)]
-        p-10
-        backdrop-blur-2xl
-        shadow-[0_20px_60px_rgba(0,0,0,.45)]
+        h-full
+        transition-all
+        duration-300
+        hover:border-cyan-400/30
       "
     >
       {/* Profile */}
 
-      <div className="flex items-center gap-5">
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
         <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-cyan-400/20">
           <Image
             src={site.profileImage}
             alt={`${site.name} - Procurement & Supply Chain Professional`}
             fill
             className="object-cover"
+            sizes="96px"
+            priority={false}
           />
         </div>
 
         <div>
-          <p className="text-3xl font-bold text-white">
-  {site.name}
-</p>
+          <h3 className="text-3xl font-bold text-white">
+            {site.name}
+          </h3>
 
           <p className="mt-2 text-cyan-300">
             {site.title}
@@ -75,7 +68,6 @@ export default function ContactInfo() {
             <CheckCircle2
               size={16}
               aria-hidden="true"
-              focusable="false"
             />
 
             {site.availability}
@@ -90,53 +82,35 @@ export default function ContactInfo() {
         className="my-10 h-px bg-gradient-to-r from-cyan-400/30 to-transparent"
       />
 
-      {/* Contact Information */}
+      {/* Contact Details */}
 
       <div className="space-y-6">
         <InfoItem
-          icon={
-            <MapPin
-              size={20}
-              aria-hidden="true"
-              focusable="false"
-            />
-          }
+          icon={<MapPin size={20} />}
           label="Location"
           value={site.location}
         />
 
         <InfoItem
-          icon={
-            <Mail
-              size={20}
-              aria-hidden="true"
-              focusable="false"
-            />
-          }
+          icon={<Mail size={20} />}
           label="Email"
           value={site.email}
         />
 
         <InfoItem
-          icon={
-            <Phone
-              size={20}
-              aria-hidden="true"
-              focusable="false"
-            />
-          }
+          icon={<Phone size={20} />}
           label="Phone"
           value={site.phone}
         />
       </div>
 
-      {/* Buttons */}
+      {/* CTA Buttons */}
 
       <div className="mt-10 flex flex-wrap gap-4">
         <a
           href={site.resume}
           download
-          aria-label="Download Dipta Roy's resume"
+          aria-label="Download Resume"
           className="
             inline-flex
             items-center
@@ -155,11 +129,7 @@ export default function ContactInfo() {
             hover:shadow-[0_0_25px_rgba(34,211,238,.25)]
           "
         >
-          <Download
-            size={18}
-            aria-hidden="true"
-            focusable="false"
-          />
+          <Download size={18} />
 
           Resume
         </a>
@@ -168,7 +138,7 @@ export default function ContactInfo() {
           href={site.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit Dipta Roy's LinkedIn profile (opens in a new tab)"
+          aria-label="Visit LinkedIn Profile"
           className="
             inline-flex
             items-center
@@ -187,7 +157,6 @@ export default function ContactInfo() {
         >
           <FaLinkedinIn
             size={18}
-            aria-hidden="true"
             className="text-cyan-400"
           />
 
@@ -198,7 +167,7 @@ export default function ContactInfo() {
           href={site.github}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit Dipta Roy's GitHub profile (opens in a new tab)"
+          aria-label="Visit GitHub Profile"
           className="
             inline-flex
             items-center
@@ -217,30 +186,30 @@ export default function ContactInfo() {
         >
           <FaGithub
             size={18}
-            aria-hidden="true"
             className="text-white"
           />
 
           GitHub
         </a>
       </div>
-    </motion.div>
+    </GlassCard>
   );
+}
+
+interface InfoItemProps {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
 }
 
 function InfoItem({
   icon,
   label,
   value,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  value: string;
-}) {
+}: InfoItemProps) {
   return (
     <div className="flex items-start gap-4">
       <div
-        aria-hidden="true"
         className="
           flex
           h-12
@@ -260,7 +229,7 @@ function InfoItem({
           {label}
         </p>
 
-        <p className="mt-1 font-medium text-white">
+        <p className="mt-1 font-medium text-white break-all">
           {value}
         </p>
       </div>
