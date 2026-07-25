@@ -10,16 +10,20 @@ import FloatingCards from "./FloatingCards";
 export default function HeroImage() {
   return (
     <motion.div
-      {...heroRight}
-      className="
-        relative
-        flex
-        items-center
-        justify-center
+  {...heroRight}
+  className="
+    relative
+    flex
+    items-center
+    justify-center
 
-        lg:justify-end
-      "
-    >
+    lg:justify-end
+
+    lg:translate-x-20
+    xl:translate-x-28
+    2xl:translate-x-32
+  "
+>
       {/* ======================================================
           MAIN AMBIENT GLOW
       ======================================================= */}
