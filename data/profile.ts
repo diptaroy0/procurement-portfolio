@@ -22,8 +22,8 @@ export const profile = {
   },
   {
     icon: "briefcase",
-    value: "500+",
-    label: "Purchase Orders",
+    value: "USD $3 Million+",
+    label: "Machine & Spare Parts Purchase",
   },
   {
     icon: "award",
