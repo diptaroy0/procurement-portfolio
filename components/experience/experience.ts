@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
   {
     period: "Jun 2025 – Jun 2026",
     title: "Assistant Manager – Procurement & Development",
-    company: "RFL-DPL-Development)",
+    company: "RFL-DPL-Development",
     location: "Dhaka, Bangladesh",
 
     responsibilities: [
