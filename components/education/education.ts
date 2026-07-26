@@ -32,10 +32,27 @@ export const education: EducationItem[] = [
     icon: GraduationCap,
     title: "B.Sc. in Electrical & Electronic Engineering",
     organization: "Hajee Mohammad Danesh Science & Technology University",
-    period: "Completed",
+    period: "Completed", 
     description:
       "Built a strong engineering foundation in industrial automation, electrical systems, control engineering, and analytical problem solving.",
   },
+
+  {
+    icon: GraduationCap,
+    title: "HSC(Higher Secondary Certificate) in Science",
+    organization: "Ranisankail College, Thakurgaon",
+    period: "Completed",
+    description: "Built a solid foundation in physics, chemistry, and mathematics, preparing for advanced studies in engineering and technology.",
+  },
+
+{
+    icon: GraduationCap,
+    title: "SSC(Secondary School Certificate) in Science",
+    organization: "Ranisankail Pilot Boys High School, Thakurgaon",
+    period: "Completed",
+    description: "Developed a strong understanding of scientific principles and analytical skills, laying the groundwork for further academic pursuits."
+  },
+
 ];
 
 export const certifications: CertificationItem[] = [
