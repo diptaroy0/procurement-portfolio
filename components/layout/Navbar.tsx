@@ -151,7 +151,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <a
-            href="/resume/Dipta_Roy_Resume.pdf"
+            href="/resume/Resume.pdf"
             download
             aria-label="Download Dipta Roy's resume"
             className="
