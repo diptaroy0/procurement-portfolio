@@ -10,7 +10,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "http://localhost:3000";
+const siteUrl = "https://diptaroy0.vercel.app/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

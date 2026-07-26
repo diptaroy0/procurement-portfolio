@@ -11,8 +11,9 @@ import useActiveSection from "@/hooks/useActiveSection";
 const navItems = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
+  { name: "Expertise", href: "#expertise" },
   { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
+  { name: "e", href: "#expertise" },
   { name: "Contact", href: "#contact" },
 ];
 
