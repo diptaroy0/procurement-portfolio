@@ -24,13 +24,13 @@ export default function Home() {
 
         <Hero />
 
-        <Achievements />
-
-        <CoreExpertise />
-
         <About />
 
         <Experience />
+
+        <Achievements />
+
+        <CoreExpertise />
 
         <ProcurementWorkflow />
 
