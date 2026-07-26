@@ -21,4 +21,6 @@ export const site = {
   github: "https://github.com/diptaroy0",
 
   profileImage: "/images/dipta.png",
+
+  logoImage: "/images/Logo_Dipta.png",
 };

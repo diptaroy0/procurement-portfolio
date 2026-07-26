@@ -27,7 +27,7 @@ export const profile = {
   },
   {
     icon: "award",
-    value: "5+",
+    value: "2+",
     label: "Years Experience",
   },
   {

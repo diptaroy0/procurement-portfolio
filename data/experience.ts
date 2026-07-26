@@ -22,7 +22,7 @@ export const experience: Experience[] = [
 
     title: "Assistant Manager",
 
-    company: "RFL Development",
+    company: "RFL-DPL-Development",
 
     location: "Dhaka, Bangladesh",
 
@@ -68,9 +68,9 @@ export const experience: Experience[] = [
 
     title: "Assistant Engineer",
 
-    company: "RFL Maintenance",
+    company: "RFL-RIP-DPL-Maintenance",
 
-    location: "Dhaka, Bangladesh",
+    location: "Kaliganj, Gazipur,Dhaka, Bangladesh",
 
     metrics: [
       {
@@ -102,7 +102,9 @@ export const experience: Experience[] = [
 
     title: "Trainee Engineer",
 
-    company: "RFL RIP-DPL",
+    company: "RFL-RIP-DPL-Maintenance",
+    
+    location: "Kaliganj, Gazipur,Dhaka, Bangladesh", 
 
     responsibilities: [
       "Industrial production support.",
