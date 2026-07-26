@@ -80,7 +80,7 @@ export default function Navbar() {
           <div >
 
           <Image
-                        src="/images/Logo.png"
+                        src="/images/Logo_Dipta.png"
                         alt="Dipta Roy"
                         width={100}
                         height={100}
