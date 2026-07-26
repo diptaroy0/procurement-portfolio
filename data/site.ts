@@ -14,7 +14,7 @@ export const site = {
 
   location: "Satarkul, Badda, Dhaka",
 
-  resume: "/resume/Dipta_Roy_Resume.pdf",
+  resume: "/resume/Resume.pdf",
 
   linkedin: "https://www.linkedin.com/in/diptaroy0/",
 
