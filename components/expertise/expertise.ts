@@ -30,10 +30,10 @@ export const expertise: ExpertiseItem[] = [
     title: "Supply Chain",
     skills: [
       "Inventory Management",
-      "Material Planning",
+      "Spare Parts Planning",
       "Vendor Coordination",
-      "Warehouse Operations",
-      "Logistics Support",
+      "LC Documentation",
+      "SCM Operations",
       "Material Handling",
     ],
   },
