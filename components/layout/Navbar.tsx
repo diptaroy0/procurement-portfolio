@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
+import Image from "next/image";
 
 import MobileMenu from "./MobileMenu";
 import useActiveSection from "@/hooks/useActiveSection";
@@ -77,7 +78,20 @@ export default function Navbar() {
           className="flex items-center gap-4"
         >
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 text-xl font-bold text-white shadow-lg shadow-cyan-500/25">
-            DR
+DR
+          <Image
+                        src="/images/Logo.png"
+                        alt="Dipta Roy"
+                        width={20}
+                        height={20}
+                        className="
+                          relative
+                          h-10
+                          w-10
+                          rounded-full                
+                        "
+                      />
+            
           </div>
 
           <div>
