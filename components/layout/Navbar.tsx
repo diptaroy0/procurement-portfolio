@@ -86,8 +86,8 @@ export default function Navbar() {
                         height={100}
                         className="
                           relative
-                          h-10
-                          w-10               
+                          h-20
+                          w-20               
                         "
                       />
             
