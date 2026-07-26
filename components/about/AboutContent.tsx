@@ -88,7 +88,8 @@ export default function AboutContent() {
         Having worked with over 100 international supplier organizations and
         managed procurement activities worth more than USD 3 Million, I combine
         engineering knowledge with commercial decision-making to deliver
-        measurable business value.
+        measurable business value. Currently pursuing Professionan MBA at the 
+        Bangladesh University of Professionals. 
       </motion.p>
 
       {/* Personal Information */}
