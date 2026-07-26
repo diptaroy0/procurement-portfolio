@@ -18,9 +18,9 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     period: "Jun 2025 – Jun 2026",
-    title: "Assistant Manager – Industrial Automation & SCM",
-    company: "RFL Group (DPL Development)",
-    location: "Bangladesh",
+    title: "Assistant Manager – Procurement & Development",
+    company: "RFL-DPL-Development)",
+    location: "Dhaka, Bangladesh",
 
     responsibilities: [
       "Managed end-to-end procurement of industrial automation equipment, machinery, and engineering components.",
@@ -35,25 +35,26 @@ export const experiences: Experience[] = [
 
       "Worked with ERP-based procurement workflows, documentation, and procurement reporting.",
 
-      "Coordinated industrial automation projects involving PLC, HMI, SCADA, and RMCS solutions.",
+      "Coordinated industrial automation projects involving PLC, HMI, and RMCS solutions.",
 
       "Worked closely with engineering, production, finance, and warehouse teams to ensure successful project execution.",
     ],
 
     technologies: [
-      "SAP S/4HANA",
       "Strategic Sourcing",
       "Supplier Negotiation",
       "Vendor Development",
       "RFQ Management",
+      "Comparative Statements",
       "Purchase Orders",
       "Supply Chain",
-      "Inventory Planning",
+      "Oracle ERP",
+      "Spare Parts Planning",
       "PLC",
       "HMI",
-      "SCADA",
       "RMCS",
       "Industrial Automation",
+      "Material Handling",
     ],
 
     metrics: [
@@ -78,9 +79,9 @@ export const experiences: Experience[] = [
 
   {
     period: "Aug 2024 – May 2025",
-    title: "Assistant Engineer – Industrial Automation",
-    company: "RFL Group (DPL Development)",
-    location: "Bangladesh",
+    title: "Assistant Engineer – Procurement & Industrial Automation",
+    company: "RFL-RIP-DPL-Maintenance",
+    location: "Kaliganj, Gazipur, Dhaka,Bangladesh",
 
     responsibilities: [
       "Designed and implemented industrial automation solutions for manufacturing operations.",
@@ -89,13 +90,16 @@ export const experiences: Experience[] = [
 
       "Performed machine installation, troubleshooting, preventive maintenance, and system optimization.",
 
+      "Planned and executed procurement of industrial automation components, sensors, and control systems",
+
       "Collaborated with production teams to improve operational efficiency and reduce machine downtime.",
     ],
 
     technologies: [
       "PLC",
       "HMI",
-      "SCADA",
+      "Raw Material Conveying System (RMCS)",
+      "Spare Parts Planning & Purchase",
       "Industrial Automation",
       "Electrical Design",
       "AutoCAD",
@@ -104,9 +108,9 @@ export const experiences: Experience[] = [
 
   {
     period: "Aug 2024 – Jan 2025",
-    title: "Trainee Engineer – Industrial Automation",
-    company: "RFL Group (DPL Development)",
-    location: "Bangladesh",
+    title: "Trainee Engineer – Maintenance",
+    company: "RFL-RIP-DPL-Maintenance",
+    location: "Kaliganj, Gazipur, Dhaka,Bangladesh",
 
     responsibilities: [
       "Received hands-on training in industrial automation systems, manufacturing operations, and engineering practices.",
@@ -121,6 +125,9 @@ export const experiences: Experience[] = [
       "HMI",
       "Industrial Automation",
       "Electrical Maintenance",
+      "Preventive Maintenance",
+      "Troubleshooting",
+      "AutoCAD",
     ],
   },
 ];
