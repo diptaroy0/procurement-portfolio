@@ -170,37 +170,36 @@ export default function HeroImage() {
         "
       >
         <Image
-          src="/images/dipta.png"
-          alt="Dipta Roy - Procurement & Supply Chain Professional"
-          width={520}
-          height={700}
-          priority
-          sizes="
-            (max-width:640px) 290px,
-            (max-width:768px) 340px,
-            (max-width:1024px) 400px,
-            (max-width:1280px) 470px,
-            500px
-          "
-          className="
-            h-auto
-            w-[290px]
-            object-contain
+  src="/images/dipta.png"
+  alt="Dipta Roy - Procurement & Supply Chain Professional"
+  width={520}
+  height={700}
+  preload
+  fetchPriority="high"
+  decoding="async"
+  sizes="
+    (max-width:640px) 290px,
+    (max-width:768px) 340px,
+    (max-width:1024px) 400px,
+    (max-width:1280px) 470px,
+    500px
+  "
+  className="
+    h-auto
+    w-[290px]
+    object-contain
 
-            drop-shadow-[0_40px_80px_rgba(0,0,0,.60)]
+    drop-shadow-[0_40px_80px_rgba(0,0,0,.60)]
 
-            transition-all
-            duration-500
+    transition-all
+    duration-500
 
-            sm:w-[340px]
-
-            md:w-[400px]
-
-            lg:w-[470px]
-
-            xl:w-[500px]
-          "
-        />
+    sm:w-[340px]
+    md:w-[400px]
+    lg:w-[470px]
+    xl:w-[500px]
+  "
+/>
       </motion.div>
     </motion.div>
   );
