@@ -29,34 +29,21 @@ export default function HeroContent() {
       <motion.h1
         id="hero-heading"
         {...fadeUp}
-        className="leading-[0.95]"
+        className="leading-[1.08] lg:leading-[1.05]"
       >
         <span
           className="
             block
             text-5xl
-            font-black
-            tracking-tight
+            font-extrabold
+            tracking-[-0.02em]
             text-white
+
             sm:text-6xl
-            xl:text-8xl
+            lg:text-7xl
           "
         >
           {profile.headline.line1}
-        </span>
-
-        <span
-          className="
-            block
-            text-5xl
-            font-black
-            tracking-tight
-            text-white
-            sm:text-6xl
-            xl:text-8xl
-          "
-        >
-          {profile.headline.line2}
         </span>
 
         <span
@@ -69,33 +56,18 @@ export default function HeroContent() {
             to-blue-500
             bg-clip-text
             text-5xl
-            font-black
-            tracking-tight
+            font-extrabold
+            tracking-[-0.02em]
             text-transparent
-            sm:text-6xl
-            xl:text-8xl
-          "
-        >
-          {profile.headline.line3}
-        </span>
 
-        <span
-          className="
-            block
-            bg-gradient-to-r
-            from-cyan-300
-            via-sky-400
-            to-blue-500
-            bg-clip-text
-            text-5xl
-            font-black
-            tracking-tight
-            text-transparent
+            sm:mt-6
             sm:text-6xl
-            xl:text-8xl
+
+            lg:mt-7
+            lg:text-7xl
           "
         >
-          {profile.headline.line4}
+          {profile.headline.line2}
         </span>
       </motion.h1>
 
@@ -108,7 +80,7 @@ export default function HeroContent() {
           duration: 0.7,
           delay: 0.5,
         }}
-        className="mt-10 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600"
+        className="mt-12 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600"
       />
 
       {/* Summary */}
@@ -124,8 +96,12 @@ export default function HeroContent() {
           text-base
           leading-8
           text-gray-300
+
           sm:text-lg
           sm:leading-9
+
+          lg:text-xl
+          lg:leading-10
         "
       >
         {profile.summary}
@@ -144,6 +120,7 @@ export default function HeroContent() {
           text-base
           leading-8
           text-gray-400
+
           sm:text-lg
           sm:leading-9
         "

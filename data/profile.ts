@@ -2,10 +2,8 @@ export const profile = {
   availability: "Available for New Opportunities",
 
   headline: {
-    line1: "Engineering",
-    line2: "Precision.",
-    line3: "Procurement",
-    line4: "Excellence.",
+    line1: "Engineering Precision.",
+    line2: "Procurement Excellence.",
   },
 
   summary:

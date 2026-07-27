@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { personStructuredData } from "@/lib/structuredData";
+import BackToTop from "@/components/common/BackToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -121,6 +122,8 @@ export default function RootLayout({
         className={`${inter.className} bg-[#081120] text-white antialiased`}
       >
         {children}
+
+        <BackToTop />
 
         <script
           type="application/ld+json"

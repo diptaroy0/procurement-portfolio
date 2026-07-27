@@ -12,6 +12,7 @@ import CoreExpertise from "@/components/expertise/CoreExpertise";
 import ProcurementWorkflow from "@/components/workflow/ProcurementWorkflow";
 import CaseStudies from "@/components/case-studies/CaseStudies";
 import Education from "@/components/education/Education";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -39,6 +40,8 @@ export default function Home() {
         <Education />
 
         <Contact />
+
+        <Footer />
       </main>
     </>
   );
