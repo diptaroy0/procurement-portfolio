@@ -1,5 +1,5 @@
 export const profile = {
-  availability: "Available for New Opportunities",
+  availability: "🟢 Open to Procurement & SCM Opportunities",
 
   headline: {
     line1: "Engineering Precision.",
