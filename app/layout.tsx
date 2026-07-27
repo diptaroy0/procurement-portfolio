@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 const siteUrl = "https://diptaroy0.vercel.app";
-const ogImage = `${siteUrl}/images/og-image1.png`;
+const ogImage = `${siteUrl}/images/og-image2.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
