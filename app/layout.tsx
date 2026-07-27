@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Professional portfolio of Dipta Roy, Procurement & Supply Chain Professional specializing in strategic sourcing, supplier management, Oracle ERP, industrial automation, PLC, HMI, procurement optimization, and operational excellence.",
+    "Procurement & Supply Chain Professional specializing in strategic sourcing, supplier management, Oracle ERP, industrial automation, PLC, HMI, and procurement optimization.",
 
   keywords: [
     "Dipta Roy",
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     title: "Dipta Roy | Procurement & Supply Chain Professional",
 
     description:
-      "Professional portfolio showcasing expertise in Procurement, Supply Chain Management, Strategic Sourcing, Oracle ERP, Industrial Automation, PLC, and HMI.",
+      "Procurement & Supply Chain Professional with expertise in Strategic Sourcing, Oracle ERP, Supplier Management, Industrial Automation, PLC, and HMI.",
 
     images: [
       {
@@ -110,7 +110,7 @@ export const metadata: Metadata = {
     title: "Dipta Roy | Procurement & Supply Chain Professional",
 
     description:
-      "Professional portfolio showcasing expertise in Procurement, Supply Chain Management, Strategic Sourcing, Oracle ERP, Industrial Automation, PLC, and HMI.",
+      "Procurement & Supply Chain Professional with expertise in Strategic Sourcing, Oracle ERP, Supplier Management, Industrial Automation, PLC, and HMI.",
 
     images: [ogImage],
   },
