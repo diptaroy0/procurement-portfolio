@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   applicationName: "Dipta Roy Portfolio",
+  generator: "Next.js",
 
   title: {
     default: "Dipta Roy | Procurement & Supply Chain Professional",
@@ -147,10 +148,10 @@ export const metadata: Metadata = {
   category: "Professional Portfolio",
 
   appleWebApp: {
-    capable: true,
-    statusBarStyle: "black-translucent",
-    title: "Dipta Roy",
-  },
+  capable: true,
+  statusBarStyle: "black-translucent",
+  title: "Dipta Roy Portfolio",
+},
 
   verification: {
     // google: "Paste your Google Search Console verification code here",
