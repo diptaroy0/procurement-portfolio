@@ -154,7 +154,7 @@ export const metadata: Metadata = {
 },
 
   verification: {
-    // google: "Paste your Google Search Console verification code here",
+    google: "qJoTykuPtpb8_dxWJDmXr-jDs54yLinhqzrLIsxIcqg",
   },
 
   other: {
