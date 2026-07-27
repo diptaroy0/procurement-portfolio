@@ -19,6 +19,8 @@ export default function Footer() {
           <Link
             href="https://github.com/diptaroy0"
             target="_blank"
+            rel="noopener noreferrer"
+  aria-label="GitHub Profile"
             className="text-gray-400 transition hover:text-cyan-400"
           >
             <FaGithub size={22} />
@@ -27,6 +29,8 @@ export default function Footer() {
           <Link
             href="https://www.linkedin.com/in/diptaroy0/"
             target="_blank"
+            rel="noopener noreferrer"
+  aria-label="LinkedIn Profile"
             className="text-gray-400 transition hover:text-cyan-400"
           >
             <FaLinkedinIn size={22} />
@@ -34,7 +38,7 @@ export default function Footer() {
 
         </div>
 
-        <p className="mt-8 text-sm text-gray-500">
+        <p className="mt-8 text-sm text-slate-300">
           © {new Date().getFullYear()} Dipta Roy. All Rights Reserved.
         </p>
 
