@@ -12,6 +12,7 @@ const inter = Inter({
 });
 
 const siteUrl = "https://diptaroy0.vercel.app";
+const ogImage = `${siteUrl}/images/og-image1.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -24,12 +25,13 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Explore the professional portfolio of Dipta Roy, a Procurement & Supply Chain Professional with expertise in strategic sourcing, supplier management, Oracle ERP, industrial automation, and procurement process optimization.",
+    "Professional portfolio of Dipta Roy, Procurement & Supply Chain Professional specializing in strategic sourcing, supplier management, Oracle ERP, industrial automation, PLC, HMI, procurement optimization, and operational excellence.",
 
   keywords: [
     "Dipta Roy",
     "Procurement",
     "Supply Chain",
+    "Supply Chain Management",
     "Strategic Procurement",
     "Strategic Sourcing",
     "Global Sourcing",
@@ -71,8 +73,8 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
       "max-image-preview": "large",
+      "max-video-preview": -1,
       "max-snippet": -1,
     },
   },
@@ -85,20 +87,19 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-
     siteName: "Dipta Roy Portfolio",
 
     title: "Dipta Roy | Procurement & Supply Chain Professional",
 
     description:
-      "Engineering Precision. Procurement Excellence.",
+      "Professional portfolio showcasing expertise in Procurement, Supply Chain Management, Strategic Sourcing, Oracle ERP, Industrial Automation, PLC, and HMI.",
 
     images: [
       {
-        url: "/images/og-image.png",
+        url: ogImage,
         width: 1200,
         height: 630,
-        alt: "Dipta Roy Portfolio",
+        alt: "Dipta Roy – Procurement & Supply Chain Professional Portfolio",
       },
     ],
   },
@@ -109,12 +110,9 @@ export const metadata: Metadata = {
     title: "Dipta Roy | Procurement & Supply Chain Professional",
 
     description:
-      "Engineering Precision. Procurement Excellence.",
+      "Professional portfolio showcasing expertise in Procurement, Supply Chain Management, Strategic Sourcing, Oracle ERP, Industrial Automation, PLC, and HMI.",
 
-    images: ["/images/og-image.png"],
-
-    // Replace with your real X username
-    // creator: "@yourusername",
+    images: [ogImage],
   },
 
   icons: {
@@ -147,6 +145,21 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   category: "Professional Portfolio",
+
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Dipta Roy",
+  },
+
+  verification: {
+    // google: "Paste your Google Search Console verification code here",
+  },
+
+  other: {
+    "theme-color": "#081120",
+    "color-scheme": "dark",
+  },
 };
 
 export const viewport: Viewport = {
