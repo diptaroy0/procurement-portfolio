@@ -14,7 +14,7 @@ import EducationCard from "./EducationCard";
 import {
   education,
   certifications,
-} from "./education";
+} from "./educationData";
 
 export default function Education() {
   return (

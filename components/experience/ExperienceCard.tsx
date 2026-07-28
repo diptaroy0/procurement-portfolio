@@ -11,7 +11,7 @@ import {
 import { GlassCard, Tag, StatCard } from "@/components/common";
 import { fadeUp } from "@/lib/animations";
 
-import type { Experience } from "./experience";
+import type { Experience } from "./experienceData";
 
 interface ExperienceCardProps {
   experience: Experience;

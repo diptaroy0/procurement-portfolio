@@ -6,7 +6,7 @@ import { CheckCircle2 } from "lucide-react";
 import { GlassCard, Tag } from "@/components/common";
 import { fadeUp } from "@/lib/animations";
 
-import type { CaseStudy } from "./caseStudies";
+import type { CaseStudy } from "./caseStudiesData";
 
 interface CaseStudyCardProps {
   study: CaseStudy;

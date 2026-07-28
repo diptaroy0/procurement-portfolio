@@ -6,7 +6,7 @@ import { Container, SectionHeader } from "@/components/common";
 import { fadeUp } from "@/lib/animations";
 
 import CaseStudyCard from "./CaseStudyCard";
-import { caseStudies } from "./caseStudies";
+import { caseStudies } from "./caseStudiesData";
 
 export default function CaseStudies() {
   return (

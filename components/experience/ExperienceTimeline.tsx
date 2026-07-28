@@ -1,7 +1,7 @@
 "use client";
 
 import ExperienceCard from "./ExperienceCard";
-import { experiences } from "./experience";
+import { experiences } from "./experienceData";
 
 export default function ExperienceTimeline() {
   return (

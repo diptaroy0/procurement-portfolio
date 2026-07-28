@@ -6,7 +6,7 @@ import {
 } from "@/components/common";
 
 import AchievementCard from "./AchievementCard";
-import { achievements } from "./achievements";
+import { achievements } from "./achievementsData";
 
 export default function Achievements() {
   return (

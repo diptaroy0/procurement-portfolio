@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { GlassCard } from "@/components/common";
 import { fadeUp } from "@/lib/animations";
 
-import type { EducationItem } from "./education";
+import type { EducationItem } from "./educationData";
 
 interface EducationCardProps {
   education: EducationItem;
