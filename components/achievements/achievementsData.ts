@@ -7,26 +7,26 @@ export interface Achievement {
 export const achievements: Achievement[] = [
   {
     number: "100+",
-    title: "International Suppliers",
+    title: "Global Suppliers Managed",
     description:
-      "Built and managed supplier relationships across China and Taiwan.",
+      "Established and maintained procurement relationships with more than 100 international suppliers across China and Taiwan.",
   },
   {
     number: "100+",
-    title: "Material Handling Equipment",
+    title: "Equipment Procured",
     description:
-      "Successfully procured forklifts, pallet stackers, and reach trucks.",
+      "Successfully sourced forklifts, reach trucks, pallet stackers, industrial automation equipment, and engineering spare parts.",
   },
   {
-    number: "PLC",
-    title: "Industrial Automation",
+    number: "RMCS",
+    title: "Automation Projects",
     description:
-      "Supported PLC, HMI, and RMCS automation projects.",
+      "Contributed to Raw Material Conveying System (RMCS) projects involving PLC, HMI, electrical control systems, and industrial automation.",
   },
   {
-    number: "SAP",
-    title: "S/4HANA Procurement",
+    number: "ERP",
+    title: "Procurement Workflow",
     description:
-      "Experienced with PR, RFQ, PO, GRN, and end-to-end procurement workflows.",
+      "Hands-on experience with ERP-driven procurement processes including RFQ, supplier evaluation, purchase orders, inventory planning, and procurement documentation.",
   },
 ];

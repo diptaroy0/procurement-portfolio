@@ -8,8 +8,11 @@ import {
   MapPin,
 } from "lucide-react";
 
-import { GlassCard, Tag, StatCard } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
+import {
+  GlassCard,
+  StatCard,
+  Tag,
+} from "@/components/common";
 
 import type { Experience } from "./experienceData";
 
@@ -21,8 +24,8 @@ export default function ExperienceCard({
   experience,
 }: ExperienceCardProps) {
   return (
-    <motion.div
-      {...fadeUp}
+    <motion.article
+      layout
       className="relative pl-16 md:pl-24"
     >
       {/* Timeline Node */}
@@ -32,7 +35,7 @@ export default function ExperienceCard({
         className="
           absolute
           left-2
-          top-8
+          top-10
           z-20
 
           flex
@@ -44,6 +47,7 @@ export default function ExperienceCard({
           rounded-full
           border-4
           border-[#081120]
+
           bg-cyan-400
 
           shadow-[0_0_30px_rgba(34,211,238,.75)]
@@ -54,14 +58,17 @@ export default function ExperienceCard({
         <div className="h-2.5 w-2.5 rounded-full bg-[#081120]" />
       </div>
 
-      {/* Card */}
+      {/* Experience Card */}
 
       <GlassCard
         padding="none"
         className="
           overflow-hidden
+          transition-all
+          duration-300
 
-          hover:border-cyan-400/35
+          hover:-translate-y-1
+          hover:border-cyan-400/30
           hover:shadow-[0_0_45px_rgba(34,211,238,.18)]
         "
       >
@@ -70,38 +77,43 @@ export default function ExperienceCard({
         <header
           className="
             border-b
-            border-cyan-400/10
+            border-white/10
 
             p-6
             sm:p-8
             lg:p-9
           "
         >
-          <span
-            className="
-              inline-flex
-              items-center
-              gap-2
+          <div className="flex flex-wrap items-center gap-3">
+            <span
+              className="
+                inline-flex
+                items-center
+                gap-2
 
-              rounded-full
-              border
-              border-cyan-400/20
-              bg-cyan-500/10
+                rounded-full
 
-              px-4
-              py-2
+                border
+                border-cyan-400/20
 
-              text-sm
-              text-cyan-300
-            "
-          >
-            <CalendarDays
-              size={15}
-              aria-hidden="true"
-            />
+                bg-cyan-500/10
 
-            {experience.period}
-          </span>
+                px-4
+                py-2
+
+                text-sm
+                font-medium
+                text-cyan-300
+              "
+            >
+              <CalendarDays
+                size={15}
+                aria-hidden="true"
+              />
+
+              {experience.period}
+            </span>
+          </div>
 
           <h3
             className="
@@ -125,18 +137,16 @@ export default function ExperienceCard({
 
               flex
               flex-wrap
-              gap-4
+              items-center
+              gap-5
 
               text-gray-400
-
-              md:gap-8
             "
           >
             <div className="flex items-center gap-2">
               <Building2
                 size={18}
                 className="text-cyan-400"
-                aria-hidden="true"
               />
 
               <span className="font-semibold text-white">
@@ -149,7 +159,6 @@ export default function ExperienceCard({
                 <MapPin
                   size={18}
                   className="text-cyan-400"
-                  aria-hidden="true"
                 />
 
                 <span>{experience.location}</span>
@@ -158,19 +167,21 @@ export default function ExperienceCard({
           </div>
         </header>
 
-        {/* Metrics */}
+        {/* KPI */}
 
         {experience.metrics && (
-          <div
+          <section
             className="
               grid
               grid-cols-2
               gap-4
 
+              border-b
+              border-white/10
+
               p-6
 
               lg:grid-cols-4
-              lg:gap-5
               lg:p-8
             "
           >
@@ -181,37 +192,39 @@ export default function ExperienceCard({
                 label={metric.label}
               />
             ))}
-          </div>
+          </section>
         )}
 
         {/* Responsibilities */}
 
-        <div
+        <section
           className="
             px-6
-            pb-6
+            py-8
 
             sm:px-8
-            sm:pb-8
 
             lg:px-9
-            lg:pb-9
+            lg:py-9
           "
         >
-          <h4 className="mb-6 text-xl font-semibold text-white">
+          <h4 className="text-xl font-semibold text-white">
             Key Responsibilities
           </h4>
 
-          <ul className="space-y-4 lg:space-y-5">
+          <ul className="mt-6 space-y-5">
             {experience.responsibilities.map((item) => (
               <li
                 key={item}
                 className="flex items-start gap-4"
               >
                 <CheckCircle2
-                  size={19}
-                  className="mt-1 shrink-0 text-cyan-400"
-                  aria-hidden="true"
+                  size={20}
+                  className="
+                    mt-1
+                    shrink-0
+                    text-cyan-400
+                  "
                 />
 
                 <span
@@ -228,26 +241,23 @@ export default function ExperienceCard({
             ))}
           </ul>
 
-          {/* Technologies */}
+          {/* Skills */}
 
-          <div
-            className="
-              mt-8
-              flex
-              flex-wrap
-              gap-3
+          <div className="mt-10">
+            <h4 className="mb-5 text-xl font-semibold text-white">
+              Technologies & Skills
+            </h4>
 
-              lg:mt-10
-            "
-          >
-            {experience.technologies.map((tech) => (
-              <Tag key={tech}>
-                {tech}
-              </Tag>
-            ))}
+            <div className="flex flex-wrap gap-3">
+              {experience.technologies.map((tech) => (
+                <Tag key={tech}>
+                  {tech}
+                </Tag>
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
       </GlassCard>
-    </motion.div>
+    </motion.article>
   );
 }
