@@ -19,46 +19,53 @@ export default function Hero() {
       className="
         relative
         overflow-hidden
-        pt-32
+        pt-28
+        sm:pt-32
         lg:pt-36
+        xl:pt-40
       "
     >
+      {/* Background Effects */}
       <BackgroundEffects />
 
       <Container>
-        {/* ===============================
-            HERO CONTENT
-        ================================ */}
-
         <div
           className="
+            relative
             grid
             items-center
-            gap-14
+            gap-16
 
-            lg:min-h-[calc(100vh-180px)]
-            lg:grid-cols-[1.15fr_0.85fr]
-            lg:gap-10
+            lg:min-h-[calc(100vh-170px)]
+            lg:grid-cols-[1.08fr_0.92fr]
+            lg:gap-16
+
+            xl:min-h-[calc(100vh-180px)]
+            xl:grid-cols-[1.05fr_0.95fr]
+            xl:gap-24
           "
         >
-          {/* ===============================
-              LEFT
-          ================================ */}
+          {/* ======================================
+              LEFT CONTENT
+          ====================================== */}
 
           <motion.div
             {...heroLeft}
-            className="order-2 lg:order-1"
+            className="
+              order-2
+              lg:order-1
+            "
           >
             <HeroContent />
 
-            <div className="mt-12 lg:mt-14">
+            <div className="mt-14 lg:mt-16">
               <HeroStats />
             </div>
           </motion.div>
 
-          {/* ===============================
-              RIGHT
-          ================================ */}
+          {/* ======================================
+              RIGHT IMAGE
+          ====================================== */}
 
           <div
             className="
@@ -74,17 +81,19 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ===============================
+        {/* ======================================
             SCROLL INDICATOR
-        ================================ */}
+        ====================================== */}
 
         <div
           className="
-            mt-16
-            flex
-            justify-center
+            absolute
+            bottom-[-25px]
+            left-1/2
+            hidden
+            -translate-x-1/2
 
-            lg:mt-20
+            lg:block
           "
         >
           <ScrollIndicator />
