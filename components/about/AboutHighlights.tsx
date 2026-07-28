@@ -18,10 +18,15 @@ export default function AboutHighlights() {
             {...fadeUp}
             whileHover={{
               y: -8,
-              scale: 1.02,
+              scale: 1.03,
+            }}
+            transition={{
+              duration: 0.25,
             }}
             className="
               group
+              relative
+              overflow-hidden
               rounded-3xl
               border
               border-cyan-400/15
@@ -34,37 +39,94 @@ export default function AboutHighlights() {
               hover:shadow-[0_0_35px_rgba(34,211,238,.18)]
             "
           >
+            {/* Hover Glow */}
+
             <div
-              className={`
-                mb-5
-                flex
-                h-14
-                w-14
-                items-center
-                justify-center
-                rounded-2xl
+              className="
+                absolute
+                inset-0
                 bg-gradient-to-br
-                ${item.color}
-                text-cyan-400
-                transition-all
+                from-cyan-500/0
+                via-cyan-400/5
+                to-blue-500/0
+                opacity-0
+                transition-opacity
                 duration-300
-                group-hover:rotate-6
-                group-hover:scale-110
-              `}
-            >
-              <Icon
-                size={24}
-                aria-hidden="true"
+                group-hover:opacity-100
+              "
+            />
+
+            <div className="relative">
+
+              {/* Icon */}
+
+              <div
+                className={`
+                  mb-6
+                  flex
+                  h-14
+                  w-14
+                  items-center
+                  justify-center
+                  rounded-2xl
+                  bg-gradient-to-br
+                  ${item.color}
+                  text-cyan-400
+                  transition-all
+                  duration-300
+                  group-hover:rotate-6
+                  group-hover:scale-110
+                `}
+              >
+                <Icon
+                  size={24}
+                  aria-hidden="true"
+                />
+              </div>
+
+              {/* Value */}
+
+              <h3
+                className="
+                  text-3xl
+                  font-black
+                  tracking-tight
+                  text-white
+                  transition-colors
+                  duration-300
+                  group-hover:text-cyan-300
+                "
+              >
+                {item.value}
+              </h3>
+
+              {/* Divider */}
+
+              <div
+                className="
+                  mt-4
+                  h-px
+                  w-14
+                  bg-gradient-to-r
+                  from-cyan-400
+                  to-transparent
+                "
               />
+
+              {/* Title */}
+
+              <p
+                className="
+                  mt-4
+                  text-sm
+                  leading-6
+                  text-gray-400
+                "
+              >
+                {item.title}
+              </p>
+
             </div>
-
-            <p className="gradient-text text-3xl font-black">
-              {item.value}
-            </p>
-
-            <p className="mt-2 text-sm leading-6 text-gray-400">
-              {item.title}
-            </p>
           </motion.div>
         );
       })}

@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  MapPin,
   Briefcase,
   GraduationCap,
+  MapPin,
 } from "lucide-react";
 
 export default function AboutImage() {
@@ -18,14 +18,12 @@ export default function AboutImage() {
       animate={{
         y: [0, -6, 0],
       }}
-      style={{
-        marginTop: "-110px",
-      }}
-      className="relative flex justify-center"
+      className="relative -mt-28 flex justify-center"
     >
-      {/* Background Glow */}
+      {/* Ambient Glow */}
 
       <div
+        aria-hidden="true"
         className="
           absolute
           -z-10
@@ -48,19 +46,19 @@ export default function AboutImage() {
           rounded-[32px]
           border
           border-cyan-400/20
-          bg-[rgba(15,23,42,.68)]
+          bg-[rgba(15,23,42,.70)]
           backdrop-blur-2xl
           shadow-[0_25px_60px_rgba(0,0,0,.45)]
           transition-all
           duration-500
           hover:-translate-y-2
           hover:border-cyan-400/40
-          hover:shadow-[0_0_40px_rgba(34,211,238,.18)]
+          hover:shadow-[0_0_45px_rgba(34,211,238,.18)]
         "
       >
-        {/* Top Banner */}
+        {/* Banner */}
 
-        <div className="h-28 bg-gradient-to-r from-cyan-500/25 to-blue-600/15" />
+        <div className="h-28 bg-gradient-to-r from-cyan-500/25 via-cyan-500/10 to-blue-600/15" />
 
         {/* Profile */}
 
@@ -68,16 +66,14 @@ export default function AboutImage() {
 
           <div className="relative">
 
-            {/* Glow */}
-
             <div
               className="
                 absolute
                 inset-0
+                scale-125
                 rounded-full
                 bg-cyan-400/20
                 blur-xl
-                scale-125
               "
             />
 
@@ -86,6 +82,8 @@ export default function AboutImage() {
               alt="Dipta Roy"
               width={170}
               height={170}
+              loading="lazy"
+              draggable={false}
               className="
                 relative
                 h-40
@@ -94,78 +92,84 @@ export default function AboutImage() {
                 border-4
                 border-[#081120]
                 object-cover
-                shadow-xl
+                shadow-2xl
+                select-none
               "
             />
 
           </div>
 
-          <p className="mt-6 text-3xl font-bold text-white">
+          <h3 className="mt-6 text-3xl font-bold text-white">
             Dipta Roy
-          </p>
+          </h3>
 
           <p className="mt-2 text-center text-cyan-400">
             Procurement & Supply Chain Professional
           </p>
 
-          {/* Status */}
+          {/* Availability */}
 
           <div
             className="
-              mt-5
+              mt-6
+              inline-flex
+              items-center
+              gap-3
               rounded-full
               border
-              border-cyan-400/25
-              bg-cyan-500/10
+              border-green-500/20
+              bg-green-500/10
               px-5
-              py-2
+              py-2.5
               text-sm
-              text-cyan-300
+              font-medium
+              text-green-300
             "
           >
-            ● Available for New Opportunities
+            <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-green-400" />
+            Available for New Opportunities
           </div>
 
-          {/* Information */}
+          {/* Details */}
 
           <div className="mt-10 w-full space-y-6">
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-start gap-4">
 
               <Briefcase
                 size={18}
-                className="text-cyan-400"
+                className="mt-1 shrink-0 text-cyan-400"
               />
 
-              <span className="text-gray-300">
+              <span className="leading-7 text-gray-300">
                 Assistant Manager – Procurement &
                 Industrial Automation
               </span>
 
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-start gap-4">
 
               <GraduationCap
                 size={18}
-                className="text-cyan-400"
+                className="mt-1 shrink-0 text-cyan-400"
               />
 
-              <span className="text-gray-300">
-                Professional MBA (SCM), BUP
+              <span className="leading-7 text-gray-300">
+                Professional MBA (Supply Chain Management), BUP
               </span>
 
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-start gap-4">
 
               <MapPin
                 size={18}
-                className="text-cyan-400"
+                className="mt-1 shrink-0 text-cyan-400"
               />
 
-              <span className="text-gray-300">
-                Satarkul, Badda, Dhaka
+              <span className="leading-7 text-gray-300">
+                Satarkul, Badda, Dhaka, Bangladesh
               </span>
 
             </div>

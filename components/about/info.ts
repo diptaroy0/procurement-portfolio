@@ -18,7 +18,7 @@ export const info: AboutInfoItem[] = [
   {
     icon: MapPin,
     title: "Location",
-    value: "Satarkul, Badda, Dhaka",
+    value: "Dhaka, Bangladesh",
   },
   {
     icon: Mail,
@@ -33,16 +33,16 @@ export const info: AboutInfoItem[] = [
   {
     icon: GraduationCap,
     title: "Education",
-    value: "B.Sc. in EEE • Professional MBA (BUP)",
+    value: "B.Sc. in EEE • Professional MBA (SCM)",
   },
   {
     icon: BriefcaseBusiness,
-    title: "Experience",
-    value: "Industrial Automation & Procurement",
+    title: "Specialization",
+    value: "Procurement • Supply Chain • Automation",
   },
   {
     icon: Languages,
     title: "Languages",
-    value: "Bangla • English",
+    value: "Bangla (Native) • English (Professional)",
   },
 ];

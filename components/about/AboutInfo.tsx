@@ -16,12 +16,17 @@ export default function AboutInfo() {
           <motion.div
             key={item.title}
             {...fadeUp}
-            whileHover={{ y: -5 }}
+            whileHover={{
+              y: -6,
+              scale: 1.02,
+            }}
+            transition={{
+              duration: 0.25,
+            }}
             className="
               group
-              flex
-              items-center
-              gap-4
+              relative
+              overflow-hidden
               rounded-2xl
               border
               border-cyan-400/15
@@ -34,49 +39,85 @@ export default function AboutInfo() {
               hover:shadow-[0_0_30px_rgba(34,211,238,.15)]
             "
           >
+            {/* Hover Glow */}
+
             <div
               className="
-                flex
-                h-12
-                w-12
-                items-center
-                justify-center
-                rounded-xl
-                bg-gradient-to-br
-                from-cyan-500/20
-                via-cyan-400/10
-                to-blue-600/20
-                text-cyan-400
-                transition-transform
+                absolute
+                inset-0
+                bg-gradient-to-r
+                from-cyan-500/0
+                via-cyan-400/5
+                to-blue-500/0
+                opacity-0
+                transition-opacity
                 duration-300
-                group-hover:scale-110
-                group-hover:rotate-6
+                group-hover:opacity-100
               "
-            >
-              <Icon
-                size={20}
-                aria-hidden="true"
-              />
-            </div>
+            />
 
-            <div>
-              <p className="text-sm text-gray-400">
-                {item.title}
-              </p>
+            <div className="relative flex items-center gap-4">
 
-              <p
+              {/* Icon */}
+
+              <div
                 className="
-                  mt-1
-                  text-sm
-                  font-semibold
-                  leading-6
-                  text-white
-
-                  sm:text-[15px]
+                  flex
+                  h-12
+                  w-12
+                  shrink-0
+                  items-center
+                  justify-center
+                  rounded-xl
+                  bg-gradient-to-br
+                  from-cyan-500/20
+                  via-cyan-400/10
+                  to-blue-600/20
+                  text-cyan-400
+                  transition-all
+                  duration-300
+                  group-hover:scale-110
+                  group-hover:rotate-6
                 "
               >
-                {item.value}
-              </p>
+                <Icon
+                  size={20}
+                  aria-hidden="true"
+                />
+              </div>
+
+              {/* Content */}
+
+              <div className="min-w-0">
+
+                <p
+                  className="
+                    text-xs
+                    font-medium
+                    uppercase
+                    tracking-wider
+                    text-gray-500
+                  "
+                >
+                  {item.title}
+                </p>
+
+                <p
+                  className="
+                    mt-1
+                    text-sm
+                    font-semibold
+                    leading-6
+                    text-white
+
+                    sm:text-[15px]
+                  "
+                >
+                  {item.value}
+                </p>
+
+              </div>
+
             </div>
           </motion.div>
         );
