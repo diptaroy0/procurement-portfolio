@@ -1,19 +1,34 @@
 export const skills = [
+  // Procurement & Supply Chain
   "Strategic Sourcing",
-  "Supplier Development",
-  "Vendor Negotiation",
   "International Procurement",
-  "RFQ & Quotation Analysis",
+  "Supplier Negotiation",
+  "Vendor Development",
+  "RFQ Analysis",
   "Purchase Order Management",
-  "SAP S/4HANA",
-  "Inventory Management",
+  "Inventory Planning",
   "Supply Chain Management",
-  "Industrial Automation",
-  "PLC",
-  "HMI",
-  "SCADA",
+  "Cost Optimization",
+
+  // ERP & Business Systems
+  "SAP S/4HANA",
+  "ERP Procurement",
+  "Purchase Requisition (PR)",
+  "Goods Receipt (GRN)",
+  "Invoice Verification (IR)",
+
+  // Industrial Automation
+  "PLC Programming",
+  "HMI Development",
+  "RMCS",
+  "Electrical Control Systems",
+  "Machine Commissioning",
+
+  // Engineering & Software
   "AutoCAD",
   "MATLAB",
+  "Microsoft Excel",
   "Project Coordination",
-  "Cost Optimization",
+  "Technical Documentation",
+  "Preventive Maintenance",
 ] as const;

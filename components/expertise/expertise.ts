@@ -15,50 +15,53 @@ export interface ExpertiseItem {
 export const expertise: ExpertiseItem[] = [
   {
     icon: ShoppingCart,
-    title: "Procurement",
+    title: "Procurement & Strategic Sourcing",
     skills: [
       "Strategic Sourcing",
       "Supplier Negotiation",
       "Vendor Development",
-      "RFQ & Quotation",
-      "Purchase Orders",
+      "International Procurement",
+      "RFQ & Quotation Analysis",
+      "Purchase Order Management",
+    ],
+  },
+
+  {
+    icon: Boxes,
+    title: "Supply Chain Management",
+    skills: [
+      "Inventory Planning",
+      "Material Handling Equipment",
+      "Spare Parts Planning",
+      "Vendor Coordination",
+      "Supply Chain Operations",
       "Cost Optimization",
     ],
   },
-  {
-    icon: Boxes,
-    title: "Supply Chain",
-    skills: [
-      "Inventory Management",
-      "Spare Parts Planning",
-      "Vendor Coordination",
-      "LC Documentation",
-      "SCM Operations",
-      "Material Handling",
-    ],
-  },
+
   {
     icon: Database,
-    title: "ERP Systems",
+    title: "ERP & Business Systems",
     skills: [
       "SAP S/4HANA",
-      "Purchase Requisition",
-      "Goods Receipt",
-      "Invoice Verification",
-      "Procurement Cycle",
-      "Master Data",
+      "Purchase Requisition (PR)",
+      "Purchase Order (PO)",
+      "Goods Receipt (GRN)",
+      "Invoice Verification (IR)",
+      "Procurement Workflow",
     ],
   },
+
   {
     icon: Cpu,
     title: "Industrial Automation",
     skills: [
-      "PLC",
-      "HMI",
+      "PLC Programming",
+      "HMI Development",
       "SCADA",
-      "Sensors",
       "RMCS",
-      "Electrical Systems",
+      "Electrical Control Systems",
+      "Machine Commissioning",
     ],
   },
 ];

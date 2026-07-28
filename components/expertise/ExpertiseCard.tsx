@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
-import { CheckCircle2 } from "lucide-react";
+import {
+  ArrowUpRight,
+  CheckCircle2,
+} from "lucide-react";
 
 import { GlassCard } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 interface ExpertiseCardProps {
   icon: LucideIcon;
@@ -19,13 +21,14 @@ export default function ExpertiseCard({
   skills,
 }: ExpertiseCardProps) {
   return (
-    <motion.div
-      {...fadeUp}
-      className="h-full"
-    >
+    <motion.article layout className="h-full">
       <GlassCard
         className="
+          group
+          relative
           h-full
+          overflow-hidden
+
           p-6
 
           transition-all
@@ -33,30 +36,92 @@ export default function ExpertiseCard({
 
           hover:-translate-y-2
           hover:border-cyan-400/30
-          hover:shadow-[0_0_35px_rgba(34,211,238,.15)]
+          hover:shadow-[0_0_45px_rgba(34,211,238,.18)]
 
           sm:p-8
         "
       >
-        {/* Icon */}
+        {/* Background Glow */}
 
         <div
+          aria-hidden="true"
           className="
-            flex
-            h-14
-            w-14
-            items-center
-            justify-center
-            rounded-2xl
-            bg-cyan-500/10
+            absolute
+            inset-0
+            opacity-0
+            transition-opacity
+            duration-300
 
-            sm:h-16
-            sm:w-16
+            group-hover:opacity-100
           "
         >
-          <Icon
-            size={28}
-            className="text-cyan-400 sm:h-8 sm:w-8"
+          <div
+            className="
+              absolute
+              right-0
+              top-0
+
+              h-44
+              w-44
+
+              translate-x-10
+              -translate-y-10
+
+              rounded-full
+              bg-cyan-500/10
+
+              blur-3xl
+            "
+          />
+        </div>
+
+        {/* Header */}
+
+        <div className="relative z-10 flex items-start justify-between">
+          <div
+            className="
+              flex
+              h-16
+              w-16
+              items-center
+              justify-center
+
+              rounded-2xl
+
+              border
+              border-cyan-400/20
+
+              bg-gradient-to-br
+              from-cyan-500/15
+              via-sky-500/10
+              to-transparent
+
+              text-cyan-400
+
+              transition-transform
+              duration-300
+
+              group-hover:scale-110
+              group-hover:rotate-6
+            "
+          >
+            <Icon
+              size={30}
+              aria-hidden="true"
+            />
+          </div>
+
+          <ArrowUpRight
+            size={22}
+            className="
+              text-cyan-400/40
+              transition-all
+              duration-300
+
+              group-hover:translate-x-1
+              group-hover:-translate-y-1
+              group-hover:text-cyan-300
+            "
             aria-hidden="true"
           />
         </div>
@@ -65,43 +130,58 @@ export default function ExpertiseCard({
 
         <h3
           className="
-            mt-5
-            text-xl
-            font-bold
-            text-white
+            mt-8
 
-            sm:mt-6
-            sm:text-2xl
+            text-2xl
+            font-bold
+
+            leading-tight
+            text-white
           "
         >
           {title}
         </h3>
 
-        {/* Skill List */}
+        {/* Divider */}
 
-        <ul
+        <div
           className="
-            mt-6
-            space-y-3
+            mt-5
 
-            sm:mt-8
-            sm:space-y-4
+            h-px
+            w-16
+
+            bg-gradient-to-r
+            from-cyan-400
+            to-transparent
           "
-        >
+        />
+
+        {/* Skills */}
+
+        <ul className="mt-8 space-y-4">
           {skills.map((skill) => (
             <li
               key={skill}
-              className="flex items-center gap-3"
+              className="
+                flex
+                items-center
+                gap-3
+              "
             >
               <CheckCircle2
                 size={18}
-                className="text-cyan-400"
+                className="
+                  shrink-0
+                  text-cyan-400
+                "
                 aria-hidden="true"
               />
 
               <span
                 className="
                   text-sm
+                  leading-6
                   text-gray-300
 
                   sm:text-base
@@ -113,6 +193,6 @@ export default function ExpertiseCard({
           ))}
         </ul>
       </GlassCard>
-    </motion.div>
+    </motion.article>
   );
 }
