@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import Image from "next/image";
 
 import MobileMenu from "./MobileMenu";
 import useActiveSection from "@/hooks/useActiveSection";
@@ -73,37 +74,37 @@ export default function Navbar() {
       >
         {/* Logo */}
 
-        <a
-          href="#"
+        <Link
+          href="/"
           aria-label="Go to homepage"
           className="flex items-center gap-4"
         >
-          <div >
-
           <Image
-                        src="/images/Logo_Dipta.png"
-                        alt="Dipta Roy"
-                        width={100}
-                        height={100}
-                        className="
-                          relative
-                          h-20
-                          w-20               
-                        "
-                      />
-            
-          </div>
+            src="/images/Logo_Dipta.png"
+            alt="Dipta Roy Logo"
+            width={100}
+            height={100}
+            priority
+            loading="eager"
+            decoding="async"
+            draggable={false}
+            className="
+              h-20
+              w-20
+              select-none
+            "
+          />
 
           <div>
-            <p className="text-2xl font-bold text-white">
+            <h1 className="text-2xl font-bold text-white">
               Dipta <span className="text-cyan-400">Roy</span>
-            </p>
+            </h1>
 
             <p className="text-xs uppercase tracking-[0.35em] text-slate-400">
               Procurement • SCM
             </p>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
 
@@ -115,7 +116,7 @@ export default function Navbar() {
             const active = activeSection === item.href.replace("#", "");
 
             return (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
@@ -156,7 +157,7 @@ export default function Navbar() {
                     }
                   `}
                 />
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -164,10 +165,11 @@ export default function Navbar() {
         {/* Desktop Buttons */}
 
         <div className="hidden items-center gap-4 lg:flex">
-          <a
+          <Link
             href="/resume/Resume.pdf"
-            download
-            aria-label="Download Dipta Roy's resume"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Dipta Roy Resume"
             className="
               inline-flex
               items-center
@@ -190,13 +192,12 @@ export default function Navbar() {
             <Download
               size={18}
               aria-hidden="true"
-              focusable="false"
             />
 
             Resume
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="#contact"
             aria-label="Go to contact section"
             className="
@@ -216,7 +217,7 @@ export default function Navbar() {
             "
           >
             Hire Me
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu */}

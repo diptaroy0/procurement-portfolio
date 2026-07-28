@@ -230,7 +230,6 @@ export default function HeroImage() {
           height={700}
           priority
           loading="eager"
-          quality={100}
           draggable={false}
           decoding="async"
           sizes="

@@ -4,168 +4,163 @@ import { motion } from "framer-motion";
 import {
   Globe2,
   ShoppingCart,
-  Cpu,
+  BadgeCheck,
+  Database,
 } from "lucide-react";
 
 const stats = [
   {
+    id: "suppliers",
     icon: Globe2,
     value: "100+",
-    label: "Global Suppliers",
+    label1: "Global",
+    label2: "Suppliers",
   },
   {
+    id: "orders",
     icon: ShoppingCart,
-    value: "100+",
-    label: "Purchasing Projects",
+    value: "120+",
+    label1: "Purchase",
+    label2: "Orders",
   },
   {
-    icon: Cpu,
+    id: "experience",
+    icon: BadgeCheck,
     value: "2+",
-    label: "Years Experience",
+    label1: "Years",
+    label2: "Experience",
+  },
+  {
+    id: "erp",
+    icon: Database,
+    value: "ERP",
+    label1: "SAP •",
+    label2: "Oracle",
   },
 ];
 
 export default function HeroStats() {
   return (
-    <div
-      className="
-        grid
-        gap-5
-
-        sm:grid-cols-3
-      "
-    >
+    <div className="mt-12 flex flex-wrap gap-5">
       {stats.map((item, index) => {
         const Icon = item.icon;
 
         return (
           <motion.div
-            key={item.label}
+            key={item.id}
             initial={{
               opacity: 0,
-              y: 24,
-              scale: 0.96,
+              y: 20,
             }}
             whileInView={{
               opacity: 1,
               y: 0,
-              scale: 1,
             }}
             viewport={{
               once: true,
               amount: 0.4,
             }}
             transition={{
-              duration: 0.6,
+              duration: 0.5,
               delay: index * 0.12,
             }}
             whileHover={{
-              y: -6,
-              scale: 1.02,
+              y: -5,
             }}
             className="
               group
-              relative
 
-              overflow-hidden
+              flex
+              h-[168px]
+              w-[110px]
+              flex-col
 
-              rounded-3xl
+              sm:h-[178px]
+              sm:w-[120px]
+
+              rounded-[24px]
 
               border
               border-white/10
 
-              bg-white/[0.04]
+              bg-white/[0.05]
 
-              p-7
+              px-5
+              py-6
 
               backdrop-blur-xl
 
               transition-all
               duration-300
 
-              hover:border-cyan-400/30
-              hover:bg-white/[0.06]
-              hover:shadow-[0_20px_50px_rgba(34,211,238,.12)]
+              hover:border-cyan-400/25
+              hover:bg-white/[0.07]
+              hover:shadow-[0_18px_45px_rgba(34,211,238,.08)]
             "
           >
-            {/* Background Glow */}
+            {/* Icon */}
 
             <div
-              aria-hidden="true"
               className="
-                absolute
-                inset-0
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
 
-                opacity-0
+                rounded-xl
 
                 bg-gradient-to-br
-                from-cyan-500/10
-                to-transparent
+                from-cyan-500/20
+                to-blue-600/20
 
-                transition-opacity
+                text-cyan-400
+
+                transition-transform
                 duration-300
 
-                group-hover:opacity-100
+                group-hover:scale-110
               "
-            />
+            >
+              <Icon
+                size={19}
+                aria-hidden="true"
+              />
+            </div>
 
-            <div className="relative z-10 flex items-center gap-5">
-              <div
-                className="
-                  flex
-                  h-14
-                  w-14
-                  shrink-0
-                  items-center
-                  justify-center
+            {/* Value */}
 
-                  rounded-2xl
+            <h3
+              className="
+                mt-6
 
-                  bg-gradient-to-br
-                  from-cyan-500/20
-                  to-blue-600/20
+                text-[30px]
+                font-extrabold
+                leading-none
+                tracking-tight
 
-                  text-cyan-400
+                text-cyan-400
+              "
+            >
+              {item.value}
+            </h3>
 
-                  transition-transform
-                  duration-300
+            {/* Labels */}
 
-                  group-hover:scale-110
-                  group-hover:rotate-6
-                "
-              >
-                <Icon
-                  size={24}
-                  aria-hidden="true"
-                />
-              </div>
+            <div
+              className="
+                mt-3
 
-              <div>
-                <h3
-                  className="
-                    text-3xl
-                    font-extrabold
-                    tracking-tight
-                    text-white
-                  "
-                >
-                  {item.value}
-                </h3>
+                space-y-1
 
-                <p
-                  className="
-                    mt-1
+                text-[14px]
+                leading-none
 
-                    text-sm
-
-                    font-medium
-
-                    text-gray-400
-                  "
-                >
-                  {item.label}
-                </p>
-              </div>
+                text-slate-400
+              "
+            >
+              <p>{item.label1}</p>
+              <p>{item.label2}</p>
             </div>
           </motion.div>
         );
