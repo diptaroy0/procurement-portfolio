@@ -1,5 +1,3 @@
-import type { LucideIcon } from "lucide-react";
-
 export interface ExperienceMetric {
   value: string;
   label: string;

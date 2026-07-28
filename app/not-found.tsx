@@ -55,8 +55,8 @@ export default function NotFound() {
         </h2>
 
         <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-slate-400">
-          The page you're looking for doesn't exist or may have been moved.
-          Let's get you back to the portfolio.
+          The page you&apos;re looking for doesn&apos;t exist or may have been
+          moved. Let&apos;s get you back to the portfolio.
         </p>
 
         <Link
@@ -68,7 +68,7 @@ export default function NotFound() {
         </Link>
 
         <p className="mt-10 text-sm text-slate-500">
-          Dipta Roy • Procurement & Supply Chain Professional
+          Dipta Roy • Procurement &amp; Supply Chain Professional
         </p>
       </motion.div>
     </main>

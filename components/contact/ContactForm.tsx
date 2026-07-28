@@ -26,7 +26,8 @@ export default function ContactForm() {
 
         <p className="mt-3 leading-7 text-gray-400 lg:leading-8">
           Have an opportunity, collaboration, or procurement project in mind?
-          Fill out the form below and I'll get back to you as soon as possible.
+          Fill out the form below and I&apos;ll get back to you as soon as
+          possible.
         </p>
 
         <form
@@ -119,7 +120,6 @@ export default function ContactForm() {
               size={18}
               aria-hidden="true"
             />
-
             Send Message
           </button>
         </form>
