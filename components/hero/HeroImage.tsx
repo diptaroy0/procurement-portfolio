@@ -226,14 +226,13 @@ export default function HeroImage() {
         <Image
           src="/images/dipta.png"
           alt="Dipta Roy - Procurement & Supply Chain Professional"
-
           width={520}
           height={700}
-
-          preload
-          fetchPriority="high"
+          priority
+          loading="eager"
+          quality={100}
+          draggable={false}
           decoding="async"
-
           sizes="
             (max-width:640px) 290px,
             (max-width:768px) 340px,
@@ -241,13 +240,12 @@ export default function HeroImage() {
             (max-width:1280px) 470px,
             500px
           "
-
           className="
             h-auto
-
             w-[290px]
 
             object-contain
+            select-none
 
             drop-shadow-[0_50px_100px_rgba(0,0,0,.65)]
 
@@ -255,11 +253,8 @@ export default function HeroImage() {
             duration-500
 
             sm:w-[340px]
-
             md:w-[400px]
-
             lg:w-[470px]
-
             xl:w-[500px]
           "
         />
