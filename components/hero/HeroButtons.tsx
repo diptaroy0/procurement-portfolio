@@ -1,140 +1,100 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Download } from "lucide-react";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { ArrowRight, Download } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 import { site } from "@/data/site";
+
+const primaryButton =
+  "group inline-flex h-14 items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 px-9 text-base font-semibold text-white shadow-[0_15px_35px_rgba(14,165,233,.28)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_50px_rgba(14,165,233,.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400";
+
+const secondaryButton =
+  "group inline-flex h-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 text-base font-medium text-slate-200 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-cyan-500/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400";
 
 export default function HeroButtons() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        delay: 0.8,
-        duration: 0.6,
+        duration: 0.7,
+        delay: 0.7,
       }}
-      className="mt-10 flex flex-wrap gap-4"
+      className="flex flex-wrap items-center gap-4
+lg:gap-5"
     >
       {/* Resume */}
 
-      <motion.a
-        whileHover={{
-          scale: 1.05,
-          y: -3,
-        }}
-        whileTap={{
-          scale: 0.97,
-        }}
-        href={site.resume}
-        download
-        className="
-          group
-          inline-flex
-          items-center
-          gap-2
-          rounded-2xl
-          bg-gradient-to-r
-          from-cyan-500
-          to-blue-600
-          px-8
-          py-4
-          font-semibold
-          text-white
-          shadow-lg
-          transition-all
-          duration-300
-          hover:shadow-[0_0_30px_rgba(34,211,238,.45)]
-        "
+      <Link
+        href="/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Download CV"
+        className={primaryButton}
       >
         <Download
-          size={18}
-          className="transition-transform duration-300 group-hover:-translate-y-1"
+          size={20}
+          aria-hidden="true"
+          className="mr-3 shrink-0 transition-transform duration-300 group-hover:-translate-y-1"
         />
 
-        Download Resume
-      </motion.a>
+        View Resume
+
+        <ArrowRight
+          size={18}
+          className="ml-3 shrink-0 transition-transform duration-300 group-hover:translate-x-1"
+        />
+      </Link>
 
       {/* LinkedIn */}
 
-      <motion.a
-        whileHover={{
-          scale: 1.05,
-          y: -3,
-        }}
-        whileTap={{
-          scale: 0.97,
-        }}
+      <Link
         href={site.linkedin}
         target="_blank"
-        rel="noreferrer"
-        className="
-          inline-flex
-          items-center
-          gap-2
-          rounded-2xl
-          border
-          border-white/10
-          bg-white/5
-          px-7
-          py-4
-          font-medium
-          text-white
-          backdrop-blur-xl
-          transition-all
-          duration-300
-          hover:border-cyan-400/50
-          hover:bg-cyan-500/10
-        "
+        rel="noopener noreferrer"
+        title="Visit LinkedIn Profile"
+        aria-label="Visit LinkedIn Profile"
+        className={secondaryButton}
       >
-        <FaLinkedinIn
-          size={18}
-          className="text-cyan-400"
+        <FaLinkedin
+          className="
+            mr-2.5
+            shrink-0
+            text-[20px]
+            transition-transform
+            duration-300
+            group-hover:scale-110
+          "
         />
 
         LinkedIn
-      </motion.a>
+      </Link>
 
       {/* GitHub */}
 
-      <motion.a
-        whileHover={{
-          scale: 1.05,
-          y: -3,
-        }}
-        whileTap={{
-          scale: 0.97,
-        }}
+      <Link
         href={site.github}
         target="_blank"
-        rel="noreferrer"
-        className="
-          inline-flex
-          items-center
-          gap-2
-          rounded-2xl
-          border
-          border-white/10
-          bg-white/5
-          px-7
-          py-4
-          font-medium
-          text-white
-          backdrop-blur-xl
-          transition-all
-          duration-300
-          hover:border-cyan-400/50
-          hover:bg-cyan-500/10
-        "
+        rel="noopener noreferrer"
+        title="Visit GitHub Profile"
+        aria-label="Visit GitHub Profile"
+        className={secondaryButton}
       >
         <FaGithub
-          size={18}
-          className="text-white"
+          className="
+            mr-2.5
+            shrink-0
+            text-[20px]
+            transition-transform
+            duration-300
+            group-hover:rotate-6
+          "
         />
 
         GitHub
-      </motion.a>
+      </Link>
     </motion.div>
   );
 }

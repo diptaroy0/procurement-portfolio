@@ -12,7 +12,6 @@ const inter = Inter({
 });
 
 const siteUrl = "https://diptaroy0.vercel.app";
-const ogImage = `${siteUrl}/images/og-image2.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Professional portfolio of Dipta Roy specializing in Procurement, Supply Chain, Strategic Sourcing, Oracle ERP, Cost Optimization, and Industrial Automation.",
+    "Professional portfolio of Dipta Roy specializing in Procurement, Supply Chain, Strategic Sourcing, Oracle ERP, Cost Optimization, Supplier Management, and Industrial Automation.",
 
   keywords: [
     "Dipta Roy",
@@ -38,8 +37,8 @@ export const metadata: Metadata = {
     "Global Sourcing",
     "Supplier Management",
     "Vendor Management",
-    "Industrial Automation",
     "Oracle ERP",
+    "Industrial Automation",
     "PLC",
     "HMI",
     "Bangladesh",
@@ -70,6 +69,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
     nocache: false,
+    noarchive: false,
+    nosnippet: false,
+    noimageindex: false,
 
     googleBot: {
       index: true,
@@ -93,11 +95,11 @@ export const metadata: Metadata = {
     title: "Dipta Roy | Procurement & Supply Chain Professional",
 
     description:
-      "Procurement & Supply Chain Professional specializing in Strategic Sourcing, Supplier Management, Oracle ERP, and Industrial Automation.",
+      "Procurement & Supply Chain Professional specializing in Strategic Sourcing, Supplier Management, Oracle ERP, Cost Optimization, and Industrial Automation.",
 
     images: [
       {
-        url: ogImage,
+        url: "/images/og-image2.png",
         width: 1200,
         height: 630,
         alt: "Dipta Roy – Procurement & Supply Chain Professional Portfolio",
@@ -113,7 +115,7 @@ export const metadata: Metadata = {
     description:
       "Procurement & Supply Chain Professional with expertise in Strategic Sourcing, Oracle ERP, Supplier Management, Industrial Automation, PLC, and HMI.",
 
-    images: [ogImage],
+    images: ["/images/og-image2.png"],
   },
 
   icons: {
@@ -147,11 +149,13 @@ export const metadata: Metadata = {
 
   category: "Professional Portfolio",
 
+  classification: "Business",
+
   appleWebApp: {
-  capable: true,
-  statusBarStyle: "black-translucent",
-  title: "Dipta Roy Portfolio",
-},
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Dipta Roy Portfolio",
+  },
 
   verification: {
     google: "qJoTykuPtpb8_dxWJDmXr-jDs54yLinhqzrLIsxIcqg",
@@ -178,7 +182,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-[#081120] text-white antialiased`}
+        className={`${inter.className} bg-[#081120] text-white antialiased selection:bg-cyan-400/30 selection:text-white`}
       >
         {children}
 

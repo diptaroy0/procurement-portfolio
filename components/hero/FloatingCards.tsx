@@ -14,28 +14,36 @@ const cards = [
     subtitle: "China • Taiwan",
     icon: Globe,
     top: "12%",
-    left: "-14%",
+    left: "-15%",
+    width: "w-[230px]",
+    duration: 6.2,
   },
   {
     title: "Strategic Sourcing",
     subtitle: "Cost Optimization",
     icon: Boxes,
-    top: "23%",
+    top: "24%",
     right: "-18%",
+    width: "w-[210px]",
+    duration: 7.1,
   },
   {
     title: "PLC • HMI",
     subtitle: "Industrial Automation",
     icon: Cpu,
     bottom: "24%",
-    left: "-43%",
+    left: "-42%",
+    width: "w-[235px]",
+    duration: 6.8,
   },
   {
-    title: "Oracle & SAP",
-    subtitle: "ERP Systems",
+    title: "Oracle ERP & SAP",
+    subtitle: "Supply Chain Systems",
     icon: Database,
     bottom: "8%",
     right: "-42%",
+    width: "w-[220px]",
+    duration: 7.6,
   },
 ];
 
@@ -50,21 +58,22 @@ export default function FloatingCards() {
             key={card.title}
             initial={{
               opacity: 0,
-              y: 20,
-              scale: 0.95,
+              y: 30,
+              scale: 0.94,
             }}
             animate={{
               opacity: 1,
-              y: [0, -6, 0],
+              y: [0, -8, 0],
             }}
             transition={{
-              delay: index * 0.2,
-              duration: 6.5,
+              delay: index * 0.25,
+              duration: card.duration,
               repeat: Infinity,
               ease: "easeInOut",
             }}
             whileHover={{
-              scale: 1.04,
+              scale: 1.05,
+              y: -5,
             }}
             style={{
               top: card.top,
@@ -72,61 +81,99 @@ export default function FloatingCards() {
               right: card.right,
               bottom: card.bottom,
             }}
-            className="
+            className={`
               group
               absolute
               z-30
               hidden
               lg:flex
               items-center
-              gap-3
+              gap-4
+
+              ${card.width}
+
               rounded-2xl
+
               border
               border-cyan-400/20
-              bg-[rgba(15,23,42,.82)]
+
+              bg-[rgba(15,23,42,.84)]
+
               px-5
-              py-3.5
+              py-4
+
               backdrop-blur-2xl
-              shadow-[0_18px_45px_rgba(0,0,0,.45)]
+
+              shadow-[0_20px_55px_rgba(0,0,0,.48)]
+
               transition-all
               duration-300
-              hover:border-cyan-400/45
-              hover:shadow-[0_0_35px_rgba(34,211,238,.22)]
+
+              hover:border-cyan-400/50
+              hover:shadow-[0_0_40px_rgba(34,211,238,.22)]
+
               transform-gpu
               will-change-transform
-            "
+            `}
           >
             <div
               className="
                 flex
-                h-11
-                w-11
+                h-12
+                w-12
+                shrink-0
                 items-center
                 justify-center
+
                 rounded-xl
+
                 bg-gradient-to-br
                 from-cyan-500/20
                 via-cyan-400/15
                 to-blue-600/20
+
                 text-cyan-400
-                transition-transform
+
+                transition-all
                 duration-300
+
                 group-hover:rotate-6
                 group-hover:scale-110
               "
             >
               <Icon
-                size={19}
+                size={20}
                 aria-hidden="true"
               />
             </div>
 
-            <div>
-              <p className="whitespace-nowrap text-[15px] font-semibold tracking-wide text-white">
+            <div className="min-w-0">
+              <p
+                className="
+                  whitespace-nowrap
+
+                  text-[15px]
+                  font-semibold
+
+                  tracking-wide
+
+                  text-white
+                "
+              >
                 {card.title}
               </p>
 
-              <p className="mt-0.5 whitespace-nowrap text-xs text-gray-400">
+              <p
+                className="
+                  mt-1
+
+                  whitespace-nowrap
+
+                  text-xs
+
+                  text-gray-400
+                "
+              >
                 {card.subtitle}
               </p>
             </div>

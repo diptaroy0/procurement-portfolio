@@ -15,32 +15,45 @@ import HeroButtons from "./HeroButtons";
 
 export default function HeroContent() {
   return (
-    <div className="max-w-xl lg:max-w-2xl">
-      {/* Availability */}
+    <div className="max-w-[680px]">
+      {/* ==========================================
+          Availability Badge
+      =========================================== */}
 
-      <motion.div {...fadeDown} className="mb-8">
-        <IconBadge icon={Circle} iconSize={10}>
+      <motion.div
+        {...fadeDown}
+        className="mb-8"
+      >
+        <IconBadge
+          icon={Circle}
+          iconSize={10}
+        >
           {profile.availability}
         </IconBadge>
       </motion.div>
 
-      {/* Heading */}
+      {/* ==========================================
+          Hero Heading
+      =========================================== */}
 
       <motion.h1
         id="hero-heading"
         {...fadeUp}
-        className="leading-[1.08] lg:leading-[1.05]"
+        className="leading-[1.02]"
       >
         <span
           className="
             block
             text-5xl
-            font-extrabold
-            tracking-[-0.02em]
+            font-black
+            tracking-[-0.04em]
             text-white
 
             sm:text-6xl
+
             lg:text-7xl
+
+            xl:text-[5rem]
           "
         >
           {profile.headline.line1}
@@ -48,42 +61,64 @@ export default function HeroContent() {
 
         <span
           className="
-            mt-5
+            mt-6
             block
+
             bg-gradient-to-r
             from-cyan-300
             via-sky-400
             to-blue-500
+
             bg-clip-text
+
             text-5xl
-            font-extrabold
-            tracking-[-0.02em]
+            font-black
+            tracking-[-0.04em]
             text-transparent
 
-            sm:mt-6
             sm:text-6xl
 
-            lg:mt-7
             lg:text-7xl
+
+            xl:text-[5rem]
           "
         >
           {profile.headline.line2}
         </span>
       </motion.h1>
 
-      {/* Accent Line */}
+      {/* ==========================================
+          Accent Line
+      =========================================== */}
 
       <motion.div
-        initial={{ width: 0 }}
-        animate={{ width: 120 }}
-        transition={{
-          duration: 0.7,
-          delay: 0.5,
+        initial={{
+          width: 0,
+          opacity: 0,
         }}
-        className="mt-12 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600"
+        animate={{
+          width: 150,
+          opacity: 1,
+        }}
+        transition={{
+          delay: 0.45,
+          duration: 0.7,
+        }}
+        className="
+          mt-12
+          h-[2px]
+          rounded-full
+
+          bg-gradient-to-r
+          from-cyan-400
+          via-sky-400
+          to-transparent
+        "
       />
 
-      {/* Summary */}
+      {/* ==========================================
+          Professional Summary
+      =========================================== */}
 
       <motion.p
         {...fadeUp}
@@ -93,6 +128,9 @@ export default function HeroContent() {
         }}
         className="
           mt-10
+
+          max-w-[650px]
+
           text-base
           leading-8
           text-gray-300
@@ -107,7 +145,9 @@ export default function HeroContent() {
         {profile.summary}
       </motion.p>
 
-      {/* Description */}
+      {/* ==========================================
+          Description
+      =========================================== */}
 
       <motion.p
         {...fadeIn}
@@ -117,6 +157,9 @@ export default function HeroContent() {
         }}
         className="
           mt-8
+
+          max-w-[650px]
+
           text-base
           leading-8
           text-gray-400
@@ -128,7 +171,9 @@ export default function HeroContent() {
         {profile.description}
       </motion.p>
 
-      {/* Buttons */}
+      {/* ==========================================
+          CTA Buttons
+      =========================================== */}
 
       <motion.div
         {...fadeUp}
@@ -136,7 +181,7 @@ export default function HeroContent() {
           ...fadeUp.transition,
           delay: 0.6,
         }}
-        className="mt-12"
+        className="mt-14"
       >
         <HeroButtons />
       </motion.div>
