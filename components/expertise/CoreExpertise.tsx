@@ -17,7 +17,7 @@ export default function CoreExpertise() {
     <section
       id="expertise"
       aria-labelledby="expertise-heading"
-      className="relative overflow-hidden py-20 md:py-24 lg:py-32"
+      className="relative overflow-hidden py-20 lg:py-24"
     >
       {/* Background Glow */}
 
