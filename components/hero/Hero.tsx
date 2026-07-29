@@ -50,12 +50,14 @@ export default function Hero() {
           ====================================== */}
 
           <motion.div
-            {...heroLeft}
-            className="
-              order-2
-              lg:order-1
-            "
-          >
+  {...heroLeft}
+  className="
+    order-2
+    lg:order-1
+    lg:-ml-6
+    xl:-ml-8
+  "
+>
             <HeroContent />
 
             <div className="mt-14 lg:mt-16">
