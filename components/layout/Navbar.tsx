@@ -62,7 +62,7 @@ export default function Navbar() {
     lg:px-10
     xl:px-12
 
-    py-3.5
+    py-3
 
     backdrop-blur-[30px]
 
