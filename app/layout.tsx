@@ -162,7 +162,6 @@ export const metadata: Metadata = {
   },
 
   other: {
-    "theme-color": "#081120",
     "color-scheme": "dark",
   },
 };

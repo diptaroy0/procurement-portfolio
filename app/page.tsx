@@ -3,8 +3,6 @@ import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
 import Experience from "@/components/experience/Experience";
 import Contact from "@/components/contact/Contact";
-
-import BackgroundEffects from "@/components/ui/BackgroundEffects";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 
 import Achievements from "@/components/achievements/Achievements";
@@ -19,7 +17,6 @@ export default function Home() {
   return (
     <>
       <ScrollProgress />
-      <BackgroundEffects />
 
       <main className="relative min-h-screen overflow-x-hidden">
         <Navbar />
