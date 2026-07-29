@@ -26,6 +26,11 @@ const securityHeaders = [
     key: "Cross-Origin-Opener-Policy",
     value: "same-origin",
   },
+  {
+    key: "Strict-Transport-Security",
+    value:
+      "max-age=63072000; includeSubDomains; preload",
+  },
 ];
 
 const nextConfig: NextConfig = {
@@ -48,12 +53,7 @@ const nextConfig: NextConfig = {
 
     minimumCacheTTL: 60 * 60 * 24 * 30,
 
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
+    unoptimized: false,
   },
 
   async headers() {

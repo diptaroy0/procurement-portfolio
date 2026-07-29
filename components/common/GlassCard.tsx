@@ -26,7 +26,7 @@ export default function GlassCard({
   const content = (
     <div
       className={clsx(
-        "rounded-[32px]",
+        "rounded-[28px]",
         "border border-cyan-400/15",
         "bg-[rgba(15,23,42,.72)]",
         "backdrop-blur-2xl",

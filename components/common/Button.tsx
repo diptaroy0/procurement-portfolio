@@ -23,8 +23,8 @@ interface ButtonProps
 
 const motionProps = {
   whileHover: {
-    scale: 1.05,
-    y: -3,
+    scale: 1.03,
+    y: -2,
   },
   whileTap: {
     scale: 0.97,

@@ -52,7 +52,7 @@ export default function SectionHeader({
           delay: 0.1,
         }}
         className="
-          mt-8
+          mt-6
           text-4xl
           font-black
           text-white
@@ -73,10 +73,10 @@ export default function SectionHeader({
         }}
         className="
           mx-auto
-          mt-8
+          mt-6
           max-w-2xl
           text-lg
-          leading-9
+          leading-8
           text-gray-400
         "
       >
