@@ -26,5 +26,4 @@ export const site = {
 
   logoImage: "/images/Logo_Dipta.png",
 
-  resumepdf: "/resume/Resume.pdf",
 };

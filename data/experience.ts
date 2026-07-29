@@ -70,7 +70,7 @@ export const experience: Experience[] = [
 
     company: "RFL-RIP-DPL-Maintenance",
 
-    location: "Kaliganj, Gazipur,Dhaka, Bangladesh",
+    location: "Kaliganj, Gazipur, Dhaka, Bangladesh",
 
     metrics: [
       {
@@ -104,7 +104,7 @@ export const experience: Experience[] = [
 
     company: "RFL-RIP-DPL-Maintenance",
     
-    location: "Kaliganj, Gazipur,Dhaka, Bangladesh", 
+    location: "Kaliganj, Gazipur, Dhaka, Bangladesh", 
 
     responsibilities: [
       "Industrial production support.",

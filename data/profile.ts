@@ -20,8 +20,8 @@ export const profile = {
   },
   {
     icon: "briefcase",
-    value: "100+",
-    label: "Purchase Orders",
+    value: "120+",
+    label: "Procurement Orders",
   },
   {
     icon: "award",

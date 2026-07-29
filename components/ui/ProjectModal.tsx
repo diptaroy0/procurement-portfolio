@@ -60,11 +60,15 @@ export default function ProjectModal({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
+            aria-hidden="true"
           />
 
           {/* Modal */}
 
           <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="project-title"
             className="fixed inset-0 z-[1000] flex items-center justify-center p-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -107,6 +111,7 @@ export default function ProjectModal({
 
               <button
                 onClick={onClose}
+                aria-label="Close project details"
                 className="
                   absolute
                   right-6
@@ -139,7 +144,10 @@ export default function ProjectModal({
 
               <div className="space-y-8 p-10">
                 <div>
-                  <h2 className="text-4xl font-bold text-white">
+                  <h2
+                    id="project-title"
+                    className="text-4xl font-bold text-white"
+                  >
                     {project.title}
                   </h2>
 

@@ -33,11 +33,11 @@ export default function BackgroundEffects() {
           absolute
           -left-72
           -top-72
-          h-[900px]
-          w-[900px]
+          h-[760px]
+          w-[760px]
           rounded-full
           bg-cyan-400/18
-          blur-[240px]
+          blur-[220px]
         "
       />
 
@@ -60,11 +60,11 @@ export default function BackgroundEffects() {
           absolute
           -right-72
           -top-72
-          h-[850px]
-          w-[850px]
+          h-[740px]
+          w-[740px]
           rounded-full
           bg-blue-500/16
-          blur-[250px]
+          blur-[220px]
         "
       />
 
@@ -87,11 +87,11 @@ export default function BackgroundEffects() {
           absolute
           -left-80
           -bottom-80
-          h-[950px]
-          w-[950px]
+          h-[820px]
+          w-[820px]
           rounded-full
           bg-blue-700/14
-          blur-[270px]
+          blur-[220px]
         "
       />
 
@@ -114,11 +114,11 @@ export default function BackgroundEffects() {
           absolute
           -right-80
           -bottom-80
-          h-[950px]
-          w-[950px]
+          h-[820px]
+          w-[820px]
           rounded-full
           bg-cyan-500/14
-          blur-[270px]
+          blur-[220px]
         "
       />
 
@@ -132,8 +132,8 @@ export default function BackgroundEffects() {
           absolute
           left-1/2
           top-1/2
-          h-[900px]
-          w-[900px]
+          h-[760px]
+          w-[760px]
           -translate-x-1/2
           -translate-y-1/2
           rounded-full

@@ -158,9 +158,9 @@ export default function SectionHeader({
         }}
         className={clsx(
           `
-          mt-8
+          mt-6
           text-lg
-          leading-9
+          leading-8
           text-gray-400
           `,
           centered ? "mx-auto max-w-2xl" : ""
