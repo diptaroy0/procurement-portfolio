@@ -4,6 +4,10 @@ export const personStructuredData = {
 
   name: "Dipta Roy",
 
+  url: "https://your-domain.com",
+
+  image: "https://your-domain.com/images/dipta.png",
+
   jobTitle:
     "Procurement & Supply Chain Professional | Industrial Automation Engineer",
 
@@ -12,11 +16,9 @@ export const personStructuredData = {
 
   email: "mailto:diptaroy0@gmail.com",
 
-  image: "/images/dipta.png",
-
   sameAs: [
     "https://github.com/diptaroy0",
-    "https://www.linkedin.com/in/diptaroy0/"
+    "https://www.linkedin.com/in/diptaroy0/",
   ],
 
   alumniOf: {
@@ -31,11 +33,14 @@ export const personStructuredData = {
     "Supplier Management",
     "Vendor Negotiation",
     "Oracle ERP",
+    "SAP S/4HANA",
     "Industrial Automation",
     "PLC",
     "HMI",
+    "SCADA",
     "Global Sourcing",
     "Material Handling Equipment",
     "Project Management",
+    "Cost Optimization",
   ],
 };

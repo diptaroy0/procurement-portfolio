@@ -1,6 +1,20 @@
 import type { MotionProps } from "framer-motion";
 
 /* ==========================================================
+   Shared Configuration
+========================================================== */
+
+const defaultViewport = {
+  once: true,
+  amount: 0.2,
+};
+
+const defaultTransition = {
+  duration: 0.7,
+  ease: "easeOut" as const,
+};
+
+/* ==========================================================
    Hero Animations
 ========================================================== */
 
@@ -53,15 +67,9 @@ export const fadeUp: MotionProps = {
     y: 0,
   },
 
-  transition: {
-    duration: 0.7,
-    ease: "easeOut",
-  },
+  transition: defaultTransition,
 
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
+  viewport: defaultViewport,
 };
 
 export const fadeDown: MotionProps = {
@@ -75,15 +83,9 @@ export const fadeDown: MotionProps = {
     y: 0,
   },
 
-  transition: {
-    duration: 0.7,
-    ease: "easeOut",
-  },
+  transition: defaultTransition,
 
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
+  viewport: defaultViewport,
 };
 
 export const fadeLeft: MotionProps = {
@@ -97,15 +99,9 @@ export const fadeLeft: MotionProps = {
     x: 0,
   },
 
-  transition: {
-    duration: 0.7,
-    ease: "easeOut",
-  },
+  transition: defaultTransition,
 
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
+  viewport: defaultViewport,
 };
 
 export const fadeRight: MotionProps = {
@@ -119,15 +115,9 @@ export const fadeRight: MotionProps = {
     x: 0,
   },
 
-  transition: {
-    duration: 0.7,
-    ease: "easeOut",
-  },
+  transition: defaultTransition,
 
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
+  viewport: defaultViewport,
 };
 
 export const fadeIn: MotionProps = {
@@ -144,10 +134,7 @@ export const fadeIn: MotionProps = {
     ease: "easeOut",
   },
 
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
+  viewport: defaultViewport,
 };
 
 export const scaleIn: MotionProps = {
@@ -166,10 +153,7 @@ export const scaleIn: MotionProps = {
     ease: "easeOut",
   },
 
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
+  viewport: defaultViewport,
 };
 
 export const zoomIn: MotionProps = {
@@ -188,10 +172,7 @@ export const zoomIn: MotionProps = {
     ease: "easeOut",
   },
 
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
+  viewport: defaultViewport,
 };
 
 export const rotateIn: MotionProps = {
@@ -212,10 +193,7 @@ export const rotateIn: MotionProps = {
     ease: "easeOut",
   },
 
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
+  viewport: defaultViewport,
 };
 
 export const fadeUpSlow: MotionProps = {
@@ -234,8 +212,5 @@ export const fadeUpSlow: MotionProps = {
     ease: "easeOut",
   },
 
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
+  viewport: defaultViewport,
 };

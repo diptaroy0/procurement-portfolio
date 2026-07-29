@@ -28,10 +28,8 @@ export default function ContactInfo() {
         relative
         h-full
         overflow-hidden
-
         transition-all
         duration-300
-
         hover:border-cyan-400/30
         hover:shadow-[0_0_40px_rgba(34,211,238,.18)]
       "
@@ -44,24 +42,16 @@ export default function ContactInfo() {
           absolute
           right-0
           top-0
-
           h-56
           w-56
-
           translate-x-20
           -translate-y-20
-
           rounded-full
-
           bg-cyan-500/10
-
           blur-3xl
-
           opacity-0
-
           transition-opacity
           duration-300
-
           group-hover:opacity-100
         "
       />
@@ -75,6 +65,7 @@ export default function ContactInfo() {
               src={site.profileImage}
               alt={`${site.name} profile`}
               fill
+              priority
               className="object-cover"
               sizes="96px"
             />
@@ -95,26 +86,20 @@ export default function ContactInfo() {
                 inline-flex
                 items-center
                 gap-2
-
                 rounded-full
-
                 border
                 border-emerald-400/20
-
                 bg-emerald-500/10
-
                 px-4
                 py-2
-
                 text-sm
                 font-medium
-
                 text-emerald-300
               "
             >
               <CheckCircle2 size={16} />
 
-              Open to Procurement Opportunities
+              {site.availability}
             </div>
           </div>
         </div>
@@ -152,7 +137,7 @@ export default function ContactInfo() {
             icon={<Phone size={20} />}
             label="Phone"
             value={site.phone}
-            href={`tel:${site.phone}`}
+            href={`tel:${site.phone.replace(/\s+/g, "")}`}
           />
         </div>
 
@@ -162,27 +147,22 @@ export default function ContactInfo() {
           <a
             href={site.resume}
             download
+            aria-label="Download resume"
             className="
               inline-flex
               items-center
               justify-center
               gap-2
-
               rounded-xl
-
               bg-gradient-to-r
               from-cyan-500
               to-blue-600
-
               px-5
               py-3
-
               font-semibold
               text-white
-
               transition-all
               duration-300
-
               hover:scale-[1.03]
               hover:shadow-[0_0_30px_rgba(34,211,238,.25)]
             "
@@ -195,26 +175,21 @@ export default function ContactInfo() {
             href={site.linkedin}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit LinkedIn profile"
             className="
               inline-flex
               items-center
               justify-center
               gap-2
-
               rounded-xl
-
               border
               border-cyan-400/20
-
               px-5
               py-3
-
               font-semibold
               text-white
-
               transition-all
               duration-300
-
               hover:border-cyan-400
               hover:bg-cyan-500/10
             "
@@ -225,11 +200,11 @@ export default function ContactInfo() {
 
             <ArrowUpRight size={16} />
           </a>
-
-          <a
+                    <a
             href={site.github}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit GitHub profile"
             className="
               inline-flex
               items-center
@@ -304,7 +279,7 @@ function InfoItem({
           {label}
         </p>
 
-        <p className="mt-1 break-all font-medium text-white">
+        <p className="mt-1 break-words font-medium text-white">
           {value}
         </p>
       </div>
@@ -315,12 +290,22 @@ function InfoItem({
     return (
       <a
         href={href}
-        className="flex items-start gap-4 transition-colors hover:text-cyan-300"
+        className="
+          flex
+          items-start
+          gap-4
+          transition-colors
+          hover:text-cyan-300
+        "
       >
         {content}
       </a>
     );
   }
 
-  return <div className="flex items-start gap-4">{content}</div>;
+  return (
+    <div className="flex items-start gap-4">
+      {content}
+    </div>
+  );
 }

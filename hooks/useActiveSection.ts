@@ -31,14 +31,20 @@ export default function useActiveSection() {
         }
       });
 
-      setActiveSection(current);
+      setActiveSection((prev) =>
+        prev === current ? prev : current
+      );
     };
 
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return activeSection;

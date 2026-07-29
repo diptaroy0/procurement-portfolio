@@ -1,13 +1,20 @@
 export function cn(
-  ...classes: (string | false | undefined | null)[]
-) {
+  ...classes: Array<string | false | null | undefined>
+): string {
   return classes.filter(Boolean).join(" ");
 }
 
-export function delay(index: number, step = 0.1) {
+export function delay(
+  index: number,
+  step = 0.1
+): number {
   return index * step;
 }
 
-export function yearsSince(year: number) {
-  return new Date().getFullYear() - year;
+export function yearsSince(
+  year: number
+): number {
+  const currentYear = new Date().getFullYear();
+
+  return Math.max(0, currentYear - year);
 }
