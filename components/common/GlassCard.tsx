@@ -1,37 +1,36 @@
 "use client";
 
-import { ReactNode } from "react";
+import { motion } from "framer-motion";
 import clsx from "clsx";
+import { ReactNode } from "react";
 
 type GlassCardProps = {
   children: ReactNode;
   className?: string;
+
   hover?: boolean;
   animate?: boolean;
+
   padding?: "none" | "sm" | "md" | "lg";
 };
 
 export default function GlassCard({
   children,
   className,
+
   hover = true,
+  animate = true,
+
   padding = "lg",
 }: GlassCardProps) {
-  return (
+  const content = (
     <div
       className={clsx(
         "rounded-[28px]",
         "border border-cyan-400/15",
-
-        // Removed backdrop-filter for testing
-        "bg-[#0f172a]",
-
-        "shadow-xl",
-
-        "transition-all duration-300",
-
-        hover &&
-          "hover:-translate-y-1 hover:border-cyan-400/30",
+        "bg-[rgba(15,23,42,.72)]",
+        "backdrop-blur-2xl",
+        "shadow-[0_20px_60px_rgba(0,0,0,.45)]",
 
         {
           "p-0": padding === "none",
@@ -45,5 +44,25 @@ export default function GlassCard({
     >
       {children}
     </div>
+  );
+
+  if (!animate) return content;
+
+  return (
+    <motion.div
+      whileHover={
+        hover
+          ? {
+              y: -8,
+              scale: 1.02,
+            }
+          : undefined
+      }
+      transition={{
+        duration: 0.25,
+      }}
+    >
+      {content}
+    </motion.div>
   );
 }
