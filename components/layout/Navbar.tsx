@@ -44,39 +44,47 @@ export default function Navbar() {
       className="fixed top-0 left-0 z-50 w-full"
     >
       <div
-        className={`
-          mx-auto
-          mt-4
-          flex
-          max-w-7xl
-          items-center
-          justify-between
-          rounded-3xl
-          border
-          px-5
-sm:px-6
-lg:px-8
+  className={`
+    mx-auto
+    mt-5
 
-py-3.5
-          backdrop-blur-[30px]
-          transition-all
-          duration-500
+    flex
+    max-w-[1700px]
 
-          ${
-            scrolled
-              ? `
-                border-cyan-400/15
-                bg-[#081120]/60
-                shadow-[0_20px_60px_rgba(0,0,0,.45)]
-              `
-              : `
-                border-white/10
-                bg-[#081120]/45
-                shadow-[0_10px_40px_rgba(0,0,0,.20)]
-              `
-          }
-        `}
-      >
+    items-center
+    justify-between
+
+    rounded-3xl
+    border
+
+    px-6
+    sm:px-8
+    lg:px-10
+    xl:px-12
+
+    py-4
+
+    backdrop-blur-[30px]
+
+    transition-all
+    duration-500
+
+    ${
+      scrolled
+        ? `
+          border-cyan-400/15
+          bg-[#081120]/60
+          shadow-[0_20px_60px_rgba(0,0,0,.45)]
+        `
+        : `
+          border-white/10
+          bg-[#081120]/45
+          shadow-[0_10px_40px_rgba(0,0,0,.20)]
+        `
+    }
+  `}
+>
+      
         {/* Logo */}
 
         <Link
@@ -122,7 +130,7 @@ lg:gap-4
 
         <nav
           aria-label="Primary navigation"
-          className="hidden items-center gap-8 xl:gap-10 lg:flex"
+          className="hidden items-center gap-10 xl:gap-12 lg:flex"
         >
           {navItems.map((item) => {
             const active = activeSection === item.href.replace("#", "");
