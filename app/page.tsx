@@ -13,6 +13,7 @@ import ProcurementWorkflow from "@/components/workflow/ProcurementWorkflow";
 import CaseStudies from "@/components/case-studies/CaseStudies";
 import Education from "@/components/education/Education";
 import Footer from "@/components/layout/Footer";
+import FeaturedProjects from "@/components/projects/FeaturedProjects";
 
 export default function Home() {
   return (
@@ -36,6 +37,8 @@ export default function Home() {
         <ProcurementWorkflow />
 
         <CaseStudies />
+
+        <FeaturedProjects />
 
         <Education />
 
