@@ -19,9 +19,9 @@ export default function HeroImage() {
 
         lg:justify-end
 
-        lg:translate-x-8
-        xl:translate-x-10
-        2xl:translate-x-12
+        lg:translate-x-4
+xl:translate-x-6
+2xl:translate-x-8
       "
     >
       {/* ==========================================
