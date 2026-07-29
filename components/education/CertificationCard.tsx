@@ -2,30 +2,34 @@
 
 import { motion } from "framer-motion";
 import {
-  CalendarDays,
-  ChevronRight,
-  Building2,
+  ArrowUpRight,
+  BookOpen,
+  CircleCheck,
 } from "lucide-react";
 
-import { GlassCard } from "@/components/common";
+import { GlassCard, Tag } from "@/components/common";
 import { fadeUp } from "@/lib/animations";
 
-import type { EducationItem } from "./educationData";
+import type { CertificationItem } from "./educationData";
 
-interface EducationCardProps {
-  education: EducationItem;
+interface CertificationCardProps {
+  certification: CertificationItem;
 }
 
-export default function EducationCard({
-  education,
-}: EducationCardProps) {
+export default function CertificationCard({
+  certification,
+}: CertificationCardProps) {
   const {
     icon: Icon,
     title,
-    organization,
-    period,
-    description,
-  } = education;
+    status,
+    skills,
+  } = certification;
+
+  const statusColor =
+    status === "Professional Experience"
+      ? "bg-emerald-500/15 border-emerald-400/30 text-emerald-300"
+      : "bg-cyan-500/15 border-cyan-400/30 text-cyan-300";
 
   return (
     <motion.article
@@ -55,8 +59,8 @@ export default function EducationCard({
             right-0
             top-0
 
-            h-40
-            w-40
+            h-36
+            w-36
 
             translate-x-10
             -translate-y-10
@@ -83,26 +87,23 @@ export default function EducationCard({
             <div
               className="
                 flex
-                h-16
-                w-16
+                h-14
+                w-14
                 items-center
                 justify-center
 
                 rounded-2xl
 
-                border
-                border-cyan-400/20
-
                 bg-cyan-500/10
               "
             >
               <Icon
-                size={30}
+                size={28}
                 className="text-cyan-400"
               />
             </div>
 
-            <ChevronRight
+            <ArrowUpRight
               size={20}
               className="
                 text-cyan-400/40
@@ -110,22 +111,23 @@ export default function EducationCard({
                 transition-all
                 duration-300
 
+                group-hover:-translate-y-1
                 group-hover:translate-x-1
                 group-hover:text-cyan-300
               "
             />
           </div>
 
-          {/* Degree */}
+          {/* Title */}
 
           <h3
             className="
               mt-6
 
-              text-2xl
+              text-xl
               font-bold
 
-              leading-tight
+              leading-snug
 
               text-white
             "
@@ -133,40 +135,14 @@ export default function EducationCard({
             {title}
           </h3>
 
-          {/* Organization */}
-
-          <div className="mt-5 flex items-center gap-2">
-            <Building2
-              size={17}
-              className="text-cyan-400"
-            />
-
-            <p className="font-medium text-cyan-300">
-              {organization}
-            </p>
-          </div>
-
-          {/* Period */}
-
-          <div className="mt-2 flex items-center gap-2">
-            <CalendarDays
-              size={16}
-              className="text-gray-500"
-            />
-
-            <p className="text-sm text-gray-500">
-              {period}
-            </p>
-          </div>
-
           {/* Divider */}
 
           <div
             className="
-              mt-6
+              mt-5
 
               h-px
-              w-20
+              w-16
 
               bg-gradient-to-r
               from-cyan-400
@@ -174,19 +150,56 @@ export default function EducationCard({
             "
           />
 
-          {/* Description */}
+          {/* Status */}
 
-          <p
-            className="
-              mt-6
+          <div className="mt-6">
+            <span
+              className={`
+                inline-flex
+                items-center
+                gap-2
 
-              leading-8
+                rounded-full
 
-              text-gray-400
-            "
-          >
-            {description}
-          </p>
+                border
+
+                px-4
+                py-2
+
+                text-sm
+                font-medium
+
+                ${statusColor}
+              `}
+            >
+              <CircleCheck size={15} />
+
+              {status}
+            </span>
+          </div>
+
+          {/* Skills */}
+
+          <div className="mt-8">
+            <div className="mb-4 flex items-center gap-2">
+              <BookOpen
+                size={18}
+                className="text-cyan-400"
+              />
+
+              <h4 className="font-semibold text-cyan-300">
+                Skills
+              </h4>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {skills.map((skill) => (
+                <Tag key={skill}>
+                  {skill}
+                </Tag>
+              ))}
+            </div>
+          </div>
         </div>
       </GlassCard>
     </motion.article>
