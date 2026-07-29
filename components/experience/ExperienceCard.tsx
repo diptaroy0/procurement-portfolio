@@ -25,7 +25,6 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <motion.article
-      layout
       className="relative pl-16 md:pl-24"
     >
       {/* Timeline Node */}
