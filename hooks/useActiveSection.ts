@@ -7,6 +7,7 @@ const SECTION_IDS = [
   "experience",
   "expertise",
   "case-studies",
+  "projects",
   "education",
   "contact",
 ];

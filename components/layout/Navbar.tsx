@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
+import { site } from "@/data/site";
 
 import MobileMenu from "./MobileMenu";
 import useActiveSection from "@/hooks/useActiveSection";
@@ -13,6 +14,7 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Expertise", href: "#expertise" },
+  { name: "Projects", href: "#projects" },
   { name: "Case Studies", href: "#case-studies" },
   { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
@@ -51,8 +53,11 @@ export default function Navbar() {
           justify-between
           rounded-3xl
           border
-          px-8
-          py-4
+          px-5
+sm:px-6
+lg:px-8
+
+py-3.5
           backdrop-blur-[30px]
           transition-all
           duration-500
@@ -75,9 +80,14 @@ export default function Navbar() {
         {/* Logo */}
 
         <Link
-          href="/"
+          href="#home"
           aria-label="Go to homepage"
-          className="flex items-center gap-4"
+          className="
+flex
+items-center
+gap-3
+lg:gap-4
+"
         >
           <Image
             src="/images/Logo_Dipta.png"
@@ -89,10 +99,12 @@ export default function Navbar() {
             decoding="async"
             draggable={false}
             className="
-              h-20
-              w-20
-              select-none
-            "
+  h-16
+  w-16
+  lg:h-20
+  lg:w-20
+  select-none
+"
           />
 
           <div>
@@ -110,7 +122,7 @@ export default function Navbar() {
 
         <nav
           aria-label="Primary navigation"
-          className="hidden items-center gap-10 lg:flex"
+          className="hidden items-center gap-8 xl:gap-10 lg:flex"
         >
           {navItems.map((item) => {
             const active = activeSection === item.href.replace("#", "");
@@ -126,7 +138,8 @@ export default function Navbar() {
                   text-[15px]
                   font-medium
                   transition-all
-                  duration-300
+duration-500
+ease-out
 
                   ${
                     active
@@ -148,7 +161,8 @@ export default function Navbar() {
                     bg-cyan-400
                     shadow-[0_0_12px_rgba(34,211,238,.6)]
                     transition-all
-                    duration-300
+duration-500
+ease-out
 
                     ${
                       active
@@ -166,10 +180,11 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <Link
-            href="/resume/Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open Dipta Roy Resume"
+  href={site.resume}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Download Resume"
+  
             className="
               inline-flex
               items-center
@@ -184,9 +199,11 @@ export default function Navbar() {
               font-semibold
               text-white
               transition-all
-              duration-300
-              hover:border-cyan-300
-              hover:bg-cyan-500/10
+duration-300
+hover:border-cyan-300
+hover:bg-cyan-500/10
+hover:-translate-y-0.5
+hover:shadow-[0_12px_25px_rgba(34,211,238,.15)]
             "
           >
             <Download
@@ -194,7 +211,7 @@ export default function Navbar() {
               aria-hidden="true"
             />
 
-            Resume
+            Download Resume
           </Link>
 
           <Link
@@ -216,7 +233,7 @@ export default function Navbar() {
               hover:shadow-[0_15px_35px_rgba(34,211,238,.30)]
             "
           >
-            Hire Me
+            Let's Connect
           </Link>
         </div>
 

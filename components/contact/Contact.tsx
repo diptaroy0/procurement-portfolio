@@ -19,25 +19,65 @@ export default function Contact() {
       aria-labelledby="contact-heading"
       className="relative overflow-hidden py-20 md:py-24 lg:py-32"
     >
+      {/* Background Effects */}
+
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 overflow-hidden"
+      >
+        <div
+          className="
+            absolute
+            left-[-220px]
+            bottom-[-120px]
+
+            h-[420px]
+            w-[420px]
+
+            rounded-full
+
+            bg-cyan-500/10
+
+            blur-[140px]
+          "
+        />
+
+        <div
+          className="
+            absolute
+            right-[-220px]
+            top-[-120px]
+
+            h-[420px]
+            w-[420px]
+
+            rounded-full
+
+            bg-blue-500/10
+
+            blur-[150px]
+          "
+        />
+      </div>
+
       <Container>
         <SectionHeader
           id="contact-heading"
           badge="Let's Connect"
-          title="Get In Touch"
-          description="I'm always open to discussing procurement, supply chain management, industrial automation, and exciting career opportunities. Feel free to reach out if you'd like to collaborate or simply connect."
+          title="Let's Build Something Great Together"
+          description="Whether you're looking for a procurement professional, supply chain specialist, or industrial automation engineer, I'd be delighted to discuss opportunities, collaborations, or innovative projects."
         />
 
         <motion.div
           {...fadeUp}
           className="
-            mt-12
+            mt-14
             grid
-            grid-cols-1
             gap-8
 
             lg:mt-20
             lg:grid-cols-2
-            lg:gap-12
+            lg:gap-10
           "
         >
           <ContactInfo />

@@ -36,9 +36,9 @@ export default function Home() {
 
         <ProcurementWorkflow />
 
-        <CaseStudies />
-
         <FeaturedProjects />
+
+        <CaseStudies />
 
         <Education />
 
