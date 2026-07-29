@@ -49,7 +49,7 @@ export default function Navbar() {
     mt-5
 
     flex
-    max-w-[1700px]
+    max-w-[1600px]
 
     items-center
     justify-between
