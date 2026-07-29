@@ -54,8 +54,8 @@ export default function Hero() {
   className="
     order-2
     lg:order-1
-    lg:-ml-20
-    xl:-ml-22
+    lg:-ml-6
+    xl:-ml-8
   "
 >
             <HeroContent />
