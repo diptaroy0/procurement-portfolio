@@ -21,62 +21,71 @@ export interface WorkflowStep {
 export const workflow: WorkflowStep[] = [
   {
     icon: ClipboardList,
-    title: "Requirement",
+    title: "Requirement Analysis",
     description:
-      "Receive technical or business requirements from stakeholders.",
+      "Collect technical specifications and procurement requirements from engineering, production, or business stakeholders.",
   },
+
   {
     icon: FileText,
     title: "Purchase Requisition",
     description:
-      "Review and approve procurement requests before sourcing.",
+      "Review and validate purchase requisitions (PR) before initiating the sourcing process.",
   },
+
   {
     icon: Search,
-    title: "RFQ",
+    title: "RFQ & Supplier Sourcing",
     description:
-      "Request quotations from qualified suppliers and collect commercial offers.",
+      "Issue Requests for Quotation (RFQs), identify qualified suppliers, and collect commercial and technical proposals.",
   },
+
   {
     icon: Users,
     title: "Supplier Evaluation",
     description:
-      "Evaluate suppliers based on technical capability, quality, pricing, and delivery performance.",
+      "Compare suppliers based on technical compliance, pricing, quality standards, lead time, and overall commercial value.",
   },
+
   {
     icon: Handshake,
     title: "Negotiation",
     description:
-      "Negotiate pricing, lead time, payment terms, warranty, and commercial conditions.",
+      "Negotiate pricing, payment terms, delivery schedules, warranty coverage, and commercial agreements to maximize value.",
   },
+
   {
     icon: ShoppingCart,
     title: "Purchase Order",
     description:
-      "Issue the official Purchase Order to the selected supplier.",
+      "Generate and issue the Purchase Order (PO) with finalized commercial terms and delivery requirements.",
   },
+
   {
     icon: Truck,
-    title: "Delivery",
+    title: "Logistics & Delivery",
     description:
-      "Coordinate logistics, shipment tracking, customs, and delivery schedules.",
+      "Coordinate shipment schedules, customs documentation, transportation, and on-time delivery with suppliers.",
   },
+
   {
     icon: PackageCheck,
-    title: "GRN",
+    title: "Goods Receipt",
     description:
-      "Inspect received materials and complete the Goods Receipt Note process.",
+      "Inspect incoming materials, verify specifications, and complete the Goods Receipt Note (GRN) process.",
   },
+
   {
     icon: Receipt,
     title: "Invoice Verification",
     description:
-      "Match supplier invoices against the Purchase Order and GRN before approval.",
+      "Perform three-way matching between the Purchase Order, Goods Receipt, and supplier invoice before approval.",
   },
+
   {
     icon: Wallet,
-    title: "Payment",
+    title: "Supplier Payment",
     description:
-      "Process supplier payment according to agreed commercial terms.",
+      "Process supplier payments according to agreed commercial terms while maintaining procurement compliance.",
   },
 ];

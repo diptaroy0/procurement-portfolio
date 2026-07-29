@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { GlassCard } from "@/components/common";
 import { fadeUp } from "@/lib/animations";
@@ -20,67 +21,185 @@ export default function WorkflowCard({
   description,
 }: WorkflowCardProps) {
   return (
-    <motion.div
+    <motion.article
       {...fadeUp}
       transition={{
         ...fadeUp.transition,
         delay: index * 0.08,
       }}
+      className="h-full"
     >
       <GlassCard
-        padding="md"
         className="
+          group
+          relative
           h-full
+          overflow-hidden
+
+          p-6
+
           transition-all
           duration-300
 
           hover:-translate-y-2
           hover:border-cyan-400/30
-          hover:shadow-[0_0_35px_rgba(34,211,238,.15)]
+          hover:shadow-[0_0_40px_rgba(34,211,238,.18)]
+
+          lg:p-8
         "
       >
-        <div
-          className="
-            mb-5
-            flex
-            h-14
-            w-14
-            items-center
-            justify-center
-            rounded-2xl
-            bg-cyan-500/10
+        {/* Background Glow */}
 
-            lg:h-16
-            lg:w-16
+        <div
+          aria-hidden="true"
+          className="
+            absolute
+            inset-0
+            opacity-0
+            transition-opacity
+            duration-300
+
+            group-hover:opacity-100
           "
         >
-          <Icon
-            size={30}
-            className="text-cyan-400"
-            aria-hidden="true"
+          <div
+            className="
+              absolute
+              right-0
+              top-0
+
+              h-40
+              w-40
+
+              translate-x-10
+              -translate-y-10
+
+              rounded-full
+              bg-cyan-500/10
+
+              blur-3xl
+            "
           />
         </div>
 
-        <span className="text-sm font-semibold text-cyan-300">
+        {/* Header */}
+
+        <div className="relative z-10 flex items-start justify-between">
+          <div
+            className="
+              flex
+              h-16
+              w-16
+              items-center
+              justify-center
+
+              rounded-2xl
+
+              border
+              border-cyan-400/20
+
+              bg-gradient-to-br
+              from-cyan-500/15
+              via-sky-500/10
+              to-transparent
+
+              text-cyan-400
+
+              transition-transform
+              duration-300
+
+              group-hover:scale-110
+              group-hover:rotate-6
+            "
+          >
+            <Icon
+              size={30}
+              aria-hidden="true"
+            />
+          </div>
+
+          <ArrowRight
+            size={20}
+            aria-hidden="true"
+            className="
+              text-cyan-400/40
+
+              transition-all
+              duration-300
+
+              group-hover:translate-x-1
+              group-hover:text-cyan-300
+            "
+          />
+        </div>
+
+        {/* Step Badge */}
+
+        <div
+          className="
+            mt-7
+
+            inline-flex
+            items-center
+
+            rounded-full
+
+            border
+            border-cyan-400/20
+
+            bg-cyan-500/10
+
+            px-3
+            py-1.5
+
+            text-xs
+            font-semibold
+            uppercase
+            tracking-wider
+
+            text-cyan-300
+          "
+        >
           Step {index + 1}
-        </span>
+        </div>
+
+        {/* Title */}
 
         <h3
           className="
-            mt-2
-            text-xl
-            font-bold
-            text-white
+            mt-5
 
-            lg:text-2xl
+            text-2xl
+            font-bold
+
+            leading-tight
+            text-white
           "
         >
           {title}
         </h3>
 
+        {/* Divider */}
+
+        <div
+          className="
+            mt-5
+
+            h-px
+            w-14
+
+            bg-gradient-to-r
+            from-cyan-400
+            to-transparent
+          "
+        />
+
+        {/* Description */}
+
         <p
           className="
-            mt-4
+            mt-5
+
             leading-7
             text-gray-400
 
@@ -90,6 +209,6 @@ export default function WorkflowCard({
           {description}
         </p>
       </GlassCard>
-    </motion.div>
+    </motion.article>
   );
 }

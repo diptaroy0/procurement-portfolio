@@ -1,7 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import {
+  ArrowUpRight,
+  Building2,
+  CheckCircle2,
+  Target,
+} from "lucide-react";
 
 import { GlassCard, Tag } from "@/components/common";
 import { fadeUp } from "@/lib/animations";
@@ -16,66 +21,163 @@ export default function CaseStudyCard({
   study,
 }: CaseStudyCardProps) {
   return (
-    <motion.div
+    <motion.article
       {...fadeUp}
       className="h-full"
     >
       <GlassCard
         className="
+          group
+          relative
           h-full
+          overflow-hidden
+
+          p-6
+
           transition-all
           duration-300
 
           hover:-translate-y-2
           hover:border-cyan-400/30
-          hover:shadow-[0_0_35px_rgba(34,211,238,.15)]
+          hover:shadow-[0_0_40px_rgba(34,211,238,.18)]
+
+          lg:p-8
         "
       >
-        {/* Company */}
+        {/* Background Glow */}
 
-        <p
+        <div
+          aria-hidden="true"
           className="
-            text-xs
-            font-semibold
-            uppercase
-            tracking-[0.2em]
-            text-cyan-300
+            absolute
+            inset-0
+            opacity-0
+            transition-opacity
+            duration-300
 
-            sm:text-sm
+            group-hover:opacity-100
           "
         >
-          {study.company}
-        </p>
+          <div
+            className="
+              absolute
+              right-0
+              top-0
 
-        {/* Title */}
+              h-44
+              w-44
 
-        <h3
-          className="
-            mt-3
-            text-2xl
-            font-bold
-            leading-tight
-            text-white
+              translate-x-12
+              -translate-y-12
 
-            sm:text-3xl
-          "
-        >
-          {study.title}
-        </h3>
+              rounded-full
 
-        {/* Content */}
+              bg-cyan-500/10
 
-        <div className="mt-8 space-y-8">
+              blur-3xl
+            "
+          />
+        </div>
+
+        <div className="relative z-10">
+          {/* Company */}
+
+          <div className="flex items-start justify-between">
+            <div
+              className="
+                inline-flex
+                items-center
+                gap-2
+
+                rounded-full
+
+                border
+                border-cyan-400/20
+
+                bg-cyan-500/10
+
+                px-3
+                py-1.5
+
+                text-xs
+                font-semibold
+                uppercase
+                tracking-wider
+
+                text-cyan-300
+              "
+            >
+              <Building2
+                size={14}
+                aria-hidden="true"
+              />
+
+              {study.company}
+            </div>
+
+            <ArrowUpRight
+              size={20}
+              aria-hidden="true"
+              className="
+                text-cyan-400/40
+
+                transition-all
+                duration-300
+
+                group-hover:translate-x-1
+                group-hover:-translate-y-1
+                group-hover:text-cyan-300
+              "
+            />
+          </div>
+
+          {/* Title */}
+
+          <h3
+            className="
+              mt-6
+
+              text-2xl
+              font-bold
+
+              leading-tight
+              text-white
+            "
+          >
+            {study.title}
+          </h3>
+
+          <div
+            className="
+              mt-5
+
+              h-px
+              w-16
+
+              bg-gradient-to-r
+              from-cyan-400
+              to-transparent
+            "
+          />
+
           {/* Challenge */}
 
-          <div>
-            <h4 className="text-lg font-semibold text-cyan-300">
-              Challenge
-            </h4>
+          <section className="mt-8">
+            <div className="flex items-center gap-2">
+              <Target
+                size={18}
+                className="text-cyan-400"
+              />
+
+              <h4 className="font-semibold text-cyan-300">
+                Challenge
+              </h4>
+            </div>
 
             <p
               className="
-                mt-3
+                mt-4
+
                 leading-7
                 text-gray-400
 
@@ -84,13 +186,13 @@ export default function CaseStudyCard({
             >
               {study.challenge}
             </p>
-          </div>
+          </section>
 
           {/* Responsibilities */}
 
-          <div>
-            <h4 className="text-lg font-semibold text-cyan-300">
-              Responsibilities
+          <section className="mt-8">
+            <h4 className="font-semibold text-cyan-300">
+              Key Responsibilities
             </h4>
 
             <ul className="mt-4 space-y-3">
@@ -101,8 +203,18 @@ export default function CaseStudyCard({
                 >
                   <CheckCircle2
                     size={18}
-                    className="mt-1 shrink-0 text-cyan-400"
                     aria-hidden="true"
+                    className="
+                      mt-1
+                      shrink-0
+
+                      text-cyan-400
+
+                      transition-transform
+                      duration-300
+
+                      group-hover:scale-110
+                    "
                   />
 
                   <span className="leading-7 text-gray-300">
@@ -111,13 +223,13 @@ export default function CaseStudyCard({
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
 
           {/* Technologies */}
 
-          <div>
-            <h4 className="text-lg font-semibold text-cyan-300">
-              Technologies
+          <section className="mt-8">
+            <h4 className="font-semibold text-cyan-300">
+              Technologies & Skills
             </h4>
 
             <div className="mt-4 flex flex-wrap gap-2">
@@ -127,19 +239,21 @@ export default function CaseStudyCard({
                 </Tag>
               ))}
             </div>
-          </div>
+          </section>
 
-          {/* Outcome */}
+          {/* Result */}
 
-          <div>
-            <h4 className="text-lg font-semibold text-cyan-300">
-              Outcome
+          <section className="mt-8">
+            <h4 className="font-semibold text-cyan-300">
+              Business Outcome
             </h4>
 
             <p
               className="
-                mt-3
+                mt-4
+
                 leading-7
+
                 text-gray-300
 
                 lg:leading-8
@@ -147,9 +261,9 @@ export default function CaseStudyCard({
             >
               {study.result}
             </p>
-          </div>
+          </section>
         </div>
       </GlassCard>
-    </motion.div>
+    </motion.article>
   );
 }

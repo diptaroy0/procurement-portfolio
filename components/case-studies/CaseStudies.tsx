@@ -2,7 +2,10 @@
 
 import { motion } from "framer-motion";
 
-import { Container, SectionHeader } from "@/components/common";
+import {
+  Container,
+  SectionHeader,
+} from "@/components/common";
 import { fadeUp } from "@/lib/animations";
 
 import CaseStudyCard from "./CaseStudyCard";
@@ -15,18 +18,60 @@ export default function CaseStudies() {
       aria-labelledby="case-studies-heading"
       className="relative overflow-hidden py-20 md:py-24 lg:py-32"
     >
+      {/* Background Glow */}
+
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 overflow-hidden"
+      >
+        <div
+          className="
+            absolute
+            left-[-220px]
+            top-20
+
+            h-[420px]
+            w-[420px]
+
+            rounded-full
+
+            bg-cyan-500/8
+
+            blur-[130px]
+          "
+        />
+
+        <div
+          className="
+            absolute
+            right-[-220px]
+            bottom-10
+
+            h-[420px]
+            w-[420px]
+
+            rounded-full
+
+            bg-blue-500/8
+
+            blur-[140px]
+          "
+        />
+      </div>
+
       <Container>
         <SectionHeader
           id="case-studies-heading"
-          badge="Professional Experience"
+          badge="Real Business Impact"
           title="Featured Procurement Case Studies"
-          description="Real-world procurement initiatives demonstrating strategic sourcing, supplier management, commercial negotiation, and measurable business outcomes."
+          description="Selected procurement initiatives highlighting strategic sourcing, supplier relationship management, commercial negotiations, and measurable operational outcomes across industrial manufacturing projects."
         />
 
         <motion.div
           {...fadeUp}
           className="
-            mt-12
+            mt-14
+
             grid
             grid-cols-1
             gap-6

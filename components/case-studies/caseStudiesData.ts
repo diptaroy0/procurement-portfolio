@@ -13,26 +13,27 @@ export const caseStudies: CaseStudy[] = [
     company: "RFL Group",
 
     challenge:
-      "Supported industrial automation projects by sourcing PLCs, HMIs, sensors, electrical components, and control equipment while ensuring strict project timelines and quality requirements.",
+      "Supported industrial automation projects by sourcing PLCs, HMIs, sensors, electrical control components, and automation equipment while meeting project schedules, technical specifications, and quality requirements.",
 
     responsibilities: [
-      "Supplier sourcing and vendor qualification",
-      "Technical and commercial evaluation",
-      "Price and commercial negotiation",
-      "Purchase Order management",
-      "Delivery coordination and follow-up",
+      "Prepared and evaluated RFQs and supplier quotations",
+      "Performed technical and commercial supplier evaluations",
+      "Negotiated pricing, lead time, and commercial terms",
+      "Managed Purchase Orders throughout the procurement lifecycle",
+      "Coordinated deliveries with engineering and project teams",
     ],
 
     technologies: [
       "SAP S/4HANA",
       "Strategic Sourcing",
-      "RFQ",
+      "RFQ Management",
       "PLC",
       "HMI",
+      "Supplier Evaluation",
     ],
 
     result:
-      "Ensured the timely availability of automation components, enabling uninterrupted project execution and supporting manufacturing productivity.",
+      "Ensured the timely procurement of critical automation components, supporting uninterrupted project execution and reliable manufacturing operations.",
   },
 
   {
@@ -40,49 +41,52 @@ export const caseStudies: CaseStudy[] = [
     company: "RFL Group",
 
     challenge:
-      "Managed procurement of forklifts, reach trucks, pallet stackers, and warehouse equipment to support manufacturing expansion and operational efficiency.",
+      "Managed the procurement of forklifts, reach trucks, pallet stackers, and warehouse equipment to support factory expansion and improve material handling efficiency.",
 
     responsibilities: [
-      "International supplier communication",
-      "Quotation analysis and comparison",
-      "Commercial negotiation",
-      "Purchase planning",
-      "Delivery monitoring",
+      "Communicated with international suppliers",
+      "Compared technical and commercial quotations",
+      "Negotiated pricing and delivery schedules",
+      "Prepared Purchase Orders and procurement documentation",
+      "Tracked shipments and coordinated on-time delivery",
     ],
 
     technologies: [
+      "International Procurement",
       "Supplier Management",
       "Purchase Order Management",
-      "Negotiation",
+      "Commercial Negotiation",
       "Inventory Planning",
     ],
 
     result:
-      "Successfully supported the procurement of more than 100 material handling equipment units while ensuring cost-effective sourcing and on-time delivery.",
+      "Supported the successful procurement of more than 100 material handling equipment units while maintaining cost-effective sourcing and on-time project delivery.",
   },
 
   {
     title: "International Supplier Network Development",
-    company: "China & Taiwan",
+    company: "China & Taiwan Supplier Network",
 
     challenge:
-      "Established and maintained a reliable international supplier network while ensuring competitive pricing, consistent quality, and on-time delivery performance.",
+      "Expanded and maintained a reliable supplier network to improve sourcing capability, strengthen supplier relationships, and support continuous procurement activities.",
 
     responsibilities: [
-      "Vendor communication",
-      "Lead time management",
-      "Cost analysis",
-      "Supplier relationship management",
+      "Developed relationships with international suppliers",
+      "Managed supplier communication and follow-up",
+      "Monitored lead times and delivery commitments",
+      "Performed pricing and cost comparisons",
+      "Maintained long-term supplier relationships",
     ],
 
     technologies: [
       "Strategic Sourcing",
       "Supplier Development",
       "Supplier Relationship Management",
-      "Procurement",
+      "Cost Analysis",
+      "International Procurement",
     ],
 
     result:
-      "Built and maintained relationships with more than 100 international suppliers across China and Taiwan, strengthening sourcing capability and improving procurement responsiveness.",
+      "Built and maintained relationships with more than 100 international suppliers across China and Taiwan, improving sourcing responsiveness and supplier collaboration.",
   },
 ];
