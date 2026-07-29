@@ -70,7 +70,7 @@ export default function CoreExpertise() {
 
         <motion.div
           {...fadeUp}
-          className="mt-14 lg:mt-20"
+          className="mt-14 lg:mt-16"
         >
           <ExpertiseGrid />
         </motion.div>

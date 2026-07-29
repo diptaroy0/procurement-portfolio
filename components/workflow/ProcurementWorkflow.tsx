@@ -77,7 +77,7 @@ export default function ProcurementWorkflow() {
 
             sm:grid-cols-2
 
-            lg:mt-20
+            lg:mt-16
             lg:grid-cols-3
             lg:gap-8
 

@@ -77,7 +77,7 @@ export default function Achievements() {
 
             sm:grid-cols-2
 
-            lg:mt-20
+            lg:mt-16
             lg:gap-8
 
             xl:grid-cols-4

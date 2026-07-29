@@ -83,7 +83,7 @@ export default function Education() {
             grid
             gap-8
 
-            lg:mt-20
+            lg:mt-16
             lg:grid-cols-2
           "
         >

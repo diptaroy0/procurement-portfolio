@@ -75,7 +75,7 @@ export default function Contact() {
             grid
             gap-8
 
-            lg:mt-20
+            lg:mt-16
             lg:grid-cols-2
             lg:gap-10
           "

@@ -68,7 +68,7 @@ export default function FeaturedProjects() {
 
         <motion.div
           {...fadeUp}
-          className="mt-14 lg:mt-20"
+          className="mt-14 lg:mt-16"
         >
           <ProjectsGrid />
         </motion.div>
