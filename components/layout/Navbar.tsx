@@ -62,7 +62,7 @@ export default function Navbar() {
     lg:px-10
     xl:px-12
 
-    py-4
+    py-3.5
 
     backdrop-blur-[30px]
 
@@ -109,8 +109,8 @@ lg:gap-4
             className="
   h-16
   w-16
-  lg:h-20
-  lg:w-20
+  lg:h-[72px]
+lg:w-[72px]
   select-none
 "
           />

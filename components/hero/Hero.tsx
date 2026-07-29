@@ -86,6 +86,7 @@ export default function Hero() {
         ====================================== */}
 
         <div
+        aria-hidden="true"
           className="
             absolute
             bottom-[-25px]
