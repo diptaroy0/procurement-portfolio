@@ -62,7 +62,7 @@ export default function Navbar() {
     lg:px-10
     xl:px-12
 
-    py-3
+    py-4
 
     backdrop-blur-[30px]
 
@@ -98,29 +98,32 @@ lg:gap-4
 "
         >
           <Image
-            src="/images/Logo_Dipta.png"
-            alt="Dipta Roy Logo"
-            width={100}
-            height={100}
-            priority
-            loading="eager"
-            decoding="async"
-            draggable={false}
-            className="
-  h-16
-  w-16
-  lg:h-[72px]
-lg:w-[72px]
-  select-none
-"
-          />
+  src="/images/Logo_Dipta.png"
+  alt="Dipta Roy Logo"
+  width={110}
+  height={110}
+  priority
+  loading="eager"
+  decoding="async"
+  draggable={false}
+  className="
+    h-[68px]
+    w-[68px]
+    lg:h-[78px]
+    lg:w-[78px]
+    select-none
+    transition-transform
+    duration-300
+    group-hover:scale-105
+  "
+/>
 
           <div>
-            <h1 className="text-2xl font-bold text-white">
+            <h1 className="text-[1.7rem] font-extrabold tracking-tight text-white">
               Dipta <span className="text-cyan-400">Roy</span>
             </h1>
 
-            <p className="text-xs uppercase tracking-[0.35em] text-slate-400">
+            <p className="mt-1 text-[11px] uppercase tracking-[0.38em] text-slate-400">
               Procurement • SCM
             </p>
           </div>
@@ -145,9 +148,8 @@ lg:w-[72px]
                   relative
                   text-[15px]
                   font-medium
-                  transition-all
-duration-500
-ease-out
+                  transition-colors
+duration-300
 
                   ${
                     active
@@ -169,7 +171,7 @@ ease-out
                     bg-cyan-400
                     shadow-[0_0_12px_rgba(34,211,238,.6)]
                     transition-all
-duration-500
+duration-300
 ease-out
 
                     ${
@@ -202,8 +204,8 @@ ease-out
               border
               border-cyan-400/30
               bg-white/5
-              px-5
-              py-3
+              px-7
+              py-[14px]
               text-sm
               font-semibold
               text-white
@@ -231,8 +233,8 @@ hover:shadow-[0_12px_25px_rgba(34,211,238,.15)]
               bg-gradient-to-r
               from-cyan-500
               to-blue-600
-              px-7
-              py-3
+              px-8
+              py-[14px]
               text-sm
               font-semibold
               text-white

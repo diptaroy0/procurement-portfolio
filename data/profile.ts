@@ -7,10 +7,10 @@ export const profile = {
   },
 
   summary:
-    "Electrical & Electronic Engineer with hands-on experience in Procurement, Supply Chain Management, ERP Systems, Industrial Automation and International Supplier Management.",
+    "Electrical & Electronic Engineer with hands-on experience in Procurement, Supply Chain Management, ERP Systems and Industrial Automation.",
 
   description:
-    "Passionate about optimizing procurement operations through strategic sourcing, supplier relationship management, ERP-driven workflows, engineering expertise and data-driven decision making.",
+    "Passionate about strategic sourcing, supplier relationship management, ERP-driven workflows, and data-driven procurement.",
 
   statistics: [
   {
