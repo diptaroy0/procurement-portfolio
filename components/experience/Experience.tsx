@@ -76,9 +76,7 @@ export default function Experience() {
           {...fadeUp}
           className="mt-14 lg:mt-16"
         >
-          <div className="mt-10 rounded-xl bg-cyan-500 p-8 text-white">
-  Timeline Test
-</div>
+          <ExperienceTimeline />
         </motion.div>
       </Container>
     </section>
