@@ -25,12 +25,6 @@ export default function Tag({
           text-sm
           font-medium
           text-cyan-300
-          transition-all
-          duration-300
-          hover:-translate-y-0.5
-          hover:border-cyan-400/40
-          hover:bg-cyan-500/20
-          hover:text-white
         `,
         className
       )}
