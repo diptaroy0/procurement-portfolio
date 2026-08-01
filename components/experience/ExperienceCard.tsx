@@ -19,7 +19,7 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <article className="relative pl-16 md:pl-24">
-      {/* Timeline Node */}
+      {/* Timeline Dot */}
       <div
         className="
           absolute
@@ -34,9 +34,23 @@ export default function ExperienceCard({
       />
 
       <GlassCard padding="none">
+        {/* Header */}
+
         <header className="border-b border-white/10 p-8">
-          <span className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-4 py-2 text-cyan-300">
+          <span
+            className="
+              inline-flex
+              items-center
+              gap-2
+              rounded-full
+              bg-cyan-500/10
+              px-4
+              py-2
+              text-cyan-300
+            "
+          >
             <CalendarDays size={16} />
+
             {experience.period}
           </span>
 
@@ -66,6 +80,25 @@ export default function ExperienceCard({
             )}
           </div>
         </header>
+
+        {/* Responsibilities */}
+
+        <section className="p-8">
+          <h3 className="mb-6 text-xl font-bold text-white">
+            Key Responsibilities
+          </h3>
+
+          <ul className="space-y-4">
+            {experience.responsibilities.map((item) => (
+              <li
+                key={item}
+                className="text-gray-300"
+              >
+                • {item}
+              </li>
+            ))}
+          </ul>
+        </section>
       </GlassCard>
     </article>
   );
