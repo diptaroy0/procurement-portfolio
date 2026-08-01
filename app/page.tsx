@@ -19,7 +19,7 @@ export default function Home() {
      
 
       <main className="relative min-h-screen overflow-x-hidden">
-        <Navbar />
+  
 
         <Hero />
 
