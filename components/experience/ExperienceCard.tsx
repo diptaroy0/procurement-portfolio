@@ -212,33 +212,15 @@ export default function ExperienceCard({
           </h4>
 
           <ul className="mt-6 space-y-5">
-            {experience.responsibilities.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-4"
-              >
-                <CheckCircle2
-                  size={20}
-                  className="
-                    mt-1
-                    shrink-0
-                    text-cyan-400
-                  "
-                />
-
-                <span
-                  className="
-                    leading-7
-                    text-gray-300
-
-                    lg:leading-8
-                  "
-                >
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ul>
+  {experience.responsibilities.map((item) => (
+    <li
+      key={item}
+      className="text-gray-300"
+    >
+      • {item}
+    </li>
+  ))}
+</ul>
 
           {/* Skills */}
 
