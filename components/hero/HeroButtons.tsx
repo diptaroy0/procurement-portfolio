@@ -27,10 +27,11 @@ lg:gap-5"
     >
       {/* Resume */}
 
-      <Link
-        href="/resume/Resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
+      <a
+        href={site.resume}
+    target="_blank"
+    rel="noopener noreferrer"
+    download="Resume.pdf"
         title="Download CV"
         className={primaryButton}
       >
@@ -46,7 +47,7 @@ lg:gap-5"
           size={18}
           className="ml-3 shrink-0 transition-transform duration-300 group-hover:translate-x-1"
         />
-      </Link>
+      </a>
 
       {/* LinkedIn */}
 

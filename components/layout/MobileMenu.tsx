@@ -276,10 +276,11 @@ ease-out
 
         <div className="space-y-4 border-t border-cyan-400/10 p-6">
 
-          <Link
+          <a
             href={site.resume}
             target="_blank"
             rel="noopener noreferrer"
+            download="Resume.pdf"
             aria-label="Download Resume"
 
             className="
@@ -309,7 +310,7 @@ hover:shadow-[0_12px_25px_rgba(34,211,238,.15)]
             <Download size={18} />
 
             Download Resume
-          </Link>
+          </a>
 
           <Link
             href="#contact"
