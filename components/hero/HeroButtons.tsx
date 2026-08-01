@@ -28,7 +28,7 @@ lg:gap-5"
       {/* Resume */}
 
       <Link
-        href="/resume.pdf"
+        href="/resume/Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         title="Download CV"
