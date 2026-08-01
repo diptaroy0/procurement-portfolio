@@ -7,7 +7,6 @@ import {
 } from "lucide-react";
 
 import GlassCard from "@/components/common/GlassCard";
-import StatCard from "@/components/common/StatCard";
 
 import type { Experience } from "./experienceData";
 
@@ -20,6 +19,7 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <article className="relative pl-16 md:pl-24">
+      {/* Timeline Dot */}
       <div
         className="
           absolute
@@ -37,8 +37,20 @@ export default function ExperienceCard({
         {/* Header */}
 
         <header className="border-b border-white/10 p-8">
-          <span className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-4 py-2 text-cyan-300">
+          <span
+            className="
+              inline-flex
+              items-center
+              gap-2
+              rounded-full
+              bg-cyan-500/10
+              px-4
+              py-2
+              text-cyan-300
+            "
+          >
             <CalendarDays size={16} />
+
             {experience.period}
           </span>
 
@@ -52,6 +64,7 @@ export default function ExperienceCard({
                 size={18}
                 className="text-cyan-400"
               />
+
               {experience.company}
             </div>
 
@@ -61,25 +74,12 @@ export default function ExperienceCard({
                   size={18}
                   className="text-cyan-400"
                 />
+
                 {experience.location}
               </div>
             )}
           </div>
         </header>
-
-        {/* KPI */}
-
-        {experience.metrics && (
-          <section className="grid grid-cols-2 gap-4 border-b border-white/10 p-8 lg:grid-cols-4">
-            {experience.metrics.map((metric) => (
-              <StatCard
-                key={metric.label}
-                value={metric.value}
-                label={metric.label}
-              />
-            ))}
-          </section>
-        )}
 
         {/* Responsibilities */}
 
