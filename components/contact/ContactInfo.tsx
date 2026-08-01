@@ -145,7 +145,7 @@ export default function ContactInfo() {
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
           <a
-            href={site.resume}
+            href="/resume/Resume.pdf"
             download
             aria-label="Download resume"
             className="
