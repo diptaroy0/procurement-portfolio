@@ -16,12 +16,12 @@ import FeaturedProjects from "@/components/projects/FeaturedProjects";
 export default function Home() {
   return (
     <>
-     
+      <ScrollProgress />
 
       <main className="relative min-h-screen overflow-x-hidden">
-  
+        <Navbar />
 
-    
+        <Hero />
 
         <About />
 
