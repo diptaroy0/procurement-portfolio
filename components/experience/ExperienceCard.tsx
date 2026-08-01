@@ -1,5 +1,6 @@
 "use client";
 
+import GlassCard from "@/components/common/GlassCard";
 import type { Experience } from "./experienceData";
 
 interface ExperienceCardProps {
@@ -11,7 +12,6 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <article className="relative pl-16 md:pl-24">
-      {/* Timeline Node */}
       <div
         className="
           absolute
@@ -25,20 +25,15 @@ export default function ExperienceCard({
         "
       />
 
-      {/* Simple Card */}
-      <div className="rounded-3xl bg-white p-8 text-black">
-        <h2 className="text-3xl font-bold">
+      <GlassCard>
+        <h2 className="text-3xl font-bold text-white">
           {experience.title}
         </h2>
 
-        <p className="mt-2">
+        <p className="mt-3 text-gray-300">
           {experience.company}
         </p>
-
-        <p className="mt-1 text-gray-600">
-          {experience.period}
-        </p>
-      </div>
+      </GlassCard>
     </article>
   );
 }
