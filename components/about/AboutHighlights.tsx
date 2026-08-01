@@ -75,7 +75,7 @@ export default function AboutHighlights() {
 
               {/* Value */}
 
-              <h3
+              <p
                 className="
                   text-3xl
                   font-black
@@ -87,7 +87,7 @@ export default function AboutHighlights() {
                 "
               >
                 {item.value}
-              </h3>
+              </p>
 
               {/* Divider */}
 
