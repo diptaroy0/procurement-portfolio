@@ -185,7 +185,7 @@ export default function RootLayout({
       >
         {children}
 
-        <BackToTop />
+        
 
         <script
           type="application/ld+json"
