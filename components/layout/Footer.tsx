@@ -201,7 +201,11 @@ export default function Footer() {
           "
         >
           <p className="flex items-center gap-2 text-center">
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
+            © {new Date().getFullYear()} {site.name}. All rights reserved. 
+            </p>
+
+<p className="flex items-center gap-2 text-center">
+          Designed & Developed by Dipta Roy
           </p>
 
           <p className="flex items-center gap-2">
