@@ -60,9 +60,7 @@ export default function ContactForm() {
           </h3>
 
           <p className="mt-4 leading-8 text-gray-400">
-            Have a procurement opportunity, supply chain project, industrial
-            automation requirement, or simply want to connect? I&apos;d love to hear
-            from you.
+            Interested in Procurement, Supply Chain, ERP, or Industrial Automation? I'd be happy to discuss opportunities and collaborations.
           </p>
 
           <form
