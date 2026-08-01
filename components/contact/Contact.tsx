@@ -1,11 +1,9 @@
 "use client";
 
-
 import {
   Container,
   SectionHeader,
 } from "@/components/common";
-
 
 import ContactInfo from "./ContactInfo";
 import ContactForm from "./ContactForm";
@@ -17,7 +15,7 @@ export default function Contact() {
       aria-labelledby="contact-heading"
       className="relative overflow-hidden py-20 lg:py-24"
     >
-      {/* Background Effects */}
+      {/* Background */}
 
       <div
         aria-hidden="true"
@@ -28,15 +26,11 @@ export default function Contact() {
             absolute
             left-[-220px]
             bottom-[-120px]
-
             h-[420px]
             w-[420px]
-
             rounded-full
-
             bg-cyan-500/10
-
-            blur-[140px]
+            blur-[130px]
           "
         />
 
@@ -45,15 +39,11 @@ export default function Contact() {
             absolute
             right-[-220px]
             top-[-120px]
-
             h-[420px]
             w-[420px]
-
             rounded-full
-
             bg-blue-500/10
-
-            blur-[150px]
+            blur-[130px]
           "
         />
       </div>
@@ -68,13 +58,12 @@ export default function Contact() {
 
         <div
           className="
-            mt-14
+            mt-16
+
             grid
             gap-8
 
-            lg:mt-16
-            lg:grid-cols-2
-            lg:gap-10
+            xl:grid-cols-[1.1fr_.9fr]
           "
         >
           <ContactInfo />

@@ -62,7 +62,7 @@ export default function ContactInfo() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
           <div className="relative h-24 w-24 overflow-hidden rounded-full border-4 border-cyan-400/20">
             <Image
-              src={site.profileImage}
+              src={site.contactImage}
               alt={`${site.name} profile`}
               fill
               priority
