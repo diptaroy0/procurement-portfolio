@@ -37,7 +37,7 @@ export default function ProcurementWorkflow() {
 
             bg-cyan-500/8
 
-            blur-[130px]
+            blur-0
           "
         />
 
@@ -54,7 +54,7 @@ export default function ProcurementWorkflow() {
 
             bg-blue-500/8
 
-            blur-[140px]
+            blur-0
           "
         />
       </div>
