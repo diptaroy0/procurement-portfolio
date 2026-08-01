@@ -28,7 +28,7 @@ lg:gap-5"
       {/* Resume */}
 
       <a
-        href={site.resume}
+        href="/resume/Resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
     download="Resume.pdf"

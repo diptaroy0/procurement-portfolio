@@ -187,10 +187,11 @@ ease-out
         {/* Desktop Buttons */}
 
         <div className="hidden items-center gap-4 lg:flex">
-          <Link
-  href={site.resume}
+          <a
+  href="/resume/Resume.pdf"
   target="_blank"
   rel="noopener noreferrer"
+  download="Resume.pdf"
   aria-label="Download Resume"
   
             className="
@@ -220,7 +221,7 @@ hover:shadow-[0_12px_25px_rgba(34,211,238,.15)]
             />
 
             Download Resume
-          </Link>
+          </a>
 
           <Link
             href="#contact"

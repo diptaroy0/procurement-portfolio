@@ -277,7 +277,7 @@ ease-out
         <div className="space-y-4 border-t border-cyan-400/10 p-6">
 
           <a
-            href={site.resume}
+            href="/resume/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             download="Resume.pdf"
