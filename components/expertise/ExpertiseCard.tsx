@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import {
   ArrowUpRight,
@@ -21,7 +20,7 @@ export default function ExpertiseCard({
   skills,
 }: ExpertiseCardProps) {
   return (
-    <motion.article layout className="h-full">
+    <article className="h-full">
       <GlassCard
         className="
           group
@@ -193,6 +192,6 @@ export default function ExpertiseCard({
           ))}
         </ul>
       </GlassCard>
-    </motion.article>
+    </article>
   );
 }

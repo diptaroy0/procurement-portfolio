@@ -1,13 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 
 import {
   Container,
   SectionHeader,
 } from "@/components/common";
 
-import { fadeUp } from "@/lib/animations";
 
 import ContactInfo from "./ContactInfo";
 import ContactForm from "./ContactForm";
@@ -68,8 +66,7 @@ export default function Contact() {
           description="Whether you're looking for a procurement professional, supply chain specialist, or industrial automation engineer, I'd be delighted to discuss opportunities, collaborations, or innovative projects."
         />
 
-        <motion.div
-          {...fadeUp}
+        <div
           className="
             mt-14
             grid
@@ -83,7 +80,7 @@ export default function Contact() {
           <ContactInfo />
 
           <ContactForm />
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

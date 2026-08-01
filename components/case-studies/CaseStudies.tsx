@@ -1,12 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 
 import {
   Container,
   SectionHeader,
 } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 import CaseStudyCard from "./CaseStudyCard";
 import { caseStudies } from "./caseStudiesData";
@@ -67,8 +65,7 @@ export default function CaseStudies() {
           description="Selected procurement initiatives highlighting strategic sourcing, supplier relationship management, commercial negotiations, and measurable operational outcomes across industrial manufacturing projects."
         />
 
-        <motion.div
-          {...fadeUp}
+        <div
           className="
             mt-14
 
@@ -90,7 +87,7 @@ export default function CaseStudies() {
               study={study}
             />
           ))}
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

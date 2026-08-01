@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   Building2,
@@ -9,7 +8,6 @@ import {
 } from "lucide-react";
 
 import { GlassCard, Tag } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 import type { CaseStudy } from "./caseStudiesData";
 
@@ -21,10 +19,7 @@ export default function CaseStudyCard({
   study,
 }: CaseStudyCardProps) {
   return (
-    <motion.article
-      {...fadeUp}
-      className="h-full"
-    >
+    <article className="h-full">
       <GlassCard
         className="
           group
@@ -264,6 +259,6 @@ export default function CaseStudyCard({
           </section>
         </div>
       </GlassCard>
-    </motion.article>
+    </article>
   );
 }

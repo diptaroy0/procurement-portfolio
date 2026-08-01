@@ -1,11 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 
 import { GlassCard } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 interface WorkflowCardProps {
   index: number;
@@ -21,14 +19,7 @@ export default function WorkflowCard({
   description,
 }: WorkflowCardProps) {
   return (
-    <motion.article
-      {...fadeUp}
-      transition={{
-        ...fadeUp.transition,
-        delay: index * 0.08,
-      }}
-      className="h-full"
-    >
+    <article className="h-full">
       <GlassCard
         className="
           group
@@ -209,6 +200,6 @@ export default function WorkflowCard({
           {description}
         </p>
       </GlassCard>
-    </motion.article>
+    </article>
   );
 }

@@ -1,12 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 
 import {
   Container,
   SectionHeader,
 } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 import ProjectsGrid from "./ProjectsGrid";
 
@@ -66,12 +64,11 @@ export default function FeaturedProjects() {
           description="A selection of procurement, industrial automation, and engineering initiatives demonstrating strategic sourcing, cross-functional collaboration, and measurable operational impact."
         />
 
-        <motion.div
-          {...fadeUp}
+        <div
           className="mt-14 lg:mt-16"
         >
           <ProjectsGrid />
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   BookOpen,
@@ -8,7 +7,6 @@ import {
 } from "lucide-react";
 
 import { GlassCard, Tag } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 import type { CertificationItem } from "./educationData";
 
@@ -32,10 +30,7 @@ export default function CertificationCard({
       : "bg-cyan-500/15 border-cyan-400/30 text-cyan-300";
 
   return (
-    <motion.article
-      {...fadeUp}
-      className="h-full"
-    >
+    <article className="h-full">
       <GlassCard
         className="
           group
@@ -202,6 +197,6 @@ export default function CertificationCard({
           </div>
         </div>
       </GlassCard>
-    </motion.article>
+    </article>
   );
 }

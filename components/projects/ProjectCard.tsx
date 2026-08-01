@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   Building2,
@@ -11,7 +10,6 @@ import {
 } from "lucide-react";
 
 import { GlassCard, Tag } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 import type { Project } from "./projectsData";
 
@@ -23,10 +21,7 @@ export default function ProjectCard({
   project,
 }: ProjectCardProps) {
   return (
-    <motion.article
-      {...fadeUp}
-      className="h-full"
-    >
+    <article className="h-full">
       <GlassCard
         className="
           group
@@ -283,6 +278,6 @@ export default function ProjectCard({
           </section>
         </div>
       </GlassCard>
-    </motion.article>
+    </article>
   );
 }

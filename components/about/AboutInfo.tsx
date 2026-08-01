@@ -1,8 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
-import { fadeUp } from "@/lib/animations";
 
 import { info } from "./info";
 
@@ -13,16 +10,8 @@ export default function AboutInfo() {
         const Icon = item.icon;
 
         return (
-          <motion.div
+          <div
             key={item.title}
-            {...fadeUp}
-            whileHover={{
-              y: -6,
-              scale: 1.02,
-            }}
-            transition={{
-              duration: 0.25,
-            }}
             className="
               group
               relative
@@ -119,7 +108,7 @@ export default function AboutInfo() {
               </div>
 
             </div>
-          </motion.div>
+          </div>
         );
       })}
     </div>

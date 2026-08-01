@@ -1,13 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 
 import {
   Container,
   SectionHeader,
 } from "@/components/common";
 
-import { fadeUp } from "@/lib/animations";
 
 import ExpertiseGrid from "./ExpertiseGrid";
 import TechnicalSkills from "./TechnicalSkills";
@@ -68,23 +66,13 @@ export default function CoreExpertise() {
           description="A comprehensive blend of procurement strategy, supply chain management, ERP workflows, industrial automation, and engineering expertise developed through real-world manufacturing projects."
         />
 
-        <motion.div
-          {...fadeUp}
-          className="mt-14 lg:mt-16"
-        >
+        <div className="mt-14 lg:mt-16">
           <ExpertiseGrid />
-        </motion.div>
+        </div>
 
-        <motion.div
-          {...fadeUp}
-          transition={{
-            delay: 0.15,
-            duration: 0.7,
-          }}
-          className="mt-20 lg:mt-24"
-        >
+        <div className="mt-20 lg:mt-24">
           <TechnicalSkills />
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

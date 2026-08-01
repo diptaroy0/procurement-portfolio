@@ -1,13 +1,8 @@
-"use client";
-
-import { motion } from "framer-motion";
 
 import {
   Container,
   SectionHeader,
 } from "@/components/common";
-
-import { fadeUp } from "@/lib/animations";
 
 import ExperienceTimeline from "./ExperienceTimeline";
 
@@ -72,12 +67,9 @@ export default function Experience() {
           description="A progressive career path combining industrial automation, procurement, ERP workflows, international supplier management, and strategic sourcing."
         />
 
-        <motion.div
-          {...fadeUp}
-          className="mt-14 lg:mt-16"
-        >
+        <div className="mt-14 lg:mt-16">
           <ExperienceTimeline />
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

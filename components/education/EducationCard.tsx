@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   CalendarDays,
   ChevronRight,
@@ -8,7 +7,6 @@ import {
 } from "lucide-react";
 
 import { GlassCard } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 import type { EducationItem } from "./educationData";
 
@@ -28,10 +26,7 @@ export default function EducationCard({
   } = education;
 
   return (
-    <motion.article
-      {...fadeUp}
-      className="h-full"
-    >
+    <article className="h-full">
       <GlassCard
         className="
           group
@@ -189,6 +184,6 @@ export default function EducationCard({
           </p>
         </div>
       </GlassCard>
-    </motion.article>
+    </article>
   );
 }

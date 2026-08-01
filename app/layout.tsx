@@ -1,15 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 
 import "./globals.css";
 
 import BackToTop from "@/components/common/BackToTop";
 import { personStructuredData } from "@/lib/structuredData";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const siteUrl = "https://diptaroy0.vercel.app";
 
@@ -181,7 +175,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-[#081120] text-white antialiased selection:bg-cyan-400/30 selection:text-white`}
+        className="bg-[#081120] text-white antialiased selection:bg-cyan-400/30 selection:text-white"
       >
         {children}
 

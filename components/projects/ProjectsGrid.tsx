@@ -1,9 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-
-import { fadeUp } from "@/lib/animations";
-
 import ProjectCard from "./ProjectCard";
 import { projects } from "./projectsData";
 
@@ -19,17 +13,12 @@ export default function ProjectsGrid() {
         xl:grid-cols-2
       "
     >
-      {projects.map((project, index) => (
-        <motion.div
+      {projects.map((project) => (
+        <div
           key={project.title}
-          {...fadeUp}
-          transition={{
-            ...fadeUp.transition,
-            delay: index * 0.12,
-          }}
         >
           <ProjectCard project={project} />
-        </motion.div>
+        </div>
       ))}
     </div>
   );

@@ -1,10 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 import { GlassCard } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 interface AchievementCardProps {
   number: string;
@@ -18,7 +16,7 @@ export default function AchievementCard({
   description,
 }: AchievementCardProps) {
   return (
-    <motion.article {...fadeUp} className="h-full">
+    <article className="h-full">
       <GlassCard
         className="
           group
@@ -163,6 +161,6 @@ export default function AchievementCard({
           {description}
         </p>
       </GlassCard>
-    </motion.article>
+    </article>
   );
 }

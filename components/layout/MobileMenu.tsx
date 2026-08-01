@@ -337,7 +337,7 @@ hover:-translate-y-0.5
 hover:shadow-[0_15px_35px_rgba(34,211,238,.30)]
             "
           >
-            Let's Connect
+            Let&apos;s Connect
           </Link>
 
           <div className="flex justify-center gap-4 pt-3">

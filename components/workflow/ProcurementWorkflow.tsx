@@ -1,12 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
 
 import {
   Container,
   SectionHeader,
 } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 import WorkflowCard from "./WorkflowCard";
 import { workflow } from "./workflow";
@@ -67,8 +65,7 @@ export default function ProcurementWorkflow() {
           description="A structured procurement lifecycle that ensures transparency, supplier reliability, cost optimization, quality assurance, and timely delivery across every stage of the sourcing process."
         />
 
-        <motion.div
-          {...fadeUp}
+        <div
           className="
             mt-14
 
@@ -93,7 +90,7 @@ export default function ProcurementWorkflow() {
               description={step.description}
             />
           ))}
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

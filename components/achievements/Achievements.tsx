@@ -1,13 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 
 import {
   Container,
   SectionHeader,
 } from "@/components/common";
 
-import { fadeUp } from "@/lib/animations";
 
 import AchievementCard from "./AchievementCard";
 import { achievements } from "./achievementsData";
@@ -66,8 +64,7 @@ export default function Achievements() {
           description="Measurable accomplishments demonstrating procurement excellence, international supplier management, industrial automation expertise, and continuous professional growth."
         />
 
-        <motion.div
-          {...fadeUp}
+        <div
           className="
             mt-14
 
@@ -91,7 +88,7 @@ export default function Achievements() {
               description={achievement.description}
             />
           ))}
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

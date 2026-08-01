@@ -1,20 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   ArrowRight,
   Send,
 } from "lucide-react";
 
 import { GlassCard } from "@/components/common";
-import { fadeUp } from "@/lib/animations";
 
 export default function ContactForm() {
   return (
-    <motion.div
-      {...fadeUp}
-      className="h-full"
-    >
+    <div className="h-full">
       <GlassCard
         className="
           group
@@ -66,7 +61,7 @@ export default function ContactForm() {
 
           <p className="mt-4 leading-8 text-gray-400">
             Have a procurement opportunity, supply chain project, industrial
-            automation requirement, or simply want to connect? I'd love to hear
+            automation requirement, or simply want to connect? I&apos;d love to hear
             from you.
           </p>
 
@@ -172,14 +167,14 @@ export default function ContactForm() {
             >
               <Send size={18} />
 
-              Let's Talk
+              Let&apos;s Talk
 
               <ArrowRight size={18} />
             </button>
           </form>
         </div>
       </GlassCard>
-    </motion.div>
+    </div>
   );
 }
 

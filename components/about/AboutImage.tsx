@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import {
   Briefcase,
   GraduationCap,
@@ -10,16 +9,7 @@ import {
 
 export default function AboutImage() {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -60 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      animate={{
-        y: [0, -6, 0],
-      }}
-      className="relative -mt-28 flex justify-center"
-    >
+    <div className="relative -mt-28 flex justify-center">
       {/* Ambient Glow */}
 
       <div
@@ -180,6 +170,6 @@ export default function AboutImage() {
 
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

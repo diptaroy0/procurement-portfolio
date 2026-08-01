@@ -3,6 +3,7 @@
 import {
   Building2,
   CalendarDays,
+  CheckCircle2,
   MapPin,
 } from "lucide-react";
 
@@ -22,8 +23,10 @@ export default function ExperienceCard({
   experience,
 }: ExperienceCardProps) {
   return (
-    <article className="relative pl-16 md:pl-24">
-      {/* Timeline Dot */}
+    <article
+      className="relative pl-16 md:pl-24"
+    >
+      {/* Timeline Node */}
 
       <div
         aria-hidden="true"
@@ -31,53 +34,94 @@ export default function ExperienceCard({
           absolute
           left-2
           top-10
+          z-20
+
+          flex
           h-10
           w-10
+          items-center
+          justify-center
+
           rounded-full
+          border-4
+          border-[#081120]
+
           bg-cyan-400
+
+          shadow-[0_0_30px_rgba(34,211,238,.75)]
+
           md:left-8
         "
-      />
+      >
+        <div className="h-2.5 w-2.5 rounded-full bg-[#081120]" />
+      </div>
 
-      <GlassCard padding="none">
+      {/* Experience Card */}
+
+      <GlassCard
+        padding="none"
+        className="
+          overflow-hidden
+          transition-all
+          duration-300
+
+          hover:-translate-y-1
+          hover:border-cyan-400/30
+          hover:shadow-[0_0_45px_rgba(34,211,238,.18)]
+        "
+      >
         {/* Header */}
 
         <header
           className="
             border-b
             border-white/10
+
             p-6
             sm:p-8
             lg:p-9
           "
         >
-          <span
-            className="
-              inline-flex
-              items-center
-              gap-2
-              rounded-full
-              border
-              border-cyan-400/20
-              bg-cyan-500/10
-              px-4
-              py-2
-              text-sm
-              font-medium
-              text-cyan-300
-            "
-          >
-            <CalendarDays size={15} />
-            {experience.period}
-          </span>
+          <div className="flex flex-wrap items-center gap-3">
+            <span
+              className="
+                inline-flex
+                items-center
+                gap-2
+
+                rounded-full
+
+                border
+                border-cyan-400/20
+
+                bg-cyan-500/10
+
+                px-4
+                py-2
+
+                text-sm
+                font-medium
+                text-cyan-300
+              "
+            >
+              <CalendarDays
+                size={15}
+                aria-hidden="true"
+              />
+
+              {experience.period}
+            </span>
+          </div>
 
           <h3
             className="
               mt-6
+
               text-2xl
               font-bold
               leading-tight
               text-white
+
               sm:text-3xl
               lg:text-4xl
             "
@@ -88,10 +132,12 @@ export default function ExperienceCard({
           <div
             className="
               mt-5
+
               flex
               flex-wrap
               items-center
               gap-5
+
               text-gray-400
             "
           >
@@ -127,9 +173,12 @@ export default function ExperienceCard({
               grid
               grid-cols-2
               gap-4
+
               border-b
               border-white/10
+
               p-6
+
               lg:grid-cols-4
               lg:p-8
             "
@@ -150,7 +199,9 @@ export default function ExperienceCard({
           className="
             px-6
             py-8
+
             sm:px-8
+
             lg:px-9
             lg:py-9
           "
@@ -165,14 +216,12 @@ export default function ExperienceCard({
                 key={item}
                 className="flex items-start gap-4"
               >
-                <span
+                <CheckCircle2
+                  size={20}
                   className="
-                    mt-2
-                    h-2.5
-                    w-2.5
+                    mt-1
                     shrink-0
-                    rounded-full
-                    bg-cyan-400
+                    text-cyan-400
                   "
                 />
 
@@ -180,6 +229,7 @@ export default function ExperienceCard({
                   className="
                     leading-7
                     text-gray-300
+
                     lg:leading-8
                   "
                 >
@@ -189,7 +239,7 @@ export default function ExperienceCard({
             ))}
           </ul>
 
-          {/* Technologies */}
+          {/* Skills */}
 
           <div className="mt-10">
             <h4 className="mb-5 text-xl font-semibold text-white">

@@ -364,4 +364,14 @@ img {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  /* Avoid compositor bugs caused by large blurred surfaces behind glass cards. */
+  .glass,
+  .card {
+    backdrop-filter: none;
+  }
+
+  [class*="backdrop-blur"] {
+    backdrop-filter: none;
+  }
 }

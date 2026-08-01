@@ -1,13 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
 
 import {
   Container,
   SectionHeader,
 } from "@/components/common";
 
-import { fadeUp } from "@/lib/animations";
 
 import EducationCard from "./EducationCard";
 import {
@@ -75,8 +73,7 @@ export default function Education() {
 
         {/* Education */}
 
-        <motion.div
-          {...fadeUp}
+        <div
           className="
             mt-14
 
@@ -93,14 +90,11 @@ export default function Education() {
               education={item}
             />
           ))}
-        </motion.div>
+        </div>
 
         {/* Certifications */}
 
-        <motion.div
-          {...fadeUp}
-          className="mt-20"
-        >
+        <div className="mt-20">
           <div className="mb-10">
             <h3 className="text-3xl font-bold text-white">
               Professional Certifications
@@ -130,7 +124,7 @@ export default function Education() {
               />
             ))}
           </div>
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

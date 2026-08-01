@@ -241,7 +241,7 @@ hover:shadow-[0_12px_25px_rgba(34,211,238,.15)]
               hover:shadow-[0_15px_35px_rgba(34,211,238,.30)]
             "
           >
-            Let's Connect
+            Let&apos;s Connect
           </Link>
         </div>
 
