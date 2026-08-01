@@ -29,7 +29,7 @@ export default function GlassCard({
         "rounded-[28px]",
         "border border-cyan-400/15",
         "bg-[rgba(15,23,42,.72)]",
-        "backdrop-blur-none",
+        "backdrop-blur-2xl",
         "shadow-[0_20px_60px_rgba(0,0,0,.45)]",
 
         {

@@ -77,7 +77,7 @@ export default function WorkflowCard({
               rounded-full
               bg-cyan-500/10
 
-              opacity-20
+              blur-3xl
             "
           />
         </div>
