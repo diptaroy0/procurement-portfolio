@@ -1,6 +1,7 @@
 export interface ExperienceMetric {
   value: string;
   label: string;
+  description: string;
 }
 
 export interface Experience {
@@ -63,18 +64,26 @@ export const experiences: Experience[] = [
       {
         value: "100+",
         label: "Global Suppliers",
+        description:
+          "Built and maintained procurement relationships with more than 100 international suppliers across China and Taiwan.",
       },
       {
         value: "100+",
         label: "Equipment Procured",
+        description:
+          "Sourced forklifts, reach trucks, pallet stackers, industrial automation equipment, and engineering spare parts.",
       },
       {
         value: "2",
         label: "Sourcing Countries",
+        description:
+          "Developed dependable sourcing channels across China and Taiwan to support competitive procurement decisions.",
       },
       {
         value: "1+",
         label: "Years in Leadership",
+        description:
+          "Led cross-functional procurement coordination from RFQ evaluation through supplier negotiation and delivery follow-up.",
       },
     ],
   },
