@@ -1,27 +1,16 @@
+"use client";
+
 import { experiences } from "./experienceData";
+import ExperienceCard from "./ExperienceCard";
 
 export default function ExperienceTimeline() {
   return (
-    <div className="space-y-8">
-      {experiences.map((exp) => (
-        <div
-          key={exp.title}
-          className="rounded-3xl bg-white p-8 text-black"
-        >
-          <h2 className="text-2xl font-bold">
-            {exp.title}
-          </h2>
-
-          <p>{exp.company}</p>
-
-          <p>{exp.period}</p>
-
-          <ul className="mt-5 list-disc pl-5">
-            {exp.responsibilities.map((r) => (
-              <li key={r}>{r}</li>
-            ))}
-          </ul>
-        </div>
+    <div className="space-y-12">
+      {experiences.map((experience) => (
+        <ExperienceCard
+          key={`${experience.company}-${experience.title}-${experience.period}`}
+          experience={experience}
+        />
       ))}
     </div>
   );
