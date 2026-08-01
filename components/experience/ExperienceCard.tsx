@@ -1,6 +1,13 @@
 "use client";
 
+import {
+  Building2,
+  CalendarDays,
+  MapPin,
+} from "lucide-react";
+
 import GlassCard from "@/components/common/GlassCard";
+
 import type { Experience } from "./experienceData";
 
 interface ExperienceCardProps {
@@ -12,6 +19,7 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <article className="relative pl-16 md:pl-24">
+      {/* Timeline Node */}
       <div
         className="
           absolute
@@ -25,14 +33,39 @@ export default function ExperienceCard({
         "
       />
 
-      <GlassCard>
-        <h2 className="text-3xl font-bold text-white">
-          {experience.title}
-        </h2>
+      <GlassCard padding="none">
+        <header className="border-b border-white/10 p-8">
+          <span className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-4 py-2 text-cyan-300">
+            <CalendarDays size={16} />
+            {experience.period}
+          </span>
 
-        <p className="mt-3 text-gray-300">
-          {experience.company}
-        </p>
+          <h2 className="mt-6 text-3xl font-bold text-white">
+            {experience.title}
+          </h2>
+
+          <div className="mt-6 flex flex-wrap gap-6 text-gray-300">
+            <div className="flex items-center gap-2">
+              <Building2
+                size={18}
+                className="text-cyan-400"
+              />
+
+              {experience.company}
+            </div>
+
+            {experience.location && (
+              <div className="flex items-center gap-2">
+                <MapPin
+                  size={18}
+                  className="text-cyan-400"
+                />
+
+                {experience.location}
+              </div>
+            )}
+          </div>
+        </header>
       </GlassCard>
     </article>
   );
