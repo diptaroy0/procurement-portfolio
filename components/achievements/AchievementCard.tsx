@@ -70,7 +70,7 @@ export default function AchievementCard({
           {number}
         </p>
 
-        <h3
+        <p
           className="
             mt-6
             text-2xl
@@ -80,7 +80,7 @@ export default function AchievementCard({
           "
         >
           {title}
-        </h3>
+        </p>
 
         <div
           className="

@@ -130,7 +130,7 @@ export default function HeroStats() {
 
             {/* Value */}
 
-            <h3
+            <p
               className="
                 mt-6
 
@@ -143,7 +143,7 @@ export default function HeroStats() {
               "
             >
               {item.value}
-            </h3>
+            </p>
 
             {/* Labels */}
 
