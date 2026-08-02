@@ -217,15 +217,15 @@ http://localhost:3000
 
 ---
 
-## Experience
+## Expertise
 
-![Experience](./screenshots/experience.png)
+![Expertise](./screenshots/expertise.png)
 
 ---
 
-## Projects
+## Achievement
 
-![Projects](./screenshots/projects.png)
+![Achievement](./screenshots/achievement.png)
 
 ---
 
