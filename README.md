@@ -1,62 +1,87 @@
 # 🚀 Dipta Roy | Procurement & Supply Chain Portfolio
 
 <p align="center">
+  <img src="./screenshots/portfolio-cover.png" alt="Portfolio Preview" width="100%">
+</p>
+
+<p align="center">
   <strong>Procurement & Supply Chain Professional | Industrial Automation Engineer</strong>
 </p>
 
 <p align="center">
-  A modern portfolio showcasing experience in Procurement, Strategic Sourcing, ERP Systems, Supplier Management, and Industrial Automation.
+
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-Latest-0055FF?logo=framer)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)
+![License](https://img.shields.io/badge/License-Portfolio-blue)
+
 </p>
 
 <p align="center">
-  <a href="https://diptaroy0.vercel.app/" target="_blank">
-    🌐 Live Portfolio
-  </a>
-  &nbsp; | &nbsp;
-  <a href="https://diptaroy0.vercel.app/resume/Resume.pdf" target="_blank">
-    📄 Resume
-  </a>
-  &nbsp; | &nbsp;
-  <a href="https://www.linkedin.com/in/diptaroy0/" target="_blank">
-    💼 LinkedIn
-  </a>
-  &nbsp; | &nbsp;
-  <a href="https://github.com/diptaroy0" target="_blank">
-    💻 GitHub
-  </a>
+A modern portfolio showcasing my professional experience in Procurement, Strategic Sourcing, ERP Systems, Supplier Management, Industrial Automation, and Engineering Project Management.
+</p>
+
+<p align="center">
+
+<a href="https://diptaroy0.vercel.app">
+🌐 Live Portfolio
+</a>
+
+&nbsp; | &nbsp;
+
+<a href="https://diptaroy0.vercel.app/resume/Resume.pdf">
+📄 Resume
+</a>
+
+&nbsp; | &nbsp;
+
+<a href="https://www.linkedin.com/in/diptaroy0">
+💼 LinkedIn
+</a>
+
+&nbsp; | &nbsp;
+
+<a href="https://github.com/diptaroy0">
+💻 GitHub
+</a>
+
 </p>
 
 ---
 
-## 📖 About
+# 📖 About
 
-This repository contains my professional portfolio website, built with **Next.js 16**, **TypeScript**, and **Tailwind CSS**.
+This repository contains my professional portfolio website built with **Next.js 16**, **TypeScript**, **Tailwind CSS v4**, and **Framer Motion**.
 
-The portfolio highlights my professional experience in:
+The portfolio highlights my professional journey in:
 
 - Procurement & Supply Chain Management
 - Strategic Sourcing
-- Supplier Development
+- Supplier Relationship Management
 - Oracle ERP & SAP S/4HANA
 - Industrial Automation
 - Engineering Project Management
 - Material Handling Equipment Procurement
 
-It demonstrates both my professional experience and my ability to build modern, responsive web applications.
+It reflects both my procurement expertise and my ability to build modern, responsive, and high-performance web applications.
 
 ---
 
-## 🎯 Purpose
+# 🎯 Purpose
 
-The goal of this portfolio is to present my professional journey in an interactive and engaging way while showcasing:
+The objective of this portfolio is to present my professional experience in a modern, engaging, and recruiter-friendly format while demonstrating both technical and business capabilities.
 
-- Professional experience
-- Procurement projects
-- Industrial automation expertise
-- Case studies
-- Technical skills
+It showcases:
+
+- Professional Experience
+- Procurement Projects
+- Industrial Automation Projects
+- Procurement Case Studies
+- Technical Skills
 - Education
-- Career achievements
+- Career Achievements
 
 ---
 
@@ -72,26 +97,47 @@ The goal of this portfolio is to present my professional journey in an interacti
 
 ---
 
+# ⚡ Lighthouse Performance
+
+| Performance | Accessibility | Best Practices | SEO |
+|------------:|--------------:|---------------:|----:|
+| **100** | **100** | **100** | **100** |
+
+---
+
 # ✨ Features
 
+## Professional Portfolio
+
 - Modern Glassmorphism UI
-- Fully Responsive Design
-- Procurement-focused Professional Branding
 - Interactive Hero Section
 - About Section
-- Professional Experience Timeline
+- Experience Timeline
 - Core Expertise
 - Procurement Workflow
 - Featured Projects
-- Case Studies
+- Procurement Case Studies
 - Education & Certifications
 - Resume Download
 - Contact Section
-- Smooth Animations
+
+## Performance & SEO
+
+- Lighthouse 100/100/100/100
 - SEO Optimized
 - JSON-LD Structured Data
+- Sitemap
+- Robots.txt
+- Open Graph Support
 - PWA Ready
+
+## User Experience
+
+- Fully Responsive
+- Smooth Animations
+- Optimized Images
 - Accessibility Improvements
+- Cross-browser Compatible
 
 ---
 
@@ -103,7 +149,8 @@ The goal of this portfolio is to present my professional journey in an interacti
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 |
 | Animation | Framer Motion |
-| Icons | Lucide React & React Icons |
+| Icons | Lucide React |
+| Icons | React Icons |
 | Deployment | Vercel |
 | Package Manager | npm |
 
@@ -148,7 +195,7 @@ npm install
 npm run dev
 ```
 
-Open your browser and visit:
+Open:
 
 ```
 http://localhost:3000
@@ -157,8 +204,6 @@ http://localhost:3000
 ---
 
 # 📷 Portfolio Preview
-
-> Replace these images after uploading screenshots to the repository.
 
 ## Hero
 
@@ -192,16 +237,17 @@ http://localhost:3000
 
 # 👨‍💼 Professional Profile
 
-I am an **Electrical & Electronic Engineer** with professional experience in Procurement, Strategic Sourcing, Supplier Development, Industrial Automation, ERP Systems, and Manufacturing Operations.
+I am an **Electrical & Electronic Engineer** with professional experience in Procurement, Strategic Sourcing, Supplier Development, ERP Systems, Industrial Automation, and Manufacturing Operations.
 
-My experience combines engineering knowledge with procurement expertise, enabling me to support:
+My expertise combines engineering knowledge with procurement strategy, enabling me to contribute in:
 
 - Strategic Procurement
 - Global Supplier Management
+- Supplier Relationship Management
 - ERP-driven Procurement Processes
 - Cost Optimization
 - Material Handling Equipment Procurement
-- Industrial Automation Projects
+- Industrial Automation
 - Cross-functional Collaboration
 - Manufacturing Excellence
 
@@ -211,24 +257,38 @@ My experience combines engineering knowledge with procurement expertise, enablin
 
 **Dipta Roy**
 
-📧 Email  
-**diptaroy0@gmail.com**
+📧 **Email**
 
-🌐 Portfolio  
-https://diptaroy0.vercel.app/
+diptaroy0@gmail.com
 
-💼 LinkedIn  
-https://www.linkedin.com/in/diptaroy0/
+🌐 **Portfolio**
 
-💻 GitHub  
+https://diptaroy0.vercel.app
+
+💼 **LinkedIn**
+
+https://www.linkedin.com/in/diptaroy0
+
+💻 **GitHub**
+
 https://github.com/diptaroy0
 
 ---
 
 # 📄 License
 
-This repository is intended for portfolio and demonstration purposes.
+This repository showcases my personal portfolio and is provided for demonstration purposes.
 
-The source code may not be copied, redistributed, modified, or used commercially without prior written permission.
+The design, branding, written content, graphics, and other assets are proprietary to **Dipta Roy** and may not be copied, redistributed, modified, or used commercially without prior written permission.
 
 © 2026 Dipta Roy. All Rights Reserved.
+
+---
+
+<p align="center">
+
+### ⭐ If you like this portfolio, consider giving the repository a star!
+
+Designed & Developed with ❤️ by **Dipta Roy**
+
+</p>
