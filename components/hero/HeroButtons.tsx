@@ -28,10 +28,10 @@ lg:gap-5"
       {/* Resume */}
 
       <a
-        href="/resume/Resume.pdf"
+        href="/resume/Dipta_Resume.pdf"
     target="_blank"
     rel="noopener noreferrer"
-    download="Resume.pdf"
+    download="Dipta_Resume.pdf"
         title="Download CV"
         className={primaryButton}
       >

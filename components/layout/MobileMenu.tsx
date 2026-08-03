@@ -277,10 +277,10 @@ ease-out
         <div className="space-y-4 border-t border-cyan-400/10 p-6">
 
           <a
-            href="/resume/Resume.pdf"
+            href="/resume/Dipta_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            download="Resume.pdf"
+            download="Dipta_Resume.pdf"
             aria-label="Download Resume"
 
             className="

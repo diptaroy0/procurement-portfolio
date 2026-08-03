@@ -31,7 +31,7 @@ A modern portfolio showcasing my professional experience in Procurement, Strateg
 
 &nbsp; | &nbsp;
 
-<a href="https://diptaroy0.vercel.app/resume/Resume.pdf">
+<a href="https://diptaroy0.vercel.app/resume/Dipta_Resume.pdf">
 📄 Resume
 </a>
 
