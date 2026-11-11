@@ -190,10 +190,10 @@ ease-out
 
         <div className="hidden items-center gap-4 lg:flex">
           <a
-  href="/resume/Dipta_Resume.pdf"
+  href="/resume/Resume%20of%20Dipta%20Roy.pdf"
   target="_blank"
   rel="noopener noreferrer"
-  download="Dipta_Resume.pdf"
+  download="Resume of Dipta Roy.pdf"
   aria-label="Download Resume"
   
             className="
